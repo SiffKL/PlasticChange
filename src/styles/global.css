@@ -1,0 +1,112 @@
+/* ----------- PRIMITIVE ---------- */
+
+:root {
+  /* colors */
+  --color-pink: #ff1054;
+  --color-complimentary-pine-green-dark: #142c2b;
+  --color-complimentary-pine-green-light: #90b7b6;
+  --color-complimentary-pine-green-lightest: #d3e2e2;
+  --color-complimentary-pine-green-medium: #2a5f5e;
+  --color-complimentary-pine-green-normal: #007c79;
+  --color-primary-cerise-red-dark: #49131c;
+  --color-primary-cerise-red-light: #f38898;
+  --color-primary-cerise-red-lightest: #fbd9de;
+  --color-primary-cerise-red-medium: #952738;
+  --color-primary-cerise-red-normal: #e72458;
+  --color-secondary-graphite-dark: #1c1e23;
+  --color-secondary-graphite-ligth: #cacdd5;
+  --color-secondary-graphite-medium: #70727d;
+  --color-secondary-graphite-normal: #a3a6b4;
+  --color-secondary-white: #ffffff;
+
+  /* spacing */
+  --size-4: 0.25rem;
+  --size-8: 0.5rem;
+  --size-12: 0.75rem;
+  --size-16: 1rem;
+  --size-24: 1.5rem;
+  --size-32: 2rem;
+  --size-40: 2.5rem;
+  --size-48: 3rem;
+  --size-56: 3.5rem;
+  --size-64: 4rem;
+  --size-72: 4.5rem;
+  --size-80: 5rem;
+  --size-88: 5.5rem;
+  --size-96: 6rem;
+  --size-104: 6.5rem;
+  --size-112: 7rem;
+  --size-120: 7.5rem;
+  --size-128: 8rem;
+}
+
+/* ----------- SEMANTISKE ---------- */
+
+/* COLORS */
+:root {
+  /* Background color */
+  --logo-color: var(--color-pink);
+  --button-primary-default-background-color: #ffffff;
+  --button-secondary-default-background-color: var(
+    --colors-secondary-graphite-lighter
+  );
+
+  /* Text color */
+  --button-primary-default-text-color: var(--color-primary-cerise-red-normal);
+  --button-primary-hover-text-color: #ffffff;
+
+  --button-secondary-hover-text-color: #ffffff;
+  --newsletter-title-color: var(--color-complimentary-pine-green-dark);
+  --text-header1-color-pine-green-dark: var(--header-color-pine-green-dark);
+  --text-header-highlight-color: var(--color-primary-cerise-red-normal);
+  --text-paragraph-color-pine-green-light: var(
+    --color-complimentary-pine-green-light
+  );
+  --text-paragraph-color-pine-green-medium: var(
+    --color-complimentary-pine-green-medium
+  );
+  --text-paragraph-color-pine-green-normal: var(
+    --color-complimentary-pine-green-normal
+  );
+  --text-paragraph-color-pinegreen-dark: var(
+    --color-complimentary-pine-green-dark
+  );
+  --text-paragraph-graphitedark: var(--color-secondary-graphite-dark);
+  --text-paragraph-graphitelight: var(--color-secondary-graphite-ligth);
+  --text-paragraph-graphitemedium: var(--color-secondary-graphite-medium);
+
+  /* Border */
+  --border-radius: 0.25rem;
+
+  /* Button */
+  --button-padding-horizontal: var(--size-16);
+  --button-padding-vertical: var(--size-16);
+
+  --newsletter-number: 0rem;
+  --newsletter-title-size: var(--size-40);
+
+  /* Spacinng */
+  --spacing-nav-padding-vertical: 0rem;
+  --spacing-newsletter-gab-vertival: var(--size-12);
+  --spacing-footer-padding-vertical: var(--size-24);
+  --spacing-form-elements-horizontal-gab: var(--size-24);
+  --spacing-text-gap-vertical: var(--size-32);
+  --spacing-text-padding-vertical: var(--size-32);
+  --spacing-text-padding-horizontal: var(--size-48);
+  --spacing-navn-padding-horizontal: var(--size-56);
+  --spacing-section-element-gap: var(--size-80);
+  --spacing-section-padding-vertical: var(--size-80);
+  --spacing-footer-padding-horizontal: var(--spacing-section-padding-horzontal);
+  --spacing-section-padding-horzontal: var(--size-128);
+  --spacing-section-onecollum-padding-horizontal: 21.875rem;
+}
+
+/* ---------- MOBILE SPACING ----------- */
+
+:root {
+  /* numbers */
+  --container-padding-between-elements: 1.5rem;
+  --container-padding-top-bottom: 2rem;
+  --container-padding-left-right: 4rem;
+  --text-padding-between-elements: 0.75rem;
+}
