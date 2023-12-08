@@ -11,7 +11,7 @@
     <li>
       <a class="basiclink" href="hvorforgenbrug.astro">Hvorfor Genbrug?</a>
     </li>
-    <li class="pinklink"><a href="index.astro">Bliv en Plastic Changer</a></li>
+    <li><a class="pinklink" href="index.astro">Bliv en Plastic Changer</a></li>
   </ul>
 </div>
 
@@ -58,20 +58,18 @@
   }
 
   .pinklink {
-    text-decoration: none;
-    color: #e72458;
     text-decoration: underline;
+    color: var(--text-header-highlight-color, #e72458);
   }
+
   .pinklink:hover {
-  }
-  .pinklink:active {
-    color: #e72458;
+    color: var(--text-paragraph-graphitedark, #1c1e23);
     text-decoration: underline;
   }
 
-  .pinklink:visited {
-    /* color: var(--link-color-default, --color-secondary-graphite-dark); */
-    color: var(--color-secondary-graphite-dark: #1c1e23);
+  .pinklink:active {
+    color: var(--text-header-highlight-color, #e72458);
+
     text-decoration: underline;
   }
 
