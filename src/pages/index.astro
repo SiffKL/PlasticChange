@@ -5,7 +5,6 @@ import "../styles/global.css";
 // import Pbuttons from "../components/globalcomponents/Pbuttons.astro";
 // import Sbuttons from "../components/globalcomponents/Sbuttons.astro";
 import Herosection from "../components/campaignsite1/Herosection.astro";
-
 ---
 
 <html lang="en">
@@ -14,10 +13,11 @@ import Herosection from "../components/campaignsite1/Herosection.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="styles/reset.css" />
     <title>Astro</title>
   </head>
   <body>
-  <Herosection/>
+    <Nav />
     <footer><Footer /></footer>
 
     <h1>Astro</h1>
