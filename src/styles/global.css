@@ -20,6 +20,7 @@
   --color-secondary-white: #ffffff;
 
   /* spacing */
+  --size-0: 0rem;
   --size-4: 0.25rem;
   --size-8: 0.5rem;
   --size-12: 0.75rem;
@@ -38,6 +39,8 @@
   --size-112: 7rem;
   --size-120: 7.5rem;
   --size-128: 8rem;
+  --size-350: 21.875rem;
+  --size-430: 26.875rem;
 }
 
 /* ----------- SEMANTISKE ---------- */
@@ -75,6 +78,11 @@
   --text-paragraph-graphitelight: var(--color-secondary-graphite-ligth);
   --text-paragraph-graphitemedium: var(--color-secondary-graphite-medium);
 
+  /* link */
+  --link-color-default: var(--color-secondary-graphite-dark);
+  --link-color-hover: var(--color-primary-cerise-red-normal);
+  --link-color-active: var(--color-secondary-graphite-dark);
+
   /* Border */
   --border-radius: 0.25rem;
 
@@ -92,6 +100,8 @@
   /* Nav */
   --nav-padding-vertical: 0rem;
   --nav-padding-horizontal: var(--size-56);
+  --spacing-nav-padding-horizontal: var(--size-56);
+  /* --nav-gap: var(--size-430); */
 
   /* Footer */
   --footer-padding-vertical: var(--size-24);
@@ -109,7 +119,7 @@
   --section-element-gap: var(--size-80);
   --section-padding-vertical: var(--size-80);
   --section-padding-horzontal: var(--size-128);
-  --section-onecollum-padding-horizontal: 21.875rem;
+  --section-onecollum-padding-horizontal: var(--size-350);
 }
 
 /* ---------- MOBILE SPACING ----------- */
