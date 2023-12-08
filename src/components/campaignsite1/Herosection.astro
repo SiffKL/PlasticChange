@@ -1,8 +1,24 @@
 ---
 // import Buttons from "../components/globalcomponents/Buttons.astro"";
+import Nav from "../components/globalcomponents/Nav.astro";
 ---
 
 <section>
+  <Nav />
+  <div class="backgroundimg"></div>
+  <div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="942"
+      height="873"
+      viewBox="0 0 942 873"
+      fill="none"
+    >
+      <path
+        d="M231.03 322.678C214.897 251.606 69.827 217.946 58.7967 146.798C47.7665 75.6507 316.146 -26 316.146 -26L946 -26L946 873L269.28 873C269.28 873 95.6316 810.686 93.8442 754.534C92.8872 724.469 173 710.942 173.953 680.877C175.335 637.291 48.4396 621.148 13.7356 578.654C-68.0682 478.49 254.306 425.215 231.03 322.678Z"
+        fill="#D3E2E2"></path>
+    </svg>
+  </div>
   <div>
     <h1></h1>
     <p></p>
@@ -11,9 +27,33 @@
 </section>
 
 <style>
-  section {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    /* Stil for din navigation */
+  }
+
+  .backgroundimg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: url("src/asset/svgimages/HeroBackground.svg");
-    width: 100%;
+    background-size: cover; /* eller background-size: contain; afhængigt af dine krav */
     background-repeat: no-repeat;
+  }
+
+  section {
+    position: relative;
+    z-index: 1;
+  }
+
+  svg {
+    width: 100%;
+    fill: var(--color-complimentary-pine-green-lightest, #d3e2e2);
   }
 </style>
