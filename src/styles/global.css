@@ -78,27 +78,38 @@
   /* Border */
   --border-radius: 0.25rem;
 
+  /* -------------- WEB SPACING ------------*/
+
   /* Button */
   --button-padding-horizontal: var(--size-16);
   --button-padding-vertical: var(--size-16);
 
+  /* Newsletter */
   --newsletter-number: 0rem;
   --newsletter-title-size: var(--size-40);
+  --newsletter-gab-vertival: var(--size-12);
 
-  /* Spacinng */
-  --spacing-nav-padding-vertical: 0rem;
-  --spacing-newsletter-gab-vertival: var(--size-12);
-  --spacing-footer-padding-vertical: var(--size-24);
-  --spacing-form-elements-horizontal-gab: var(--size-24);
-  --spacing-text-gap-vertical: var(--size-32);
-  --spacing-text-padding-vertical: var(--size-32);
-  --spacing-text-padding-horizontal: var(--size-48);
-  --spacing-navn-padding-horizontal: var(--size-56);
-  --spacing-section-element-gap: var(--size-80);
-  --spacing-section-padding-vertical: var(--size-80);
-  --spacing-footer-padding-horizontal: var(--spacing-section-padding-horzontal);
-  --spacing-section-padding-horzontal: var(--size-128);
-  --spacing-section-onecollum-padding-horizontal: 21.875rem;
+  /* Nav */
+  --nav-padding-vertical: 0rem;
+  --nav-padding-horizontal: var(--size-56);
+
+  /* Footer */
+  --footer-padding-vertical: var(--size-24);
+  --footer-padding-horizontal: var(--section-padding-horzontal);
+
+  /* Form */
+  --form-elements-horizontal-gab: var(--size-24);
+
+  /* Tekst */
+  --text-gap-vertical: var(--size-32);
+  --text-padding-vertical: var(--size-32);
+  --text-padding-horizontal: var(--size-48);
+
+  /* Section */
+  --section-element-gap: var(--size-80);
+  --section-padding-vertical: var(--size-80);
+  --section-padding-horzontal: var(--size-128);
+  --section-onecollum-padding-horizontal: 21.875rem;
 }
 
 /* ---------- MOBILE SPACING ----------- */
