@@ -1,1 +1,25 @@
+---
+import "../styles/global.css";
+import Footer from "../components/globalcomponents/Footer.astro";
+import Nav from "../components/globalcomponents/Nav.astro";
+import Genbrugsection1 from "../components/campaignsite3/Genbrugsection1.astro";
+import Genbrugsection2 from "../components/campaignsite3/Genbrugsection2.astro";
+---
 
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Nav />
+    <Genbrugsection1 />
+    <Genbrugsection2 />
+    <footer><Footer /></footer>
+
+    <h1>Astro</h1>
+  </body>
+</html>
