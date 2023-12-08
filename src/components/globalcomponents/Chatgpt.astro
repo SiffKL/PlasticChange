@@ -1,0 +1,162 @@
+<div class="container">
+  <h1>Bliv en plastic changer i dag og kæmp i fællesskab</h1>
+  <p>
+    Være med til at redde verdenhavene for plastikaffald, ved at give en
+    donation
+  </p>
+
+  <form>
+    <label for="donation-type">Hvad vil du støtte med?</label>
+    <div class="donation-type" id="donation-type">
+      <button type="button" id="one-time">Engang</button>
+      <button type="button" id="monthly">Månedlig</button>
+    </div>
+
+    <label for="amount">Vælg beløb</label>
+    <div class="amount" id="amount">
+      <button type="button">50 kr.</button>
+      <button type="button">75 kr.</button>
+      <button type="button">100 kr.</button>
+    </div>
+
+    <input type="text" placeholder="Valgfrit beløb" />
+    <button type="submit" class="donate-button">Støt nu</button>
+  </form>
+
+  <p>Vidste du, at dit bidrag er berettiget til skattefradrag?</p>
+  <a href="#">Læs mere her</a>
+</div>
+
+<style>
+  .container {
+    max-width: 460px;
+    margin: 20px auto;
+    padding: 100px;
+    gap: 50px;
+    background: white;
+    text-align: center;
+  }
+
+  h1 {
+    color: #000;
+    font-family: Rubik;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+  }
+
+  p {
+    color: var(--color-complimentary-pine-green-normal, #007c79);
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+  }
+
+  .donation-type button,
+  .amount button {
+    display: inline-flex;
+    height: 48px;
+    min-width: 71px;
+    padding: 15px 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid #e3e3e3;
+    background: var(--button-background-color, #f8f8f8);
+    color: var(--color-secondary-graphite-dark, #1c1e23);
+    
+    text-align: center;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150.5%; /* 24.08px */
+  }
+
+  .donation-type button:focus,
+  .amount button:focus,
+  .donation-type button:active,
+  .amount button:active {
+    background: #ddd;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+  }
+
+  .donate-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #e74c3c;
+    color: white;
+    cursor: pointer;
+  }
+
+  .donate-button:hover {
+    background: #c0392b;
+  }
+
+  button.active {
+    background: #ddd; /* or any highlight color you prefer */
+    border-color: #bbb;
+  }
+
+  a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+...
+<script>
+  // Select buttons
+  const oneTimeButton = document.getElementById("one-time");
+  const monthlyButton = document.getElementById("monthly");
+  const amountButtons = document.querySelectorAll(".amount button");
+
+  // Function to toggle 'active' class
+  function toggleButtonActive(button) {
+    if (button.classList.contains("active")) {
+      button.classList.remove("active");
+    } else {
+      // Remove active from all buttons
+      [oneTimeButton, monthlyButton].forEach((btn) =>
+        btn.classList.remove("active")
+      );
+      // Add active to the clicked button
+      button.classList.add("active");
+    }
+  }
+
+  // Event listeners for buttons
+  oneTimeButton.addEventListener("click", function () {
+    toggleButtonActive(oneTimeButton);
+  });
+
+  monthlyButton.addEventListener("click", function () {
+    toggleButtonActive(monthlyButton);
+  });
+
+  // Example of how you might handle amount buttons
+  amountButtons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      // Remove active from all amount buttons
+      amountButtons.forEach((button) => button.classList.remove("active"));
+      // Add active to the clicked button
+      btn.classList.add("active");
+    });
+  });
+</script>
