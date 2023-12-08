@@ -1,0 +1,86 @@
+---
+---
+
+<div class="nav">
+  <a href="index.astro"><img src="src/asset/icons/logo.svg" alt="" /></a>
+
+  <ul>
+    <li>
+      <a class="basiclink" href="defremprincipper.astro">De 5 Principper</a>
+    </li>
+    <li>
+      <a class="basiclink" href="hvorforgenbrug.astro">Hvorfor Genbrug?</a>
+    </li>
+    <li><a class="pinklink" href="index.astro">Bliv en Plastic Changer</a></li>
+  </ul>
+</div>
+
+<style>
+  .nav {
+    margin: 0rem;
+    display: flex;
+    padding: var(--nav-padding-vertical, 0rem)
+      var(--nav-padding-horizontal, 3.5rem);
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .basiclink {
+    text-decoration: none;
+    color: var(--link-color-default, --color-secondary-graphite-dark);
+    /* color: var(--color-secondary-graphite-dark: #1c1e23); */
+  }
+  .basiclink:hover {
+    color: var(
+      --button-primary-default-text-color,
+      --color-primary-cerise-red-normal
+    );
+    text-decoration: underline;
+  }
+
+  .basiclink:active {
+    color: var(
+      --button-primary-default-text-color,
+      --color-secondary-graphite-dark
+    );
+    text-decoration: underline;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3.4375rem;
+  }
+
+  .pinklink {
+    text-decoration: underline;
+    color: var(--text-header-highlight-color, #e72458);
+  }
+
+  .pinklink:hover {
+    color: var(--text-paragraph-graphitedark, #1c1e23);
+    text-decoration: underline;
+  }
+
+  .pinklink:active {
+    color: var(--text-header-highlight-color, #e72458);
+
+    text-decoration: underline;
+  }
+
+  li {
+    /* Paragraph20Medium */
+    font-family: "Rubik", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 150%; /* 1.875rem */
+  }
+
+  @media (max-width: 1200px) {
+  }
+</style>
