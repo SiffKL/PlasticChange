@@ -3,8 +3,8 @@ import Pbuttons from "../globalcomponents/Pbuttons.astro";
 import Nav from "../globalcomponents/Nav.astro";
 ---
 
+<Nav />
 <section>
-  <Nav/>
   <div class="backgroundimg"></div>
   <div>
     <svg
@@ -19,10 +19,15 @@ import Nav from "../globalcomponents/Nav.astro";
         fill="#D3E2E2"></path>
     </svg>
   </div>
-  <div>
-    <h1></h1>
-    <p></p>
-    <Pbuttons />
+  <div class="herocontent">
+    <h1>Bliv Plastic Changer <br />- dit bidrag til fremtidens klima</h1>
+    <p>
+      Dyk ned i rejsen mod bæredygtighed og opdag, hvorfor din rolle som Plastic
+      Changer er afgørende for at skabe et positivt miljøaftryk og forandre
+      vores forhold til plastik. Er du klar til at tage skridtet mod en grønnere
+      og mere ansvarlig fremtid?
+    </p>
+    <Pbuttons title="Gør en forskel nu" size="large" />
   </div>
 </section>
 
@@ -30,10 +35,6 @@ import Nav from "../globalcomponents/Nav.astro";
   body {
     margin: 0;
     padding: 0;
-  }
-
-  nav {
-    /* Stil for din navigation */
   }
 
   .backgroundimg {
@@ -49,11 +50,48 @@ import Nav from "../globalcomponents/Nav.astro";
 
   section {
     position: relative;
-    z-index: 1;
   }
 
   svg {
     width: 100%;
     fill: var(--color-complimentary-pine-green-lightest, #d3e2e2);
+  }
+
+  .herocontent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    padding: var(--spacing-section-padding-horzontal, 8rem)
+      var(--spacing-section-padding-vertical, 5rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  p {
+    color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
+
+    /* Paragraph20Normal */
+    font-family: Rubik;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150.5%; /* 1.88125rem */
+    width: 30.6875rem;
+  }
+
+  h1 {
+    color: var(--text-header-1-color-pine-green-dark, #142c2b);
+    font-family: Poppins;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    display: flex;
+    width: 34.5625rem;
+    height: 14.375rem;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 </style>
