@@ -6,38 +6,37 @@ import Finput from "./Finput.astro";
 
 <div class="container">
   <h1>
-    Bliv en <span class="pc-text"> Plastic Changer</span> i dag og kæmp i <span
-      class="fs-text">Fællesskab</span
-    >
+    Bliv en <span class="pc-text">Plastic Changer</span> i dag og kæmp i <span class="fs-text">Fællesskab</span>
   </h1>
   <p>
-    Være med til at redde verdenhavene for plastikaffald, ved at give en
-    donation
+    Være med til at redde verdenhavene for plastikaffald, ved at give en donation
   </p>
 
   <form>
-    <label for="donation-type">Hvad vil du støtte med?
-    <div class="inline">
-      <Fbutton title="Engang" />
-      <Fbutton title="Månedlig" />
+    <div class="form-group">
+      <label for="donation-type">Hvad vil du støtte med?</label>
+      <div class="inline">
+        <Fbutton title="Engang" />
+        <Fbutton title="Månedlig" />
+      </div>
     </div>
-  </label>
 
-    <label for="amount">Vælg beløb
-
-    <div class="inline">
-      <Fbutton title="50kr" />
-      <Fbutton title="100kr" />
-      <Fbutton title="200kr" />
+    <div class="form-group">
+      <label for="amount">Vælg beløb</label>
+      <div class="inline">
+        <Fbutton title="50kr" />
+        <Fbutton title="100kr" />
+        <Fbutton title="200kr" />
+      </div>
+      <Finput placeholder="Skriv dit beløb..." inputSize="98%" />
     </div>
-    <Finput placeholder="Skriv dit beløb..." inputSize="98%" />
-  </label>
-  <label>
-    <Pbuttons title="Støt nu" size="forms" class="padding-top-24" />
 
-    <p>Vidste du, at dit bidrag er berettiget til skattefradrag?</p>
-    <a href="#">Læs mere her</a>
-  </label>
+    <div class="form-group">
+      <Pbuttons title="Støt nu" size="forms" />
+      <p>Vidste du, at dit bidrag er berettiget til skattefradrag?</p>
+      <a href="#">Læs mere her</a>
+    </div>
+
   </form>
 </div>
 
@@ -45,30 +44,35 @@ import Finput from "./Finput.astro";
   .container {
     max-width: 400px;
     margin: 20px auto;
-    padding: 44px;
-    padding-top: 30px;
-    gap: 50px;
+    padding: 30px 44px;
     background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
     border-radius: 5px;
     text-align: left;
   }
 
-  .pc-text {
-    color: var(--color-complimentary-pine-green-medium, #2a5f5e);
+  h1, p, form label, a {
     font-family: Rubik;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 40px;
   }
 
-  .fs-text {
-    color: var(--color-complimentary-pine-green-dark, #142c2b);
-    font-family: Rubik;
+  h1 {
+    color: #000;
     font-size: 32px;
-    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  .pc-text { color: var(--color-complimentary-pine-green-medium, #2a5f5e);
     font-weight: 800;
-    line-height: normal;
+   }
+  .fs-text { color: var(--color-complimentary-pine-green-dark, #142c2b); 
+    font-weight: 800;
+
+  }
+
+  p {
+    color: var(--color-complimentary-pine-green-normal, #007c79);
+    font-size: 16px;
+    font-weight: 400;
   }
 
   form {
@@ -76,41 +80,18 @@ import Finput from "./Finput.astro";
     padding-left: 44px;
     padding-right: 44px;
     padding-bottom: 30px;
-    text-align: left;
-    display: block;
-
     color: var(--color-secondary-graphite-dark, #1c1e23);
-    font-family: Rubik;
     font-size: 13px;
-    font-style: normal;
-    font-weight: 600;
+    font-weight: 800;
   }
 
-  form label {
-    margin-top: 24px; /* Adds 24px space above each label */
-    display: block; /* Ensures the label is a block-level element */
-  }
-
-  h1 {
-    color: #000;
-    font-family: Poppins;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.3;
-  }
-
-  p {
-    color: var(--color-complimentary-pine-green-normal, #007c79);
-    font-family: Rubik;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
+  .form-group {
+    margin-top: 24px;
   }
 
   .inline {
-    display: flex; /* Enables flexbox layout */
-    justify-content: space-between; /* Distributes space between the items */
+    display: flex;
+    justify-content: space-between;
   }
 
   a {
@@ -122,4 +103,6 @@ import Finput from "./Finput.astro";
   a:hover {
     text-decoration: underline;
   }
+
+
 </style>
