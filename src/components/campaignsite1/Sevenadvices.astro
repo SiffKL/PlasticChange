@@ -8,7 +8,7 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
     <h3>7 gode råd</h3>
   </div>
   <div class="sevenadvices">
-    <Oneadvice
+    <!-- <Oneadvice
       image="scr/asset/iconGoderaasTshirt"
       title="Din mælk"
       description="Køb din mælk uden skruelåg"
@@ -37,27 +37,34 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
     <Oneadvice
       title="Dine plejeprodukter"
       description="Køb i store beholdere frem for mange små"
-    />
+    /> -->
+    <Oneadvice />
+    <Oneadvice />
+    <Oneadvice />
+    <Oneadvice />
+    <Oneadvice />
+    <Oneadvice />
+    <Oneadvice />
   </div>
 </section>
 
 <style>
   .sectionadvice {
     display: flex;
-    width: 90.375rem;
-    height: 96.25rem;
+    flex-direction: column;
+    height: max-content;
     padding: var(--spacing-section-padding-vertical, 5rem)
       var(--spacing-section-padding-horzontal, 8rem);
     justify-content: center;
     align-items: center;
     align-content: center;
     gap: var(--spacing-section-element-gap, 5rem) -15.5rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
 
   .sevenadvices {
     display: flex;
-    width: 69.9375rem;
+    max-width: 69.9375rem;
     padding: var(--size-80, 5rem) 0.125rem;
     align-items: center;
     align-content: center;
