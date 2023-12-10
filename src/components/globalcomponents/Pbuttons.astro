@@ -2,15 +2,11 @@
 const { title, size } = Astro.props;
 ---
 
-<article>
+
   <button data-size={size}>{title}</button>
-</article>
+
 
 <style>
-  article {
-    display: grid;
-    justify-content: space-around;
-  }
 
   button {
     padding: var(--button-padding-vertical, 1rem)
@@ -34,5 +30,15 @@ const { title, size } = Astro.props;
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
+  }
+
+  [data-size="forms"] {
+    width: 100%;
+    padding: var(--button-padding-vertical, 1rem)
+      var(--button-padding-horizontal, 2rem);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    box-sizing: border-box; /* Include padding and border in the width */
   }
 </style>

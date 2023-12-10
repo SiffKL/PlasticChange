@@ -1,0 +1,21 @@
+---
+const { placeholder, inputSize } = Astro.props;
+---
+
+<input type="text" placeholder={placeholder} style={`width: ${inputSize};`} />
+
+<style>
+  input {
+    padding: 15px 30px;
+    border: 1px solid #e3e3e3; /* Default border color */
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-right: 8px;
+    border-radius: 5px;
+  }
+
+  input:focus {
+    outline: none; /* Remove the default focus outline */
+    border: 2px solid #357A79; /* Change to your preferred border color when focused */
+  }
+</style>

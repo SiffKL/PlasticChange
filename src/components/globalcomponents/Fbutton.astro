@@ -1,0 +1,39 @@
+---
+const { title } = Astro.props;
+---
+
+<div class="donation-type" id="donation-type">
+    <button type="button" class="donation-button" >{title}</button>
+    <!-- Add more buttons as needed -->
+</div>
+
+<style>
+.donation-type {
+    width: 100%;
+}
+
+.donation-button {
+    width: calc(100% - 8px);
+    display: inline-flex;
+    border-radius: 5px;
+    margin-right: 0;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e3e3e3;
+    background: var(--button-background-color, #f8f8f8);
+    color: var(--color-secondary-graphite-dark, #1c1e23);
+    margin-top: 8px;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.donation-button:focus,
+.donation-button:active,
+.button-active {
+    background: #357A79;
+    color: #fff;
+}
+</style>
