@@ -6,7 +6,8 @@ const { placeholder, inputSize } = Astro.props;
 
 <style>
   input {
-    padding: 15px 30px;
+    padding: var(--button-padding-vertical, 1rem)
+      var(--button-padding-horizontal, 2rem);
     border: 1px solid #e3e3e3; /* Default border color */
     box-sizing: border-box;
     margin-top: 8px;

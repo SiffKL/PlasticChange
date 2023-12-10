@@ -1,0 +1,107 @@
+---
+import Finput from "../globalcomponents/Finput.astro";
+import Pbuttons from "../globalcomponents/Pbuttons.astro";
+---
+
+<article>
+  <section class="newsletter-signup">
+    <h1>Tilmeld dig vores nyhedsbrev</h1>
+    <p>
+      Ved at tilmelde dig vores nyhedsbrev, bliver du en del af Plastic Changes
+      bevægelse mod en bæredygtig fremtid.
+    </p>
+    <div class="mailbox-container">
+      <label for="emailInput">E-mail adresse</label>
+      <div class="input-group">
+        <Finput
+          id="emailInput"
+          placeholder="name@domain.com"
+          inputSize="100%"
+        />
+        <Pbuttons title="Tilmeld dig" size="forms" />
+      </div>
+      <p>
+        Vi sender kun væsentlig information, der direkte relaterer til vores
+        mission om at ændre plastikvaner. Din tid og engagement er værdifulde
+        for os.
+      </p>
+    </div>
+  </section>
+</article>
+<style>
+  :root {
+    --pine-green-dark: #142c2b;
+    --pine-green-normal: #007c79;
+    --graphite-dark: #1c1e23;
+  }
+  article {
+    display: flex;
+    max-width: 1440px;
+    padding: var(--spacing-section-padding-vertical, 80px)
+      var(--spacing-section-padding-horzontal, 128px);
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Added to ensure centering */
+  }
+  .newsletter-signup {
+    max-width: 742px;
+    text-align: left;
+    color: var(--pine-green-dark);
+    gap: var(--spacing-text-gap-vertical, 32px);
+  }
+
+  .mailbox-container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-group {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px var(--spacing-form-elements-horizontal-gab, 24px);
+  }
+
+  .newsletter-signup h1 {
+    font-family: Poppins;
+    font-size: calc(min(max(22px, 8vw), 48px));
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+  }
+
+  .newsletter-signup p {
+    color: var(--pine-green-normal);
+    font-family: Rubik, sans-serif;
+    font-size: calc(min(max(16px, 2vw), 20px));
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .mailbox-container p {
+    color: var(--color-complimentary-pine-green-light, #90b7b6);
+    /* Paragraph16Light */
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    max-width: 60ch;
+  }
+
+  label {
+    color: var(--graphite-dark);
+    font-family: Rubik, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 600px) {
+    .input-group {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-form-elements-horizontal-gab, 12px);
+    }
+  }
+</style>
