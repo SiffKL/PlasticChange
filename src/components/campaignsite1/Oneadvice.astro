@@ -4,11 +4,11 @@ const { image, title, description } = Astro.props;
 
 <section class="oneadvice">
   <div>
-    <img {image} src="src/asset/icons/GoderaadMilk.svg" alt="" />
+    <img src={image} alt="" />
   </div>
   <div>
     <h3>{title}</h3>
-    <p {description}>Køb din mælk uden skruelåg</p>
+    <p>{description}</p>
     <style>
       .oneadvice {
         display: flex;
