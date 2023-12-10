@@ -1,16 +1,93 @@
 ---
+import Oneadvice from "../campaignsite1/Oneadvice.astro";
 ---
 
-<section>
+<section class="sectionadvice">
   <div>
-    <Oneadvice />
-    <Oneadvice />
-    <Oneadvice />
-    <Oneadvice />
-    <Oneadvice />
-    <Oneadvice />
-    <Oneadvice />
+    <h2>Tænk plastspild ind i <br />din hverdag med de</h2>
+    <h3>7 gode råd</h3>
+  </div>
+  <div class="sevenadvices">
+    <Oneadvice
+      image="scr/asset/iconGoderaasTshirt"
+      title="Din mælk"
+      description="Køb din mælk uden skruelåg"
+    />
+    <Oneadvice
+      title="Din vandflaske"
+      description="Brug drikkedunk og undgå købevand"
+    />
+    <Oneadvice
+      title="Din tøjvask"
+      description="Fyld maskinen, så du slidder mindre på tøjet"
+    />
+    <Oneadvice
+      title="Din fest"
+      description="Drop engangsservice, balloner og sugerør"
+    />
+    <Oneadvice
+      title="Dit toiletbesøg"
+      description="Kun tre ting i toilettet - tis, lort og papir"
+    />
+    <Oneadvice
+      title="Dit indkøb"
+      description="Tag mulepose med og 
+    sig nej tak til plastikposer"
+    />
+    <Oneadvice
+      title="Dine plejeprodukter"
+      description="Køb i store beholdere frem for mange små"
+    />
   </div>
 </section>
 
-<style></style>
+<style>
+  .sectionadvice {
+    display: flex;
+    width: 90.375rem;
+    height: 96.25rem;
+    padding: var(--spacing-section-padding-vertical, 5rem)
+      var(--spacing-section-padding-horzontal, 8rem);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: var(--spacing-section-element-gap, 5rem) -15.5rem;
+    flex-wrap: wrap;
+  }
+
+  .sevenadvices {
+    display: flex;
+    width: 69.9375rem;
+    padding: var(--size-80, 5rem) 0.125rem;
+    align-items: center;
+    align-content: center;
+    gap: var(--spacing-section-element-gap, 5rem) 11.3125rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+
+  h2 {
+    color: var(--text-paragraph-graphitedark, #1c1e23);
+    /* Header2-Light */
+    font-family: Poppins;
+    font-size: 3.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 67.625rem;
+
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    color: var(--text-header-highlight-color, #e72458);
+    margin: 0;
+    /* Header2 */
+    font-family: Poppins;
+    font-size: 3.875rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+</style>
