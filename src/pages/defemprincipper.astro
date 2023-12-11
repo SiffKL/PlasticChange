@@ -6,24 +6,12 @@ import Fiveprinciplessection from "../components/campaignsite2/Fiveprinciplessec
 import Newsletterform from "../components/campaignsite2/Newsletterform.astro";
 import VersusSection from "../components/campaignsite2/VersusSection.astro";
 import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="styles/reset.css" />
-
-    <title>Astro</title>
-  </head>
-  <body>
-    <Nav />
+<BaseLayout > 
+<Faktabox />
     <Fiveprinciplessection />
     <Newsletterform />
     <Faktabox />
     <VersusSection />
-    <Footer />
-  </body>
-</html>
+  </BaseLayout>
