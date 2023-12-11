@@ -21,8 +21,8 @@
   article {
     max-width: 100%; /* Adjust width as needed */
     margin: 0px auto;
-    padding: var(--spacing-text-padding-vertical, 32px)
-      var(--spacing-text-padding-horizontal, 128px);
+    padding: var(--spacing-text-padding-vertical, 6rem)
+      var(--spacing-section-padding-horzontal, 14rem);
   }
 
   .header-text {
@@ -32,11 +32,17 @@
   }
 
   h1.header-text {
-    font-size: min(max(5vw, 38px), 80px); /* Responsive font size with a min of 38px and max of 60px */
+    font-size: min(
+      max(5vw, 38px),
+      80px
+    ); /* Responsive font size with a min of 38px and max of 60px */
   }
 
   h2.header-text {
-    font-size: min(max(3vw, 18px), 48px); /* Responsive font size with a min of 18px and max of 40px */
+    font-size: min(
+      max(3vw, 18px),
+      48px
+    ); /* Responsive font size with a min of 18px and max of 40px */
     font-weight: 900;
   }
 
@@ -47,10 +53,12 @@
   .main-text {
     color: var(--paragraph-color);
     font-family: "Rubik", sans-serif;
-    font-size: min(max(1.5vw, 16px), 18px); /* Responsive font size with a min of 16px and max of 24px */
+    font-size: min(
+      max(1.5vw, 16px),
+      18px
+    ); /* Responsive font size with a min of 16px and max of 24px */
     font-weight: 500;
     line-height: 1.5;
     max-width: 60ch; /* Adjust as needed */
   }
-
 </style>

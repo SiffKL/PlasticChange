@@ -1,13 +1,20 @@
 ---
+import Title from "../globalcomponents/Title.astro";
 ---
 
+<Title
+  manchet="Hvorfor er genbrug"
+  bigred="løsningen"
+  text="Fremtiden kalder på mere genbrug, hvis vi skal løse plastikkrisen. Forstå hvorfor, at omfattende genbrugssystemer er en af de mest effektive løsninger til at løse plastikkrisen"
+/>
 <article>
-  <h1>Hvorfor er genbrug <br /> <div class="pink">løsningen</div></h1>
-  <p>
+  <!-- <h1>Hvorfor er genbrug <br /> <div class="pink">løsningen</div></h1> -->
+  <!-- <p>
     Fremtiden kalder på mere genbrug, hvis vi skal løse plastikkrisen. Forstå
     hvorfor, at omfattende genbrugssystemer er en af de mest effektive løsninger
     til at løse plastikkrisen.
-  </p>
+  </p> -->
+
   <center>
     <iframe
       width="560"
@@ -43,10 +50,13 @@
   p {
     width: 31.25rem;
     height: 7.375rem;
-    padding: var(--spacing-text-padding-vertical, 2rem)
-      var(--spacing-text-padding-horizontal, 3rem);
+    /* padding: var(--spacing-text-padding-vertical, 2rem)
+      var(--spacing-text-padding-horizontal, 3rem); */
+    padding: var(--spacing-text-padding-vertical, 32px)
+      var(--spacing-text-padding-horizontal, 128px);
     color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
     font-family: "Rubik";
     font-size: 1rem;
+    line-height: 1.5;
   }
 </style>
