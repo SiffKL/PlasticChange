@@ -51,4 +51,11 @@ import Pbuttons from "./Pbuttons.astro";
       var(--spacing-text-padding-horizontal, 3rem);
     align-self: stretch;
   }
+
+  @media screen and (max-width: 600px) {
+    .stotsection {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-form-elements-horizontal-gab, 12px);
+    }
+  }
 </style>
