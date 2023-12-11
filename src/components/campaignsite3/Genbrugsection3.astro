@@ -3,30 +3,51 @@
 
 <div class="container">
   <div class="item">
-    <h1>Large Heading</h1>
+    <h1>
+      Næsten <span class="highlight-big">halvdelen</span> af al den plastik, der
+      produceres, er til
+      <span class="highlight">engangsemballage</span>
+    </h1>
   </div>
   <div class="item">
-    <p>Paragraph Text</p>
+    <p>
+      Genbrug er med andre ord et middel til at reducere vores forbrug og affald
+      og derfor er det smart.
+    </p>
+    <p>
+      Derfor bør prioriteringen af affaldshierarkiet gentænkes, således at vi
+      bevæger os væk fra deponi og affaldsforbrænding, som stadig er den
+      affaldshåndtering, der dominerer mest i verden. I stedet bør vi
+      fremadrettet fokusere på mere effektive og direkte løsninger, som
+      reduktion og genbrug.
+    </p>
   </div>
   <div class="item">
-    <p>Another Paragraph Text</p>
+    <p>
+      Produktionen af engangsplastik har ført til stigende plastikforurening,
+      enorme affaldsbjerge og er et ubæredygtigt træk på jordens begrænsede
+      ressourcer.
+    </p>
+    <p>
+      Desuden bidrager den enorme plastikproduktion til de klimaforandringer som
+      vi også ser grundet de øgede CO2-udledninger.
+    </p>
   </div>
   <div class="item">
     <!-- <img src="your-image.jpg" alt="Description of the image" /> -->
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-      type="module"></script>
 
     <dotlottie-player
-      src="https://lottie.host/021e5636-532f-48c8-8ee4-b0a4abd612c1/UAzNjmWe2C.json"
+      class="img"
+      src="https://lottie.host/cdcabfe6-3891-4c89-b121-209e85df15b7/HtmXyGgIzI.json"
       background="transparent"
       speed="1"
-      style="width: 300px; height: 300px;"
       loop
       autoplay></dotlottie-player>
   </div>
 </div>
-
+<script
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>
 <style>
   body {
     margin: 0;
@@ -34,21 +55,43 @@
     box-sizing: border-box;
   }
 
+  .highlight-big {
+    color: var(--text-header-highlight-color, #e72458);
+    font-family: Poppins;
+    font-size: 3.4375rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  .highlight {
+    color: var(--text-header-highlight-color, #e72458);
+    font-family: Poppins;
+    font-size: 2.5625rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    padding: 20px;
+    /* grid-gap: 20px;
+    padding: 20px; */
+    padding: var(--spacing-section-padding-vertical, 5rem)
+      var(--spacing-section-padding-horzontal, 8rem);
+    grid-gap: var(--spacing-section-element-gap, 5rem);
   }
 
   .item {
     /* border: 1px solid #ddd; */
     padding: 20px;
-    text-align: center;
+    text-align: left;
   }
 
-  img {
-    max-width: 100%;
+  .img {
+    max-width: 31.25rem;
+    min-width: 17.875rem;
     height: auto;
     display: block;
     margin: 0 auto;
