@@ -1,23 +1,16 @@
 ---
+import Buttons from "./Buttons.astro";
 ---
 
 <section class="nyhedsbrev">
   <div class="container">
-    <h1>Tilmed dig vores nyhedsbrev</h1>
+    <h1>Du kan beskytte naturen, dyrelivet og vores børn mod plastik</h1>
     <p>
-      Ved at tilmelde dig vores nyhedsbrev, bliver du en del af Plastic Changes
-      bevægelse mod en bæredygtig fremtid.
+      Kun med din støtte kan vi kæmpe for, at politikere og virksomheder tager
+      ansvar for at standse overproduktion og forurening fra plastik nu og at vi
+      kan uddanne fremtidens forbrugere.
     </p>
-    <form>
-      <label for="fname">First name:</label><br />
-      <input type="text" id="fname" name="fname" /><br />
-      <input type="submit" value="Tilmed dig" />
-    </form>
-    <p>
-      Vi sender kun væsentlig information, der direkte relaterer til vores
-      mission om at ændre plastikvaner. Din tid og engagement er værdifulde for
-      os.
-    </p>
+    <Buttons>Støt nu</Buttons>
   </div>
 </section>
 
@@ -63,8 +56,26 @@
     padding: 0.25rem var(--size-8, 0.5rem);
     align-items: center;
     gap: 0.625rem/;
+    border-radius: 0.25rem;
+    border: 0.5px solid #000;
+    background: #f8f8f8;
   }
 
-  input[type=]] {
+  input[type="submit"] {
+    border-radius: 0.0625rem;
+    background: var(--color-primary-cerise-red-normal, #e72458);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: var(--button-padding-vertical, 1rem)
+      var(--button-padding-horizontal, 2rem);
+  }
+
+  input[type="submit"]::value {
+    color: var(--color-secondary-white, #fff);
+    text-align: center;
+    font-family: Rubik;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150.5%;
   }
 </style>
