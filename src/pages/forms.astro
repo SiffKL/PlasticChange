@@ -1,0 +1,36 @@
+---
+import Form1 from "../components/Forms/Form1.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Form1 from "../components/Forms/Form1.astro"
+import Form2 from "../components/Forms/Form2.astro"
+import Form3 from "../components/Forms/Form3.astro"
+import Paybutton from "../components/globalcomponents/Paybutton.astro";
+---
+<BaseLayout>
+  <Paybutton />
+  <section class="grid">
+    <div class="backgroundimg"></div>
+      <Form1 />
+      <Form2 />
+      <Form3 />
+
+      
+  </section>
+</BaseLayout>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: 6fr 8fr;
+    background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
+  }
+  .backgroundimg {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("src/asset/svgimages/HeroBackground.svg");
+    background-size: cover; /* eller background-size: contain; afhængigt af dine krav */
+    background-repeat: no-repeat;
+  }
+</style>

@@ -1,0 +1,105 @@
+<section>
+  <h1>Betal med kort eller med Mobilepay</h1>
+  <div class="buttons-group">
+    <button class="payment-button">
+      <span class="checkmark">✔</span>
+      <span class="button-text">Creditcard</span>
+      <span class="image-placeholder">[Image]</span>
+    </button>
+
+    <button class="payment-button">
+      <span class="checkmark">✔</span>
+      <span class="button-text">Mobilepay</span>
+      <span class="image-placeholder"><img></span>
+    </button>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+  }
+  
+  .buttons-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* Adds spacing between buttons */
+  }
+
+  .payment-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 335px;
+    padding: 12px 10px;
+    border: 1px solid #90b7b6;
+    border-radius: 1px;
+    background: rgba(202, 205, 213, 0.1);
+    cursor: pointer;
+    color: #000;
+  }
+
+  .checkmark,
+  .button-text,
+  .image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Rubik;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .checkmark {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin-right: 8px;
+  }
+
+  .button-text {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .image-placeholder {
+    border: 1px dashed #007c79;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #007c79;
+    white-space: nowrap;
+
+    background-image: url("src/asset/svgimages/GenbrugSectionBackground.svg");
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    /* display: flex; */
+  }
+
+
+
+  .payment-button:hover,
+  .payment-button:focus {
+    background-color: #ffffff;
+    
+  }
+
+  .payment-button:active {
+    background-color: #d0d0d0;
+  }
+  .payment-button:focus .checkmark,
+  .payment-button:active .checkmark {
+  border-color: green; /* Changes the ring to green */
+  background-color: green; /* Fills the checkmark background with green */
+  color: white; /* Changes the checkmark symbol color to white for visibility */
+}
+
+</style>
