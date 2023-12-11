@@ -1,30 +1,16 @@
 ---
-import Footer from "../components/globalcomponents/Footer.astro";
-import "../styles/global.css";
 import Herosection from "../components/campaignsite1/Herosection.astro";
 import Introsection from "../components/campaignsite1/Introsection.astro";
 import Sevenadvices from "../components/campaignsite1/Sevenadvices.astro";
 import Fivepshort from "../components/campaignsite1/Fivepshort.astro";
 import Chatgpt from "../components/globalcomponents/Chatgpt.astro";
-import Fbutton from "../components/globalcomponents/Fbutton.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="styles/reset.css" />
-    <title>Astro</title>
-  </head>
-  <body>
-    <Chatgpt/>
-    <Herosection />
-    <Introsection />
-    <Fivepshort />
-    <Sevenadvices />
-
-    <footer><Footer /></footer>
-  </body>
-</html>
+<BaseLayout>
+  <Chatgpt />
+  <Herosection />
+  <Introsection />
+  <Fivepshort />
+  <Sevenadvices />
+</BaseLayout>
