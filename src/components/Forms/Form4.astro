@@ -1,8 +1,8 @@
 ---
+import Fbutton from "../globalcomponents/Fbutton.astro";
 import Pbuttons from "../globalcomponents/Pbuttons.astro";
 import Finput from "../globalcomponents/Finput.astro";
-import ProgIndicator3 from "./Progressbar/ProgIndicator3.astro";
-import Paybutton from "../globalcomponents/Paybutton.astro";
+import ProgIndicator4 from "./Progressbar/ProgIndicator4.astro";
 ---
 
 <section class="container">
@@ -11,30 +11,25 @@ import Paybutton from "../globalcomponents/Paybutton.astro";
       class="fs-text">Fællesskab</span
     >
   </h1>
-  <ProgIndicator3 />
+  <ProgIndicator4 />
   <form>
     <!-- Donation Type -->
     <div class="form-group">
-      <Paybutton />
-    </div>
-    <div class="form-group">
-      <label>Kortnummer</label>
-      <Finput placeholder="XXXX-XXXX-XXXX-XXXX" inputSize="100%" />
-    </div>
-    <div class="halfhalf">
-      <div class="form-group">
-        <label>Udløbsdato</label>
-        <Finput placeholder="År/Måned" inputSize="80%" />
-      </div>
-      <div class="form-group">
-        <label>Kontrolsifre</label>
-        <Finput placeholder="F.eks 121" inputSize="60%" />
-      </div>
+      <label>Information</label>
+      <p class="inputs">Stefan Vinther Heide</p>
+      <p class="inputs">Stefan@VintherHeide.dk</p>
+      <label>CPR</label>
+      <p class="inputs">Ikke angivet</p>
+      <label>Kort information</label>
+      <p class="inputs">XXXX-XXXX-XXXX-XX87</p>
+      <label>Støtte</label>
+      <p class="inputs">Månedlig.</p>
+      <p class="inputs">250kr.</p>
     </div>
 
     <!-- Submit -->
     <div class="form-group">
-      <Pbuttons title="Videre til order" size="forms" />
+      <Pbuttons title="Bekræft og betal" size="forms" />
       <p class="underknap">
         Husk! Du kan også selv indtaste dit <span class="skattefradrag"
           >skattefradrag</span
@@ -55,19 +50,13 @@ import Paybutton from "../globalcomponents/Paybutton.astro";
     text-align: left;
   }
 
-  .halfhalf {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-
   .inputs {
-    color: var(--color-secondary-graphite-dark, #1c1e23);
+    color: var(--color-secondary-graphite-medium, #70727d);
+    /* Paragraph12Normal */
     font-family: Rubik;
     font-size: 12px;
     font-style: normal;
-    font-weight: 300;
-    line-height: 40px;
+    font-weight: 400;
   }
 
   .underknap {
@@ -87,13 +76,6 @@ import Paybutton from "../globalcomponents/Paybutton.astro";
     font-style: normal;
     font-weight: 700;
     line-height: 20px;
-  }
-
-  h1,
-  p,
-  form label,
-  a {
-    font-family: Rubik;
   }
 
   h1 {
@@ -123,13 +105,15 @@ import Paybutton from "../globalcomponents/Paybutton.astro";
     padding-left: 44px;
     padding-right: 44px;
     padding-bottom: 30px;
-    color: var(--color-secondary-graphite-dark, #1c1e23);
-    font-size: 13px;
-    font-weight: 800;
+    color: var(--color-secondary-graphite-dark, #1C1E23);
+/* Paragraph12Bold */
+font-family: Rubik;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
   }
 
   .form-group {
-    display: grid;
     margin-top: 24px;
   }
 
