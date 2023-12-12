@@ -2,28 +2,11 @@
 ---
 
 <article>
-  <div class="background-svg">
-    <!-- <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="1439"
-      height="675"
-      viewBox="0 0 1439 675"
-      fill="none"
-    >
-      <path d="M0 0H1439V635.294H0V312.188V0Z" fill="#D3E2E2"></path>
-      <path
-        d="M880.883 406.136C994.645 401.682 1048.52 361.63 1162.41 358.584C1276.29 355.539 1439 429.635 1439 429.635V603.529H0V448.711C0 448.711 99.7443 368.754 189.625 368.261C237.749 367.996 259.401 390.114 307.525 390.378C377.291 390.759 403.132 355.725 471.149 346.144C631.479 323.559 716.755 412.562 880.883 406.136Z"
-        fill="#90B7B6"></path>
-      <path
-        d="M558.117 490.366C444.355 486.199 390.477 448.736 276.593 445.888C162.709 443.04 0 512.346 0 512.346V675H1439V530.189C1439 530.189 1339.26 455.4 1249.37 454.939C1201.25 454.692 1179.6 475.38 1131.48 475.626C1061.71 475.983 1035.87 443.213 967.851 434.251C807.521 413.126 722.245 496.376 558.117 490.366Z"
-        fill="#2A5F5E"></path>
-    </svg> -->
-  </div>
+  <div class="background-svg"></div>
   <div class="content">
     <h4>
       Genbrug handler om at vi skal <br />
-      <div class="pink">blive bedre og smartere</div>til at bruge jordens
-      ressourcer
+      <span class="pink">blive bedre og smartere</span> til at bruge jordens ressourcer
     </h4>
     <p>
       Dels fordi vi kun har en begrænset mængde af dem. Dels fordi det reducerer
@@ -34,81 +17,65 @@
   </div>
 </article>
 
+
 <style>
-  article {
-    max-width: 100%; /* Adjust width as needed */
-    margin: 0px auto;
-    padding: var(--spacing-text-padding-vertical, 2rem)
-      var(--spacing-text-padding-horizontal, 3rem);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    overflow: hidden;
-  }
+article {
+  max-width: 1600px; /* Set max width to 1600px */
+  margin: 0 auto; /* Center the article */
+  padding: 2rem 3rem; /* Adjust padding as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
 
+.content {
+  z-index: 1;
+  width: 100%; /* Ensure content takes full width of the container */
+  max-width: 800px; /* Set a max width for the content for better readability */
+  margin: auto; /* Center the content */
+  padding: 6rem 3rem; /* Adjust padding for content */
+  text-align: center; /* Align text to the center */
+}
+
+h4 {
+  font-family: "Poppins";
+  font-size: clamp(18px, 2vw, 48px); /* Responsive font size */
+}
+
+p {
+  color: #2a5f5e;
+  font-family: "Rubik";
+  font-size: clamp(16px, 2vw, 20px); /* Responsive font size */
+}
+
+.pink {
+  color: #e72458;
+}
+
+.background-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place background behind content */
+  background-image: url("src/asset/svgimages/GenbrugSectionBackground.svg");
+  background-size: stretch; /* Cover the entire area */
+  background-repeat: no-repeat;
+  background-position: bottom; /* Align the image to the bottom */
+}
+
+@media screen and (max-width: 750px) {
   .content {
-    z-index: 1;
-    padding: var(--spacing-text-padding-vertical, 6rem)
-      var(--spacing-text-padding-horizontal, 3rem);
-    align-items: center;
+    padding: 4rem 2rem; /* Adjust padding for smaller screens */
   }
 
-  h4 {
-    /* padding: var(--spacing-text-padding-vertical, 2rem)
-      var(--spacing-text-padding-horizontal, 3rem); */
-    width: 44.625rem;
-    font-family: "Poppins";
-    font-size: min(max(2rem, 18px), 48px);
+  h4, p {
+    width: auto; /* Allow text to adjust naturally on smaller screens */
   }
 
-  p {
-    /* padding: var(--spacing-text-padding-vertical, 2rem)
-      var(--spacing-text-padding-horizontal, 3rem); */
-    color: var(--color-complimentary-pine-green-medium, #2a5f5e);
-    width: 44.625rem;
-    font-family: "Rubik";
+}
 
-    font-size: min(max(1.25rem, 16px), 18px);
-  }
-
-  .pink {
-    color: var(--text-header-highlight-color, #e72458);
-  }
-
-  .background-svg {
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Move the background behind the content */
-
-    background-image: url("src/asset/svgimages/GenbrugSectionBackground.svg");
-    background-size: cover;
-
-    background-repeat: no-repeat;
-    /* display: flex; */
-
-    padding: var(--spacing-text-padding-vertical, 2rem)
-      var(--spacing-text-padding-horizontal, 3rem);
-    align-items: center;
-    align-content: center;
-    gap: var(--spacing-text-gap-vertical, 2rem) -8.5625rem;
-    /* flex-wrap: wrap; */
-  }
-
-  @media screen and (max-width: 750px) {
-    .content {
-      margin: 20px auto;
-    }
-
-    p {
-      width: 16.25rem;
-    }
-
-    .background-svg {
-      height: 128%;
-      width: 100%;
-    }
-  }
 </style>
