@@ -55,9 +55,17 @@
     box-sizing: border-box;
   }
 
+  h1 {
+    color: var(--text-header-1-color-pine-green-dark, #142c2b);
+    font-family: "Poppins";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
   .highlight-big {
     color: var(--text-header-highlight-color, #e72458);
-    font-family: Poppins;
+    font-family: "Poppins";
     font-size: 3.4375rem;
     font-style: normal;
     font-weight: 900;
@@ -66,7 +74,7 @@
 
   .highlight {
     color: var(--text-header-highlight-color, #e72458);
-    font-family: Poppins;
+    font-family: "Poppins";
     font-size: 2.5625rem;
     font-style: normal;
     font-weight: 900;
@@ -99,7 +107,22 @@
 
   @media (max-width: 600px) {
     .container {
+      display: grid;
       grid-template-columns: 1fr;
+      padding: var(--container-padding-top-bottom, 2rem)
+        var(--container-padding-left-right, 4rem);
+      grid-gap: 0rem;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+    }
+
+    .highlight-big {
+      font-size: 2rem;
+    }
+    .highlight {
+      font-size: 1.25rem;
     }
   }
 </style>
