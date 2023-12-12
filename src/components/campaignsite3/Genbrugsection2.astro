@@ -1,6 +1,5 @@
 ---
 ---
-
 <article>
   <div class="background-svg"></div>
   <div class="content">
@@ -17,65 +16,82 @@
   </div>
 </article>
 
-
 <style>
+
+
+
 article {
-  max-width: 1600px; /* Set max width to 1600px */
-  margin: 0 auto; /* Center the article */
-  padding: 2rem 3rem; /* Adjust padding as needed */
+  position: relative; /* Keeps positioning context */
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+  width: 80%; /* Percentage-based width for responsiveness */
+  max-width: 1439px; /* Maximum width */
+  height: auto; /* Auto height for responsiveness */
+  margin: auto; /* Centers the article horizontally */
+  overflow: hidden; /* Ensures nothing goes outside the article */
+  background-color: #d3e2e2;
 }
 
+/* Style for the background */
+.background-svg {
+  position: absolute;
+  bottom: 0; /* Position at the bottom instead of top */
+  left: 0;
+  width: 100%;
+  height: 100%; /* Adjust height as needed */
+  background-image: url("src/asset/svgimages/GenbrugSectionBackground.svg");
+  background-size: cover;
+  background-position: bottom; /* Align the background image to the bottom */
+}
+
+/* Style for the content */
 .content {
-  z-index: 1;
-  width: 100%; /* Ensure content takes full width of the container */
-  max-width: 800px; /* Set a max width for the content for better readability */
-  margin: auto; /* Center the content */
-  padding: 6rem 3rem; /* Adjust padding for content */
-  text-align: center; /* Align text to the center */
+  position: relative;
+  z-index: 1; /* Ensures the content is above the background */
+  padding: var(--spacing-text-padding-vertical, 32px) var(--spacing-text-padding-horizontal, 48px);
+  width: 100%; /* Full width of the article */
+  max-width: 828px; /* Maximum width */
+  margin: auto;
+  padding-bottom: 300px;
+}
+
+/* Style for the pink text */
+.pink {
+  color: var(--text-header-highlight-color, #e72458);
+  /* Header4 */
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 h4 {
-  font-family: "Poppins";
-  font-size: clamp(18px, 2vw, 48px); /* Responsive font size */
+  margin-bottom: 20px; /* Adjust this value as needed for spacing */
 }
 
-p {
-  color: #2a5f5e;
-  font-family: "Rubik";
-  font-size: clamp(16px, 2vw, 20px); /* Responsive font size */
+p{
+  color: var(--color-complimentary-pine-green-medium, #2A5F5E);
+/* Paragraph20Normal */
+font-family: Rubik;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 150.5%;
 }
 
-.pink {
-  color: #e72458;
-}
+/* Media Queries for smaller screens */
 
+
+@media (max-width: 480px) {
+
+}
 .background-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Place background behind content */
-  background-image: url("src/asset/svgimages/GenbrugSectionBackground.svg");
-  background-size: stretch; /* Cover the entire area */
-  background-repeat: no-repeat;
-  background-position: bottom; /* Align the image to the bottom */
+
+  height: 50%;
 }
-
-@media screen and (max-width: 750px) {
-  .content {
-    padding: 4rem 2rem; /* Adjust padding for smaller screens */
-  }
-
-  h4, p {
-    width: auto; /* Allow text to adjust naturally on smaller screens */
-  }
-
-}
-
 </style>
+
