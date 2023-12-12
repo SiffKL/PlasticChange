@@ -30,7 +30,7 @@ const { number, title, text } = Astro.props;
   .number {
     color: var(--color-complimentary-pine-green-dark, #142c2b);
     font-family: Rubik;
-    font-size: 100px;
+    font-size: clamp(50px, 5vw, 80px); /* Scales between 50px and 80px */
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -38,7 +38,7 @@ const { number, title, text } = Astro.props;
   .heading {
     color: var(--color-complimentary-pine-green-dark, #142c2b);
     font-family: Rubik;
-    font-size: 32px;
+    font-size: clamp(20px, 4vw, 36px); /* Scales between 20px and 36px */
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -47,7 +47,7 @@ const { number, title, text } = Astro.props;
     color: var(--color-complimentary-pine-green-medium, #2a5f5e);
     /* Paragraph20Medium */
     font-family: Rubik;
-    font-size: 20px;
+    font-size: clamp(16px, 3vw, 20px); /* Scales between 16px and 24px */
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 30px */

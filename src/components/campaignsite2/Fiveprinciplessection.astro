@@ -2,6 +2,7 @@
 import OnePrinc from "../globalcomponents/OnePrinc.astro";
 ---
 <section>
+  <div class="content">
 <OnePrinc
   number="1"
   title="Vi er ikke imod plastik"
@@ -30,15 +31,29 @@ import OnePrinc from "../globalcomponents/OnePrinc.astro";
   title="Vi tror på at engagement driver forandring"
   text="Vi har lyst til at gøre en forskel, og tror på at vores handlinger og ord er med til at skabe en positiv forandring, der kan inspirere andre. Mange gange er det de små ting, som kan gøre den store forskel - selv en lille indsats kan være med til at skabe store resultater."
 />
+</div>
 </section>
 
 <style>
 section {
-  background-image: url("src/asset/svgimages/WavesBottles.svg");
-  background-position: center; /* Center the image */
+  max-width: 1650px; /* Maximum width of the section */
+  margin: auto; /* Center the section */
+  background-image: url("src/asset/svgimages/FiveprincipBG.svg");
+  background-size: cover; /* Cover the entire section */
+  background-position: bottom; /* Center the image in the section */
   background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-size: auto 100%; /* Fit the image height to the section height */
 }
+
+.content {
+  padding-bottom: 600px; /* Adding padding to the bottom */
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding-bottom: 300px; /* Adjust padding for smaller screens */
+  }
+}
+
 </style>
 
 

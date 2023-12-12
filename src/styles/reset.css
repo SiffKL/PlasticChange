@@ -1,130 +1,4 @@
-/* -------- Poppins -------- */
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 100;
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-}
 
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 200;
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 300;
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 800;
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 900;
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-}
-
-/* -------- Rubik ---------- */
-@font-face {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 100;
-  src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 200;
-  src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 300;
-  src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 500;
-  src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 600;
-  src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 700;
-  src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 800;
-  src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
-}
-
-@font-face {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 900;
-  src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
-}
 
 *,
 *::before,
@@ -170,15 +44,30 @@ ol:where([role="list"]) {
   padding: 0;
 }
 
+li{
+  color: var(--color-complimentary-pine-green-medium, #2A5F5E);
+
+/* Paragraph20Normal */
+font-family: Rubik;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 150.5%; /* 30.1px */
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
-  overflow-wrap: break-word;
-  font-size: initial;
+  font-family: "Poppins";
+}
+
+h2{
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 p {
