@@ -1,26 +1,28 @@
 ---
 ---
 
-<div class="nav">
-  <a href="/"><img src="src/asset/icons/logo.svg" alt="" /></a>
+<section>
+  <div class="nav">
+    <a href="/"><img src="src/asset/icons/logo.svg" alt="" /></a>
 
-  <ul>
-    <li>
-      <a class="basiclink" href="/defemprincipper"
-        >De 5 Principper</a
-      >
-    </li>
-    <li>
-      <a class="basiclink" href="/hvorforgenbrug"
-        >Hvorfor Genbrug?</a
-      >
-    </li>
-    <li>
-      <a class="pinklink" href="/forms"
-        >Bliv en Plastic Changer</a>
-    </li>
-  </ul>
-</div>
+    <div class="burger-menu">☰</div>
+    <div class="close-icon">✕</div>
+
+    <ul>
+      <li>
+        <a class="basiclink" href="/defemprincipper">De 5 Principper</a>
+      </li>
+      <li>
+        <a class="basiclink" href="/hvorforgenbrug">Hvorfor Genbrug?</a>
+      </li>
+      <li>
+        <a class="pinklink" href="src/pages/index.astro"
+          >Bliv en Plastic Changer</a
+        >
+      </li>
+    </ul>
+  </div>
+</section>
 
 <style>
   .nav {
@@ -88,6 +90,91 @@
     line-height: 150%; /* 1.875rem */
   }
 
+  /* ----------- ama herfra ----------- */
+
+  section {
+    margin: 0;
+    padding: 0;
+  }
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
+
+  .close-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
+
   @media (max-width: 1200px) {
+    .burger-menu {
+      display: block;
+      /* order: 3;  */
+    }
+
+    .close-icon {
+      display: none;
+      /* order: 3;  */
+    }
+
+    .nav {
+      margin: 0rem;
+      display: flex;
+      padding: var(--nav-padding-vertical, 0rem)
+        var(--nav-padding-horizontal, 3.5rem);
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+    }
+
+    .nav img {
+      width: 8.93525rem;
+      height: 2.60444rem;
+      /* order: 1;  */
+    }
+
+    .nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background-color: var(--color-secondary-white, #fff);
+      z-index: 10;
+    }
+
+    .nav.open ul {
+      display: flex;
+    }
+
+    .nav.open .burger-menu {
+      display: none;
+    }
+
+    .nav.open .close-icon {
+      display: block;
+    }
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.querySelector(".nav");
+    const burgerMenu = document.querySelector(".burger-menu");
+    const closeIcon = document.querySelector(".close-icon");
+    const menuList = document.querySelector(".nav ul");
+
+    burgerMenu.addEventListener("click", function () {
+      nav.classList.toggle("open");
+    });
+
+    closeIcon.addEventListener("click", function () {
+      nav.classList.remove("open");
+    });
+  });
+</script>
