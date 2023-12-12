@@ -31,7 +31,7 @@ import Pbuttons from "../globalcomponents/Pbuttons.astro";
   grid-column: 1 / 2; /* Ensuring background image is in the first column */
   background-image: url("src/asset/svgimages/HeroBackground.svg");
   background-size: cover; /* Cover the available space */
-  background-position: bottom left; /* Align the bottom of the image */
+  background-position: left; /* Align the bottom of the image */
   background-repeat: no-repeat;
   max-width: 100%;
 }
@@ -48,7 +48,7 @@ h1, p, Pbuttons {
 h1 {
   color: var(--text-header-1-color-pine-green-dark, #142c2b);
   font-family: Poppins;
-  font-size: 48px;
+  font-size: clamp(32px, 4vw, 48px); 
   font-weight: 300;
 }
 
@@ -59,7 +59,7 @@ span {
 p {
   color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
   font-family: Rubik;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px); /* Adjusts between 16px and 20px */
   line-height: 150.5%;
 }
 
@@ -72,22 +72,17 @@ p {
     grid-column: 1; /* Adjust column for background image */
     min-height: 400px; /* Set a minimum height for visibility */
     background-image: url("src/asset/svgimages/mobielBG.svg");
+    background-position: bottom; /* Align the bottom of the image */
+
 
   }
 
   .textcontainer {
-    grid-column: 1; /* Adjust column for text container */
+    grid-column: 1; 
     padding: var(--spacing-section-padding-horzontal, 32px) var(--spacing-section-padding-vertical, 20px);
     padding-top: 0;
   }
 
-  h1 {
-    font-size: 32px; /* Smaller font size for smaller screens */
-  }
-
-  p {
-    font-size: 16px; /* Smaller font size for smaller screens */
-  }
 }
 
 
