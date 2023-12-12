@@ -1,45 +1,34 @@
 ---
 import Fbutton from "../globalcomponents/Fbutton.astro";
 import Pbuttons from "../globalcomponents/Pbuttons.astro";
-import Finput from "../globalcomponents/Finput.astro"
+import Finput from "../globalcomponents/Finput.astro";
+import ProgIndicator4 from "./Progressbar/ProgIndicator4.astro";
+import Sbuttons from "../globalcomponents/Sbuttons.astro";
 ---
 
 <section class="container">
   <h1>
-    Bliv en <span class="pc-text">Plastic Changer</span> i dag og kæmp i <span class="fs-text">Fællesskab</span>
+    Tilykke! du er nu en <span class="pc-text">Plastic Changer</span> velkommen til <span
+      class="fs-text">Fællesskab</span>
   </h1>
-  <p>Være med til at redde verdenhavene for plastikaffald, ved at give en donation</p>
 
   <form>
     <!-- Donation Type -->
     <div class="form-group">
-      <label>Hvad vil du støtte med?</label>
-      <div class="inline">
-        <Fbutton id="Btn1" title="Engang" />
-        <Fbutton id="Btn2" title="Månedlig" />
-      </div>
-    </div>
-
-    <!-- Donation Amount -->
-    <div class="form-group">
-      <label>Vælg beløb</label>
-      <div class="inline">
-        <Fbutton id="Btn3" title="50kr" />
-        <Fbutton id="Btn4" title="100kr" />
-        <Fbutton id="Btn5" title="200kr" />
-      </div>
-      <Finput placeholder="Skriv dit beløb..." inputSize="98%" />
+      <label>Tusind tak for dit bidrag!</label>
+      <p>Vi byder dig hjerteligt velkommen som nyt medlem i Plastic Changer-fællesskabet - tak for at være med til at gøre en forskel i at støtte denne vigtige sag! </p>
     </div>
 
     <!-- Submit -->
+    <Pbuttons title="Tilmeld dig til vores nyhedsbrev" size="forms" />
+    <p class="underknap">
+        Vi sender kun væsentlig information, der direkte relaterer til vores mission om at ændre plastikvaner.  Din tid og engagement er værdifulde for os.
+      </p>
     <div class="form-group">
-      <Pbuttons title="Støt nu" size="forms" />
-      <p class="underknap">Vidste du, at dit bidrag er berettiget til skattefradrag?</p>
-      <a href="#">Læs mere her</a>
+      <Sbuttons title="Tilbage til forsiden" size="forms"/>
     </div>
   </form>
 </section>
-
 
 <style>
   .container {
@@ -49,6 +38,15 @@ import Finput from "../globalcomponents/Finput.astro"
     background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
     border-radius: 5px;
     text-align: left;
+  }
+
+  .inputs {
+    color: var(--color-secondary-graphite-medium, #70727d);
+    /* Paragraph12Normal */
+    font-family: Rubik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
   }
 
   .underknap {
@@ -68,13 +66,6 @@ import Finput from "../globalcomponents/Finput.astro"
     font-style: normal;
     font-weight: 700;
     line-height: 20px;
-  }
-
-  h1,
-  p,
-  form label,
-  a {
-    font-family: Rubik;
   }
 
   h1 {
@@ -104,9 +95,12 @@ import Finput from "../globalcomponents/Finput.astro"
     padding-left: 44px;
     padding-right: 44px;
     padding-bottom: 30px;
-    color: var(--color-secondary-graphite-dark, #1c1e23);
-    font-size: 13px;
-    font-weight: 800;
+    color: var(--color-secondary-graphite-dark, #1C1E23);
+/* Paragraph12Bold */
+font-family: Rubik;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
   }
 
   .form-group {
@@ -133,5 +127,4 @@ import Finput from "../globalcomponents/Finput.astro"
     color: #fff;
   }
 </style>
-<script>
-</script>
+<script></script>

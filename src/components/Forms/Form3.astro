@@ -1,45 +1,49 @@
 ---
-import Fbutton from "../globalcomponents/Fbutton.astro";
 import Pbuttons from "../globalcomponents/Pbuttons.astro";
-import Finput from "../globalcomponents/Finput.astro"
+import Finput from "../globalcomponents/Finput.astro";
+import ProgIndicator3 from "./Progressbar/ProgIndicator3.astro";
+import Paybutton from "../globalcomponents/Paybutton.astro";
 ---
 
 <section class="container">
   <h1>
-    Bliv en <span class="pc-text">Plastic Changer</span> i dag og kæmp i <span class="fs-text">Fællesskab</span>
+    Bliv en <span class="pc-text">Plastic Changer</span> i dag og kæmp i <span
+      class="fs-text">Fællesskab</span
+    >
   </h1>
-  <p>Være med til at redde verdenhavene for plastikaffald, ved at give en donation</p>
-
+  <ProgIndicator3 />
   <form>
     <!-- Donation Type -->
     <div class="form-group">
-      <label>Hvad vil du støtte med?</label>
-      <div class="inline">
-        <Fbutton id="Btn1" title="Engang" />
-        <Fbutton id="Btn2" title="Månedlig" />
-      </div>
+      <Paybutton />
     </div>
-
-    <!-- Donation Amount -->
     <div class="form-group">
-      <label>Vælg beløb</label>
-      <div class="inline">
-        <Fbutton id="Btn3" title="50kr" />
-        <Fbutton id="Btn4" title="100kr" />
-        <Fbutton id="Btn5" title="200kr" />
+      <label>Kortnummer</label>
+      <Finput placeholder="XXXX-XXXX-XXXX-XXXX" inputSize="100%" />
+    </div>
+    <div class="halfhalf">
+      <div class="form-group">
+        <label>Udløbsdato</label>
+        <Finput placeholder="År/Måned" inputSize="80%" />
       </div>
-      <Finput placeholder="Skriv dit beløb..." inputSize="98%" />
+      <div class="form-group">
+        <label>Kontrolsifre</label>
+        <Finput placeholder="F.eks 121" inputSize="60%" />
+      </div>
     </div>
 
     <!-- Submit -->
     <div class="form-group">
-      <Pbuttons title="Støt nu" size="forms" />
-      <p class="underknap">Vidste du, at dit bidrag er berettiget til skattefradrag?</p>
+      <Pbuttons title="Videre til order" size="forms" />
+      <p class="underknap">
+        Husk! Du kan også selv indtaste dit <span class="skattefradrag"
+          >skattefradrag</span
+        > når du intaster din selvangivelse hos skat.
+      </p>
       <a href="#">Læs mere her</a>
     </div>
   </form>
 </section>
-
 
 <style>
   .container {
@@ -49,6 +53,21 @@ import Finput from "../globalcomponents/Finput.astro"
     background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
     border-radius: 5px;
     text-align: left;
+  }
+
+  .halfhalf {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .inputs {
+    color: var(--color-secondary-graphite-dark, #1c1e23);
+    font-family: Rubik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 40px;
   }
 
   .underknap {
@@ -110,6 +129,7 @@ import Finput from "../globalcomponents/Finput.astro"
   }
 
   .form-group {
+    display: grid;
     margin-top: 24px;
   }
 
@@ -133,5 +153,4 @@ import Finput from "../globalcomponents/Finput.astro"
     color: #fff;
   }
 </style>
-<script>
-</script>
+<script></script>

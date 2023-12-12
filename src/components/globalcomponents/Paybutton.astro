@@ -1,0 +1,101 @@
+---
+---
+
+<section>
+  <h1>Betal med kort eller med Mobilepay</h1>
+  <div class="buttons-group">
+    <button class="payment-button" type="button">
+      <span class="checkmark">✔</span>
+      <span class="button-text">Creditcard</span>
+      <span
+        class="image-placeholder"
+        style="background-image: url('src/asset/icons/MobilePayLogo.svg');"
+      ></span>
+    </button>
+
+    <button class="payment-button" type="button">
+      <span class="checkmark">✔</span>
+      <span class="button-text">MobilePay</span>
+      <span
+        class="image-placeholder"
+        style="background-image: url('src/asset/icons/CardLogoContainer.svg');"
+      ></span>
+    </button>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttons-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* Adds spacing between buttons */
+  }
+
+  .payment-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 335px;
+    padding: 12px 10px;
+    border: 1px solid #90b7b6;
+    border-radius: 1px;
+    background: transparent;
+    color: #000;
+  }
+
+  .checkmark,
+  .button-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Rubik;
+    font-size: 16px;
+    line-height: 150%;
+    margin-right: 8px;
+  }
+
+  .checkmark {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #000;
+  }
+
+  .button-text {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .image-placeholder {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .payment-button:hover,
+  .payment-button:focus {
+    background-color: rgba(20, 44, 43, 0.1);
+  }
+
+  .payment-button:focus .checkmark,
+  .payment-button:active .checkmark {
+    border-color: green;
+    background-color: green;
+    color: white;
+  }
+</style>
