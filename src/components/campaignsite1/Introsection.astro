@@ -8,58 +8,49 @@
       Selvom en stor del af ansvaret i forhold til de menneskeskabte
       klimaforandringer ligger hos politikere såvel som industrier, kan vi hver
       især gøre vores for at mindske og forbedre det klimaaftryk, som vi
-      efterlader på Jorden til kommende generationer. For de mange små skridt,
-      vi i fællesskab kan tage mod en mere bæredygtig fremtid, kan danne grobund
-      og vise retningen for andre, der på samme vis ønsker at følge et grønnere
-      spor.
+      efterlader på Jorden til kommende generationer.
+    </p>
+    <p>
+      For de mange små skridt, vi i fællesskab kan tage mod en mere bæredygtig
+      fremtid, kan danne grobund og vise retningen for andre, der på samme vis
+      ønsker at følge et grønnere spor.
     </p>
   </div>
 </section>
 
+
 <style>
-  section {
-    display: flex;
-    width: 100vw;
-    height: 39.0625rem;
-    padding: var(--spacing-section-padding-vertical, 5rem);
-    padding-top: 0;
-    padding-bottom: 0;
-    justify-content: center;
-    align-items: center;
-    gap: var(--size-96, 6rem);
-  }
+ section {
+  display: flex;
+  width: 100vw;
+  height: 39.0625rem;
+  padding: var(--spacing-section-padding-vertical, 5rem) 0;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-96, 6rem);
+}
 
-  .contentscontainer {
-    display: flex;
-    padding: var(--spacing-text-padding-vertical, 2rem)
-      var(--spacing-text-padding-horizontal, 3rem);
-    align-items: center;
-    align-content: center;
-    gap: var(--spacing-text-gap-vertical, 2rem);
-    flex-wrap: wrap;
-  }
+.contentcontainer {
+  display: flex;
+  flex-direction: column; /* To stack items vertically */
+  padding: var(--spacing-text-padding-vertical, 2rem) var(--spacing-text-padding-horizontal, 3rem);
+  align-items: center;
+  gap: var(--spacing-text-gap-vertical, 2rem);
+}
 
-  p {
-    color: var(--text-paragraph-graphitedark, #1c1e23);
+p {
+  color: var(--text-paragraph-graphitemedium, #70727D);
+  font-family: Rubik;
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 400;
+  line-height: 150.5%;
+}
 
-    /* Paragraph20Normal */
-    font-family: Rubik;
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150.5%; /* 1.88125rem */
-    width: 42.4375rem;
-  }
+h4 {
+  color: var(--text-header-1-color-pine-green-dark, #142C2B);
+  font-family: Poppins;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+}
 
-  h4 {
-    color: var(--text-paragraph-graphitedark, #1c1e23);
-    font-family: Poppins;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    width: 31.5625rem;
-    height: 5.6875rem;
-    flex-shrink: 0;
-  }
 </style>
