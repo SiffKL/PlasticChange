@@ -98,6 +98,16 @@ import Pbuttons from "../globalcomponents/Pbuttons.astro";
     line-height: 1.5;
   }
 
+  @media screen and (max-width: 800px) {
+    article {
+      padding: var(--spacing-section-padding-vertical, 40px) var(--spacing-section-padding-horzontal, 64px);
+    }
+    .input-group {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-form-elements-horizontal-gab, 12px);
+    }
+  }
+
   @media screen and (max-width: 600px) {
     .input-group {
       grid-template-columns: 1fr;

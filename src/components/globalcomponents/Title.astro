@@ -14,17 +14,16 @@ const { manchet, bigred, text } = Astro.props;
   :root {
     --spacing-vertical: 32px;
     --spacing-horizontal: 128px;
-    --text-gap-vertical: 32px;
     --header-color: #000;
     --highlight-color: #e72458;
     --paragraph-color: #2a5f5e;
   }
 
   article {
-    max-width: 100%; /* Adjust width as needed */
-    margin: 0px auto;
-    padding: var(--spacing-text-padding-vertical, 6rem)
-      var(--spacing-section-padding-horzontal, 14rem);
+    max-width: 100%;
+    margin: 0 auto;
+    margin-left: 10%;
+    padding: var(--spacing-vertical) var(--spacing-horizontal);
   }
 
   .header-text {
@@ -34,17 +33,11 @@ const { manchet, bigred, text } = Astro.props;
   }
 
   h1.header-text {
-    font-size: min(
-      max(5vw, 38px),
-      80px
-    ); /* Responsive font size with a min of 38px and max of 60px */
+    font-size: clamp(38px, 5vw, 80px);
   }
 
   h2.header-text {
-    font-size: min(
-      max(3vw, 18px),
-      48px
-    ); /* Responsive font size with a min of 18px and max of 40px */
+    font-size: clamp(18px, 3vw, 48px);
     font-weight: 900;
   }
 
@@ -55,12 +48,16 @@ const { manchet, bigred, text } = Astro.props;
   .main-text {
     color: var(--paragraph-color);
     font-family: "Rubik", sans-serif;
-    font-size: min(
-      max(1.5vw, 16px),
-      18px
-    ); /* Responsive font size with a min of 16px and max of 24px */
+    font-size: clamp(16px, 1.5vw, 18px);
     font-weight: 500;
     line-height: 1.5;
-    max-width: 60ch; /* Adjust as needed */
+    max-width: 60ch;
+  }
+
+  @media (max-width: 1000px) {
+    article {
+      padding: var(--spacing-vertical) calc(var(--spacing-horizontal) / 2);
+      margin-left: 0;
+    }
   }
 </style>

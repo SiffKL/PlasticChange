@@ -1,17 +1,18 @@
 ---
-import Footer from "../components/globalcomponents/Footer.astro";
-import Nav from "../components/globalcomponents/Nav.astro";
-import Faktabox from "../components/campaignsite2/Faktabox.astro";
 import Fiveprinciplessection from "../components/campaignsite2/Fiveprinciplessection.astro";
 import Newsletterform from "../components/campaignsite2/Newsletterform.astro";
 import VersusSection from "../components/campaignsite2/VersusSection.astro";
-import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Title from "../components/globalcomponents/Title.astro";
 ---
-<BaseLayout > 
-<Faktabox />
-    <Fiveprinciplessection />
-    <Newsletterform />
-    <Faktabox />
-    <VersusSection />
-  </BaseLayout>
+
+<BaseLayout>
+  <Title
+    manchet="Som plastic changer har vi"
+    bigred="5 principper"
+    text="Alle, der er med til at sætte fokus på plastik dagsordenen er i princippet en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring i retningen mod ansvarlig brug af plastik."
+  />
+  <Fiveprinciplessection />
+  <Newsletterform />
+  <VersusSection />
+</BaseLayout>
