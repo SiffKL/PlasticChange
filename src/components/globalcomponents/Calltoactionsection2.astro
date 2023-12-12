@@ -1,65 +1,73 @@
 ---
 import Pbuttons from "./Pbuttons.astro";
+const { head, text, list1, list2, list3 } = Astro.props;
+
 ---
 
 <section class="stotsection">
   <div class="container">
-    <h3>Vi bruger dit bidrag med omtanke</h3>
+    <h3>{head}</h3>
     <p>
-      Forandring starter i det små, og selv det mindste skridt er et skridt i
-      den rigtige retning. Dit bidrag går til:
+      {text}
     </p>
     <ul>
-      <li>70% Projektstyring og administration</li>
-      <li>22% Fundraising og indsamlinger</li>
-      <li>8% Hav- og miljøindsatser</li>
+      <li>{list1}</li>
+      <li>{list2}</li>
+      <li>{list3}</li>
     </ul>
     <Pbuttons title="Støt nu" size="large" />
   </div>
 </section>
 
 <style>
-  h3 {
-    font-family: "Poppins";
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
+ .stotsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
+  padding: var(--spacing-section-padding-vertical, 5rem) var(--spacing-section-onecollum-padding-horizontal, 21.875rem);
+}
 
-  p,
-  ul {
-    color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
-    /* Paragraph16Light */
-    font-family: "Rubik";
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 1.5rem */
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+  gap: var(--spacing-text-gap-vertical, 2rem);
+  width: 46.375rem;
+  margin: 0 auto; /* Center container */
+  padding: 0 1rem; /* Add padding for responsiveness */
+}
 
-  ul,
-  li {
-    list-style: none;
-    padding: 0;
+h3 {
+  font-family: "Poppins";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+p, ul {
+  color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: auto; /* Adjust width for smaller screens */
+    padding: 0 10px; /* Adjust padding for smaller screens */
   }
 
   .stotsection {
-    display: flex;
-    max-height: 32;
-    padding: var(--spacing-section-padding-vertical, 5rem)
-      var(--spacing-section-onecollum-padding-horizontal, 21.875rem);
-    justify-content: center;
-    align-items: center;
-    background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
+    padding: var(--spacing-section-padding-vertical, 5rem) 2rem; /* Adjust section padding for smaller screens */
   }
-  .container {
-    width: 46.375rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-text-gap-vertical, 2rem)
-      var(--spacing-text-padding-horizontal, 3rem);
-    align-self: stretch;
-  }
+}
 </style>
