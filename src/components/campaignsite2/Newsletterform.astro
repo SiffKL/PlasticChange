@@ -18,7 +18,9 @@ import Pbuttons from "../globalcomponents/Pbuttons.astro";
           placeholder="name@domain.com"
           inputSize="100%"
         />
-        <Pbuttons title="Tilmeld dig" size="forms" />
+        <a class="no-style" href="/nyhedsbrevend">
+          <Pbuttons title="Tilmeld dig" size="forms" />
+        </a>
       </div>
       <p>
         Vi sender kun væsentlig information, der direkte relaterer til vores
@@ -98,9 +100,16 @@ import Pbuttons from "../globalcomponents/Pbuttons.astro";
     line-height: 1.5;
   }
 
+  .no-style {
+    list-style: none;
+    text-decoration: none;
+    text-decoration-line: none;
+  }
+
   @media screen and (max-width: 800px) {
     article {
-      padding: var(--spacing-section-padding-vertical, 40px) var(--spacing-section-padding-horzontal, 64px);
+      padding: var(--spacing-section-padding-vertical, 40px)
+        var(--spacing-section-padding-horzontal, 64px);
     }
     .input-group {
       grid-template-columns: 1fr;
