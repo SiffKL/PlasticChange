@@ -8,24 +8,32 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
 
 <section class="container">
   <h1>
-    Tilykke! du er nu en <span class="pc-text">Plastic Changer</span> velkommen til <span
-      class="fs-text">Fællesskab</span>
+    Tilykke! du er nu en <span class="pc-text">Plastic Changer</span> velkommen til
+    <span class="fs-text">Fællesskab</span>
   </h1>
 
   <form>
     <!-- Donation Type -->
     <div class="form-group">
       <label>Tusind tak for dit bidrag!</label>
-      <p>Vi byder dig hjerteligt velkommen som nyt medlem i Plastic Changer-fællesskabet - tak for at være med til at gøre en forskel i at støtte denne vigtige sag! </p>
+      <p>
+        Vi byder dig hjerteligt velkommen som nyt medlem i Plastic
+        Changer-fællesskabet - tak for at være med til at gøre en forskel i at
+        støtte denne vigtige sag!
+      </p>
     </div>
 
     <!-- Submit -->
     <Pbuttons title="Til Nyhedsbrev" size="forms" />
     <p class="underknap">
-        Vi sender kun væsentlig information, der direkte relaterer til vores mission om at ændre plastikvaner.  Din tid og engagement er værdifulde for os.
-      </p>
+      Vi sender kun væsentlig information, der direkte relaterer til vores
+      mission om at ændre plastikvaner. Din tid og engagement er værdifulde for
+      os.
+    </p>
     <div class="form-group">
-      <Sbuttons title="Tilbage til forsiden" size="forms"/>
+      <a class="no-style" href="/index.astro">
+        <Sbuttons title="Tilbage til forsiden" size="forms" />
+      </a>
     </div>
   </form>
 </section>
@@ -95,12 +103,12 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
     padding-left: 44px;
     padding-right: 44px;
     padding-bottom: 30px;
-    color: var(--color-secondary-graphite-dark, #1C1E23);
-/* Paragraph12Bold */
-font-family: Rubik;
-font-size: 12px;
-font-style: normal;
-font-weight: 600;
+    color: var(--color-secondary-graphite-dark, #1c1e23);
+    /* Paragraph12Bold */
+    font-family: Rubik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
   }
 
   .form-group {
@@ -125,6 +133,12 @@ font-weight: 600;
   .highlighted {
     background: #357a79;
     color: #fff;
+  }
+
+  .no-style {
+    list-style: none;
+    text-decoration: none;
+    text-decoration-line: none;
   }
 </style>
 <script></script>

@@ -12,7 +12,9 @@ import OnePrinc from "../globalcomponents/OnePrinc.astro";
       en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring
       i retningen mod ansvarlig brug af plastik.
     </p>
-    <Sbuttons title="Læs mere om principperne" , size="large" />
+    <a class="no-style" href="/defemprincipper">
+      <Sbuttons title="Læs mere om principperne" , size="large" />
+    </a>
   </secion>
   <section class="centercontent">
     <div class="fiveprincipshort">
@@ -166,6 +168,11 @@ import OnePrinc from "../globalcomponents/OnePrinc.astro";
     line-height: normal;
   }
 
+  .no-style {
+    list-style: none;
+    text-decoration: none;
+    text-decoration-line: none;
+  }
   @media only screen and (max-width: 900px) {
     .homepagesection2 {
       background-image: url("src/asset/svgimages/WavesPage1.svg");

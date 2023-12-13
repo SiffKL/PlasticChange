@@ -15,75 +15,80 @@ import Pbuttons from "../globalcomponents/Pbuttons.astro";
       vores forhold til plastik. Er du klar til at tage skridtet mod en grønnere
       og mere ansvarlig fremtid?
     </p>
-
-    <Pbuttons title="Støt nu"  size="large"/>
+    <a class="no-style" href="/forms">
+      <Pbuttons title="Støt nu" size="large" />
+    </a>
   </div>
 </section>
 
 <style>
-.grid {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
-}
-
-.backgroundimg {
-  grid-column: 1 / 2; /* Ensuring background image is in the first column */
-  background-image: url("src/asset/svgimages/HeroBackground.svg");
-  background-size: cover; /* Cover the available space */
-  background-position: left; /* Align the bottom of the image */
-  background-repeat: no-repeat;
-  max-width: 100%;
-}
-
-.textcontainer {
-  grid-column: 2 / 3; /* Ensuring text content is in the second column */
-  padding: var(--spacing-section-padding-horzontal, 128px) var(--spacing-section-padding-vertical, 80px);
-}
-
-h1, p, Pbuttons {
-  margin-bottom: var(--spacing-text-gap-vertical, 32px);
-}
-
-h1 {
-  color: var(--text-header-1-color-pine-green-dark, #142c2b);
-  font-family: Poppins;
-  font-size: clamp(32px, 4vw, 48px); 
-  font-weight: 300;
-}
-
-span {
-  font-weight: 700;
-}
-
-p {
-  color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
-  font-family: Rubik;
-  font-size: clamp(16px, 2vw, 20px); /* Adjusts between 16px and 20px */
-  line-height: 150.5%;
-}
-
-@media (max-width: 1300px) {
   .grid {
-    grid-template-columns: 1fr; /* Stack elements on smaller screens */
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
   }
 
   .backgroundimg {
-    grid-column: 1; /* Adjust column for background image */
-    min-height: 400px; /* Set a minimum height for visibility */
-    background-image: url("src/asset/svgimages/mobielBG.svg");
-    background-position: bottom; /* Align the bottom of the image */
-
-
+    grid-column: 1 / 2; /* Ensuring background image is in the first column */
+    background-image: url("src/asset/svgimages/HeroBackground.svg");
+    background-size: cover; /* Cover the available space */
+    background-position: left; /* Align the bottom of the image */
+    background-repeat: no-repeat;
+    max-width: 100%;
   }
 
   .textcontainer {
-    grid-column: 1; 
-    padding: var(--spacing-section-padding-horzontal, 32px) var(--spacing-section-padding-vertical, 20px);
-    padding-top: 0;
+    grid-column: 2 / 3; /* Ensuring text content is in the second column */
+    padding: var(--spacing-section-padding-horzontal, 128px)
+      var(--spacing-section-padding-vertical, 80px);
   }
 
-}
+  h1,
+  p,
+  Pbuttons {
+    margin-bottom: var(--spacing-text-gap-vertical, 32px);
+  }
 
+  h1 {
+    color: var(--text-header-1-color-pine-green-dark, #142c2b);
+    font-family: Poppins;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 300;
+  }
 
+  span {
+    font-weight: 700;
+  }
+
+  p {
+    color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
+    font-family: Rubik;
+    font-size: clamp(16px, 2vw, 20px); /* Adjusts between 16px and 20px */
+    line-height: 150.5%;
+  }
+
+  .no-style {
+    list-style: none;
+    text-decoration: none;
+    text-decoration-line: none;
+  }
+  @media (max-width: 1300px) {
+    .grid {
+      grid-template-columns: 1fr; /* Stack elements on smaller screens */
+    }
+
+    .backgroundimg {
+      grid-column: 1; /* Adjust column for background image */
+      min-height: 400px; /* Set a minimum height for visibility */
+      background-image: url("src/asset/svgimages/mobielBG.svg");
+      background-position: bottom; /* Align the bottom of the image */
+    }
+
+    .textcontainer {
+      grid-column: 1;
+      padding: var(--spacing-section-padding-horzontal, 32px)
+        var(--spacing-section-padding-vertical, 20px);
+      padding-top: 0;
+    }
+  }
 </style>
