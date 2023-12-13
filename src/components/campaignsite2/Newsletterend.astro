@@ -1,0 +1,105 @@
+---
+import Sbuttons from "../globalcomponents/Sbuttons.astro";
+---
+
+<section class="desk">
+  <div>
+    <h2>Tak, fordi du har lyst til at modtage vores nyhedsbrev!</h2>
+    <p>
+      Vi har registreret din email og du vil inden længe <br />
+      modtage en mail fra os
+    </p>
+    <a class="no-style space" href="/defemprincipper">
+      <Sbuttons title="Tilbage" size="large" />
+    </a>
+  </div>
+</section>
+<section class="mobile-news">
+  <div class="mob-div">
+    <h2>Tak, fordi du har lyst til at modtage vores nyhedsbrev!</h2>
+    <p>
+      Vi har registreret din email og du vil inden længe <br />
+      modtage en mail fra os
+    </p>
+    <div class="container">
+      <img
+        src="src/asset/svgimages/hval-flaske-illustration-webp.webp"
+        alt="whale in a bottle"
+      />
+    </div>
+    <a class="no-style space" href="/defemprincipper">
+      <Sbuttons title="Tilbage" size="large" />
+    </a>
+  </div>
+</section>
+
+<style>
+  .desk {
+    display: flex;
+    max-width: 1440px;
+    padding: var(--spacing-section-padding-vertical, 80px)
+      var(--spacing-section-padding-horzontal, 128px);
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Added to ensure centering */
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+  p {
+    color: var(--color-complimentary-pine-green-normal, #007c79);
+    margin-bottom: 3rem;
+  }
+
+  div {
+    max-width: 742px;
+    text-align: left;
+    color: var(--pine-green-dark);
+    gap: var(--spacing-text-gap-vertical, 2rem);
+  }
+
+  .mobile-news {
+    display: none;
+  }
+
+  .no-style {
+    list-style: none;
+    text-decoration: none;
+    text-decoration-line: none;
+  }
+
+  .space {
+    padding-top: 2rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    .desk {
+      display: none;
+    }
+
+    .mobile-news {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mob-div {
+      display: flex;
+      flex-direction: column;
+      padding: var(--container-padding-top-bottom, 2rem)
+        var(--container-padding-left-right, 4rem);
+      gap: var(--container-padding-between-elements, 1.5rem);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mobile-news img {
+      /* max-height: 19.4375rem; */
+      max-width: 16.125rem;
+    }
+  }
+</style>
