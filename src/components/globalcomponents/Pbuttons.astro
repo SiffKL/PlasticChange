@@ -2,12 +2,9 @@
 const { title, size } = Astro.props;
 ---
 
-
-  <button data-size={size}>{title}</button>
-
+<button data-size={size}>{title}</button>
 
 <style>
-
   button {
     padding: var(--button-padding-vertical, 1rem)
       var(--button-padding-horizontal, 2rem);
@@ -16,8 +13,8 @@ const { title, size } = Astro.props;
     color: var(--color-secondary-white, #fff);
     border: none;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    font-family: Rubik;
-    min-width: 235px;
+    font-family: "Rubik";
+    min-width: 14.688rem;
   }
 
   button:hover {
@@ -31,6 +28,7 @@ const { title, size } = Astro.props;
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
+    font-family: "Rubik";
   }
 
   [data-size="forms"] {
@@ -44,5 +42,6 @@ const { title, size } = Astro.props;
     margin-top: 8px;
     margin-right: 8px;
     border-radius: 5px;
+    font-family: "Rubik";
   }
 </style>
