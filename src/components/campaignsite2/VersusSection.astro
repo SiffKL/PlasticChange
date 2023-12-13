@@ -46,7 +46,9 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
       Forstå hvorfor, at omfattende genbrugssystemer er en af de mest effektive
       løsninger til at løse plastikkrisen.
     </p>
-    <Sbuttons title="Mere om genbrug" size="large" />
+    <a class="no-style" href="/hvorforgenbrug"
+      ><Sbuttons title="Mere om genbrug" size="large" /></a
+    >
   </div>
 </section>
 
@@ -183,6 +185,12 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
     gap: var(--spacing-text-gap-vertical, 2rem)
       var(--spacing-text-padding-horizontal, 3rem);
     align-self: stretch;
+  }
+
+  .no-style {
+    list-style: none;
+    text-decoration: none;
+    text-decoration-line: none;
   }
 
   @media only screen and (max-width: 800px) {

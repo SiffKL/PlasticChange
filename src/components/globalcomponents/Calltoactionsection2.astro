@@ -1,7 +1,6 @@
 ---
 import Pbuttons from "./Pbuttons.astro";
 const { head, text, list1, list2, list3 } = Astro.props;
-
 ---
 
 <section class="stotsection">
@@ -15,59 +14,70 @@ const { head, text, list1, list2, list3 } = Astro.props;
       <li>{list2}</li>
       <li>{list3}</li>
     </ul>
-    <Pbuttons title="Støt nu" size="large" />
+    <a class="no-style" href="/forms">
+      <Pbuttons title="Støt nu" size="large" />
+    </a>
   </div>
 </section>
 
 <style>
- .stotsection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
-  padding: var(--spacing-section-padding-vertical, 5rem) var(--spacing-section-onecollum-padding-horizontal, 21.875rem);
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align text to the left */
-  gap: var(--spacing-text-gap-vertical, 2rem);
-  width: 46.375rem;
-  margin: 0 auto; /* Center container */
-  padding: 0 1rem; /* Add padding for responsiveness */
-}
-
-h3 {
-  font-family: "Poppins";
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-p, ul {
-  color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
-  font-family: "Rubik";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-}
-
-ul, li {
-  list-style: none;
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .container {
-    width: auto; /* Adjust width for smaller screens */
-    padding: 0 10px; /* Adjust padding for smaller screens */
-  }
-
   .stotsection {
-    padding: var(--spacing-section-padding-vertical, 5rem) 2rem; /* Adjust section padding for smaller screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
+    padding: var(--spacing-section-padding-vertical, 5rem)
+      var(--spacing-section-onecollum-padding-horizontal, 21.875rem);
   }
-}
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    gap: var(--spacing-text-gap-vertical, 2rem);
+    width: 46.375rem;
+    margin: 0 auto; /* Center container */
+    padding: 0 1rem; /* Add padding for responsiveness */
+  }
+
+  h3 {
+    font-family: "Poppins";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  p,
+  ul {
+    color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
+    font-family: "Rubik";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+  }
+
+  .no-style {
+    list-style: none;
+    text-decoration: none;
+    text-decoration-line: none;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      width: auto; /* Adjust width for smaller screens */
+      padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+
+    .stotsection {
+      padding: var(--spacing-section-padding-vertical, 5rem) 2rem; /* Adjust section padding for smaller screens */
+    }
+  }
 </style>
