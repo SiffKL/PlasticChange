@@ -71,7 +71,7 @@ import OnePrinc from "../globalcomponents/OnePrinc.astro";
   }
   .headersection {
     display: flex;
-    width: 40rem;
+    width: 50rem;
     height: fit-content;
     padding: var(--spacing-text-padding-vertical, 2rem)
       var(--spacing-text-padding-horizontal, 3rem);
@@ -114,9 +114,12 @@ import OnePrinc from "../globalcomponents/OnePrinc.astro";
     width: auto;
     align-items: flex-start;
     gap: 1.5625rem;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
   }
 
+  h2 {
+    line-height: 9rem;
+  }
   h1 {
     color: var(--text-header-highlight-color, #e72458);
     /* Header1 */
@@ -124,7 +127,7 @@ import OnePrinc from "../globalcomponents/OnePrinc.astro";
     font-size: 5rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 2rem;
+    line-height: 5rem;
     margin: 0;
   }
   p {
@@ -161,5 +164,60 @@ import OnePrinc from "../globalcomponents/OnePrinc.astro";
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .homepagesection2 {
+      background-image: url("src/asset/svgimages/WavesPage1.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 2rem;
+      gap: 2rem;
+      height: auto;
+    }
+    .headersection {
+      width: 100%;
+      /* text-align: center; */
+      padding: 2rem 1rem;
+    }
+
+    .fiveprincipshort {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .intro,
+    p {
+      width: auto; /
+      color: #142c2b;
+      font-size: 1rem; 
+      line-height: 1.5; 
+    }
+
+    h1 {
+      color: #e72458;
+      font-size: 3rem; 
+      line-height: 1.2; 
+
+    h2 {
+      color: #1c1e23;
+      font-size: 2rem; 
+      line-height: 1.2; 
+
+    .centercontent {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .punkt {
+      font-size: 2.5rem; 
+
+    div {
+      width: 100%; 
+      height: auto; 
+      align-items: baseline;
+      flex-direction: column; 
+      gap: 0.5rem; 
+    }
   }
 </style>
