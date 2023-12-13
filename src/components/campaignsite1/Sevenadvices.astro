@@ -4,31 +4,73 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
 
 <section class="sectionadvice">
   <div>
-    <h2>Tænk plastspild ind i <br />din hverdag med de</h2>
-    <h3>7 gode råd</h3>
+    <h2>
+      Tænk plastspild ind <br /> i <span class="bold">din hverdag</span> med de <br
+      />
+      <span class="pink">7 gode råd</span>
+    </h2>
+    <h3></h3>
   </div>
 
   <section class="sevenadvices">
-    <Oneadvice
+    <!-- <Oneadvice
       image="src/asset/icons/GoderaadMilk.svg"
       title="Din mælk"
       description="Køb din mælk uden skruelåg"
-    />
-    <Oneadvice
+    /> -->
+    <div class="lottie">
+      <dotlottie-player
+        src="https://lottie.host/369caee3-f4b1-4330-b003-b92688d42a6d/XMFDuREjeM.json"
+        background="transparent"
+        speed="1"
+        style="width: 150px; height: 151px;"
+        loop
+        autoplay></dotlottie-player>
+      <Oneadvice title="Din mælk" description="Køb din mælk uden skruelåg" />
+    </div>
+
+    <div class="lottie">
+      <dotlottie-player
+        src="https://lottie.host/abf77aba-2e43-4b1c-9ba7-44dd7bcb0127/QxA32NZAAV.json"
+        background="transparent"
+        speed="1"
+        style="width: 150px; height: 152px;"
+        loop
+        autoplay></dotlottie-player>
+      <Oneadvice
+        title="Din vandflaske"
+        description="Brug drikkedunk og undgå købevand"
+      />
+    </div>
+    <!-- <Oneadvice
       image="src/asset/icons/bottle.svg"
       title="Din vandflaske"
       description="Brug drikkedunk og undgå købevand"
-    />
+    /> -->
     <Oneadvice
       image="src/asset/icons/GoderaadTshirt.svg"
       title="Din tøjvask"
       description="Fyld maskinen, så du slidder mindre på tøjet"
     />
-    <Oneadvice
+
+    <div class="lottie">
+      <dotlottie-player
+        src="https://lottie.host/33b7cd0c-9b0a-4401-8be2-38e0a1ace64a/7Zb5tPYAuC.json"
+        background="transparent"
+        speed="1"
+        style="width: 150px; height: 158px;"
+        loop
+        autoplay></dotlottie-player>
+      <Oneadvice
+        title="Din fest"
+        description="Drop engangsservice, balloner og sugerør"
+      />
+    </div>
+    <!-- <Oneadvice
       image="src/asset/icons/balloon.svg"
       title="Din fest"
       description="Drop engangsservice, balloner og sugerør"
-    />
+    /> -->
     <Oneadvice
       image="src/asset/icons/toiletpapir.svg"
       title="Dit toiletbesøg"
@@ -48,11 +90,24 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
   </section>
 </section>
 
+<script
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>
+<script
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>
+<script
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>
+
 <style>
+  .lottie {
+    display: flex;
+  }
   .sectionadvice {
     display: flex;
     flex-direction: column;
-    height: max-content;
+    /* height: max-content; */
     padding: var(--spacing-section-padding-vertical, 5rem)
       var(--spacing-section-padding-horzontal, 8rem);
     justify-content: center;
@@ -81,19 +136,36 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 67.625rem;
+    /* width: 67.625rem; */
     flex-shrink: 0;
     margin-bottom: 0;
   }
 
-  h3 {
+  .bold {
+    font-weight: 900;
+  }
+
+  .pink {
+    font-weight: 900;
+    color: var(--color-primary-cerise-red-normal, #e72458);
+  }
+
+  /* h3 {
     color: var(--text-header-highlight-color, #e72458);
     margin: 0;
     /* Header2 */
-    font-family: Poppins;
+  /* font-family: Poppins;
     font-size: 3.875rem;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+  } */
+
+  @media (max-width: 900px) {
+    h2 {
+      font-size: 2rem;
+      line-height: 150.5%; /* 2.06938rem */
+      padding: var(--spacing-section-padding-horzontal, 2rem);
+    }
   }
 </style>
