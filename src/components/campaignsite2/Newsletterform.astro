@@ -39,29 +39,32 @@ import Pbuttons from "../globalcomponents/Pbuttons.astro";
   article {
     display: flex;
     max-width: 1440px;
-    padding: var(--spacing-section-padding-vertical, 80px)
-      var(--spacing-section-padding-horzontal, 128px);
+    padding: var(--spacing-section-padding-vertical, 5rem)
+      var(--spacing-section-padding-horzontal, 8rem);
     justify-content: center;
     align-items: center;
+    text-align: left;
     margin: 0 auto; /* Added to ensure centering */
   }
   .newsletter-signup {
     max-width: 742px;
     text-align: left;
     color: var(--pine-green-dark);
-    gap: var(--spacing-text-gap-vertical, 32px);
+    gap: var(--spacing-text-gap-vertical, 2rem);
   }
 
   .mailbox-container {
     max-width: 800px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 0.5rem;
   }
 
   .input-group {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 24px var(--spacing-form-elements-horizontal-gab, 24px);
+    margin-bottom: 0.5rem;
   }
 
   .newsletter-signup h1 {
@@ -79,6 +82,7 @@ import Pbuttons from "../globalcomponents/Pbuttons.astro";
     font-size: calc(min(max(16px, 2vw), 20px));
     font-weight: 500;
     line-height: 1.5;
+    margin-bottom: 2.5rem;
   }
 
   .mailbox-container p {
