@@ -2,12 +2,12 @@
 const { image, title, description } = Astro.props;
 ---
 
-<section class="oneadvice">
+<section class="oneadvice forfatterfoto">
   <div>
     <img src={image} alt="" />
   </div>
   <div>
-    <h3>{title}</h3>
+    <h3 class="gsaptest">{title}</h3>
     <p>{description}</p>
     <style>
       .oneadvice {
@@ -18,3 +18,16 @@ const { image, title, description } = Astro.props;
     </style>
   </div>
 </section>
+<script>
+  import { gsap } from "gsap";
+
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".gsaptest", {
+    color: "#76EE00",
+    duration: 5,
+    scrollTrigger: "h3",
+  });
+</script>

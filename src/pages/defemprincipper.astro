@@ -18,3 +18,41 @@ import Faktabox from "../components/campaignsite2/Faktabox.astro";
   <Faktabox />
   <VersusSection />
 </BaseLayout>
+<!-- <script>
+  import { gsap } from "gsap";
+
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".gsaptest", {
+    color: "#76EE00",
+    duration: 5,
+    scrollTrigger: "h3",
+  });
+</script> -->
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".gsaptest", {
+    color: "#ff9900",
+    duration: 5,
+  });
+
+  gsap.from(".forfatterfoto", {
+    x: -500,
+    duration: 5,
+    scrollTrigger: ".forfatterfoto",
+  });
+  gsap.to(".galleri", {
+    scrollTrigger: {
+      trigger: ".galleri",
+      start: "center center",
+      toggleClass: "jello-vertical",
+    },
+  });
+</script>
