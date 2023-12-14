@@ -2,46 +2,33 @@
 const { title, size } = Astro.props;
 ---
 
-<article>
-  <button data-size={size}>{title}</button>
-</article>
+<button data-size={size}>{title}</button>
 
 <style>
-  article {
-    justify-content: space-around;
-  }
-
   button {
     padding: var(--button-padding-vertical, 1rem)
       var(--button-padding-horizontal, 2rem);
     border-radius: 0.0625rem;
-    border: 2px solid var(--color-primary-cerise-red-normal, #e72458);
-    color: var(--color-primary-cerise-red-normal, #e72458);
-    /* box-shadow: 0px 4px 4px 0px rgba(#49131c); */
-
+    background: var(--color-primary-cerise-red-normal, #e72458);
+    color: var(--color-secondary-white, #fff);
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-family: "Rubik";
-    font-size: 20px;
-    background-color: transparent;
+    min-width: 14.688rem;
   }
 
   button:hover {
-    border: 2px solid var(--color-complimentary-pine-green-normal, #007c79);
-
-    color: var(--color-complimentary-pine-green-normal, #007c79);
-    transition: 300ms;
-  }
-
-  [data-size="medium"] {
-    padding: var(--button-padding-vertical, 1rem)
-      var(--button-padding-horizontal, 2rem);
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
+    background: var(--color-complimentary-pine-green-normal, #007c79);
+    transition: background-color 300ms;
   }
 
   [data-size="large"] {
     padding: var(--button-padding-vertical, 1rem)
       var(--button-padding-horizontal, 2rem);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    font-family: "Rubik";
   }
 
   [data-size="forms"] {
@@ -55,5 +42,6 @@ const { title, size } = Astro.props;
     margin-top: 8px;
     margin-right: 8px;
     border-radius: 5px;
+    font-family: "Rubik";
   }
 </style>
