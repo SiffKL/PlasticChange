@@ -2,7 +2,7 @@
 ---
 
 <section>
-  <div class="contentcontainer">
+  <div class="contentcontainer slide-top">
     <h4>En dråbe i havet bliver til <br />ringe i vandet</h4>
     <p>
       Selvom en stor del af ansvaret i forhold til de menneskeskabte
@@ -41,7 +41,7 @@
 
   p {
     color: var(--text-paragraph-graphitemedium, #70727d);
-    font-family: Rubik;
+    font-family: "Rubik";
     font-size: clamp(16px, 3vw, 20px);
     font-weight: 400;
     line-height: 150.5%;
@@ -49,8 +49,61 @@
 
   h4 {
     color: var(--text-header-1-color-pine-green-dark, #142c2b);
-    font-family: Poppins;
+    font-family: "Poppins";
     font-size: clamp(22px, 3vw, 32px);
     font-weight: 700;
   }
+
+  /* ------ animista from here ------------ */
+  .slide-top {
+    -webkit-animation: slide-top 1.2s ease-in-out both;
+    animation: slide-top 1.2s ease-in-out both;
+  }
+
+  /**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+    100% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+  }
 </style>
+<script>
+  import { gsap } from "gsap";
+
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // gsap.to(".gsaptest", {
+  //   color: "#76EE00",
+  //   duration: 6,
+  //   scrollTrigger: "h1",
+  // });
+
+  gsap.to(".contentcontainer", {
+    scrollTrigger: {
+      trigger: ".contentcontainer",
+      start: "center center",
+      toggleClass: ".slide-top",
+    },
+  });
+</script>

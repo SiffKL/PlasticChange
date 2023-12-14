@@ -8,7 +8,7 @@ import Calltoactionsection2 from "../components/globalcomponents/Calltoactionsec
 
 <BaseLayout>
   <Genbrugsection1 />
-  <div class="background">
+  <div class="background slide-top">
     <Genbrugsection2 />
   </div>
   <Genbrugsection3 />
@@ -30,5 +30,37 @@ import Calltoactionsection2 from "../components/globalcomponents/Calltoactionsec
     height: 660px;
     background-position: bottom;
     background-repeat: no-repeat;
+  }
+
+  /* ------ animista from here ------------ */
+  .slide-top {
+    -webkit-animation: slide-top 2.2s ease-in-out both;
+    animation: slide-top 2.2s ease-in-out both;
+  }
+
+  /**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+    100% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
   }
 </style>

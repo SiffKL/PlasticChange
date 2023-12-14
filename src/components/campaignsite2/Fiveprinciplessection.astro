@@ -1,59 +1,89 @@
 ---
 import OnePrinc from "../globalcomponents/OnePrinc.astro";
 ---
+
 <section>
-  <div class="content">
-<OnePrinc
-  number="1"
-  title="Vi er ikke imod plastik"
-  text="Plastik gavner os, når det bruges korrekt. Vi støtter ansvarlig plastikbrug ved at reducere forbruget, især af engangsplastik, og fremme produktionen af høj kvalitet plastik, der kan genbruges. Plastic Changer ønsker ikke at afskaffe plastik, men at ændre adfærd, så det bliver en fordel frem for en byrde for verdenen."
-/>
-<OnePrinc
-  number="2"
-  title="Vi fortæller historier om plastikforurening"
-  text="Problemerne i verdenshavene skyldes ikke kun lokal forurening, men primært plastikproduktion og -behandling på land. Løsningerne bør fokusere på landbaserede tiltag. Selvom havrensning er synlig og motiverende, er nøglen til at løse problemet at reducere plastikudledningen."
-/>
+  <div class="content slide-top">
+    <OnePrinc
+      number="1"
+      title="Vi er ikke imod plastik"
+      text="Plastik gavner os, når det bruges korrekt. Vi støtter ansvarlig plastikbrug ved at reducere forbruget, især af engangsplastik, og fremme produktionen af høj kvalitet plastik, der kan genbruges. Plastic Changer ønsker ikke at afskaffe plastik, men at ændre adfærd, så det bliver en fordel frem for en byrde for verdenen."
+    />
+    <OnePrinc
+      number="2"
+      title="Vi fortæller historier om plastikforurening"
+      text="Problemerne i verdenshavene skyldes ikke kun lokal forurening, men primært plastikproduktion og -behandling på land. Løsningerne bør fokusere på landbaserede tiltag. Selvom havrensning er synlig og motiverende, er nøglen til at løse problemet at reducere plastikudledningen."
+    />
 
-<OnePrinc
-  number="3"
-  title="Vi opsøger viden og sætter os ind i sagerne"
-  text="Vi opsøger og deler viden, men vi kan ikke vide det hele og nogle gange skal et givent emne undersøges nærmere før vi kan udtale os mere sikkert om det. Det der kan virke som en smart løsning er det måske ikke, når man tager helheden i betragtning."
-/>
+    <OnePrinc
+      number="3"
+      title="Vi opsøger viden og sætter os ind i sagerne"
+      text="Vi opsøger og deler viden, men vi kan ikke vide det hele og nogle gange skal et givent emne undersøges nærmere før vi kan udtale os mere sikkert om det. Det der kan virke som en smart løsning er det måske ikke, når man tager helheden i betragtning."
+    />
 
-<OnePrinc
-  number="4"
-  title="Vi tror på ordenlighed"
-  text="Vi tror på at samtale og samarbejde er vejen frem, og peger ikke fingre af andre, men opfordrer til ordentlig opførsel."
-/>
+    <OnePrinc
+      number="4"
+      title="Vi tror på ordenlighed"
+      text="Vi tror på at samtale og samarbejde er vejen frem, og peger ikke fingre af andre, men opfordrer til ordentlig opførsel."
+    />
 
-<OnePrinc
-  number="5"
-  title="Vi tror på at engagement driver forandring"
-  text="Vi har lyst til at gøre en forskel, og tror på at vores handlinger og ord er med til at skabe en positiv forandring, der kan inspirere andre. Mange gange er det de små ting, som kan gøre den store forskel - selv en lille indsats kan være med til at skabe store resultater."
-/>
-</div>
+    <OnePrinc
+      number="5"
+      title="Vi tror på at engagement driver forandring"
+      text="Vi har lyst til at gøre en forskel, og tror på at vores handlinger og ord er med til at skabe en positiv forandring, der kan inspirere andre. Mange gange er det de små ting, som kan gøre den store forskel - selv en lille indsats kan være med til at skabe store resultater."
+    />
+  </div>
 </section>
 
 <style>
-section {
-  max-width: 1650px; /* Maximum width of the section */
-  margin: auto; /* Center the section */
-  background-image: url("src/asset/svgimages/FiveprincipBG.svg");
-  background-size: cover; /* Cover the entire section */
-  background-position: bottom; /* Center the image in the section */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-}
-
-.content {
-  padding-bottom: 600px; /* Adding padding to the bottom */
-}
-
-@media screen and (max-width: 768px) {
-  .content {
-    padding-bottom: 300px; /* Adjust padding for smaller screens */
+  section {
+    max-width: 1650px; /* Maximum width of the section */
+    margin: auto; /* Center the section */
+    background-image: url("src/asset/svgimages/FiveprincipBG.svg");
+    background-size: cover; /* Cover the entire section */
+    background-position: bottom; /* Center the image in the section */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
   }
-}
 
+  .content {
+    padding-bottom: 600px; /* Adding padding to the bottom */
+  }
+
+  @media screen and (max-width: 768px) {
+    .content {
+      padding-bottom: 300px; /* Adjust padding for smaller screens */
+    }
+  }
+
+  /* ------ animista from here ------------ */
+  .slide-top {
+    -webkit-animation: slide-top 2.2s ease-in-out both;
+    animation: slide-top 2.2s ease-in-out both;
+  }
+
+  /**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+    100% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+  }
 </style>
-
-
