@@ -8,7 +8,7 @@
     <div class="burger-menu">☰</div>
     <div class="close-icon">✕</div>
 
-    <ul>
+    <ul class="tracking-in-expand-fwd-top">
       <li>
         <a class="basiclink" href="/defemprincipper">De 5 Principper</a>
       </li>
@@ -123,10 +123,12 @@
       display: flex;
       justify-content: space-between;
       background: var(--Color-Secondary-white-blush, rgba(255, 255, 255, 0.6));
-      z-index: 1000; /* Set a high z-index value */
+      z-index: 1000;
     }
+
     .burger-menu {
       display: block;
+      transition: opacity 0.3s ease;
     }
 
     .close-icon {
@@ -136,7 +138,6 @@
     .nav img {
       width: 8.93525rem;
       height: 2.60444rem;
-      /* order: 1;  */
     }
 
     .nav ul {
@@ -146,8 +147,27 @@
       position: absolute;
       right: 0;
       background: var(--color-complimentary-pine-green-light, #90b7b6);
-      z-index: 1000; /* Set a high z-index value */
-      /* transition: transform 1s; */
+      z-index: 1000;
+      opacity: 0;
+      /* transition: opacity 0.3s ease; */
+    }
+
+    .nav.open {
+      background: var(--color-complimentary-pine-green-light, #90b7b6);
+    }
+
+    .nav.open ul {
+      display: flex;
+      top: 100%;
+      opacity: 1;
+    }
+
+    .nav.open .burger-menu {
+      display: none;
+    }
+
+    .nav.open .close-icon {
+      display: block;
     }
   }
 
@@ -169,6 +189,53 @@
   .nav.open .close-icon {
     display: block;
     /* transition: height 300ms linear; */
+  }
+
+  /* ----- animista from here -------- */
+
+  .tracking-in-expand-fwd-top {
+    -webkit-animation: tracking-in-expand-fwd-top 0.8s
+      cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    animation: tracking-in-expand-fwd-top 0.8s
+      cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  }
+
+  /**
+ * ----------------------------------------
+ * animation tracking-in-expand-fwd-top
+ * ----------------------------------------
+ */
+  @-webkit-keyframes tracking-in-expand-fwd-top {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px) translateY(-500px);
+      transform: translateZ(-700px) translateY(-500px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand-fwd-top {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px) translateY(-500px);
+      transform: translateZ(-700px) translateY(-500px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
   }
 </style>
 
