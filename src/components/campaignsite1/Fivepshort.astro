@@ -13,22 +13,22 @@ import Title from "../globalcomponents/Title.astro";
       i retningen mod ansvarlig brug af plastik.
     </p>
   </section>
-  <section>
+  <section class="principlist">
     <div class="content">
       <div class="box">
         <h3>1</h3><h4>Vi er ikke imod plastik</h4>
       </div>
       <div class="box">
-        <h3>2</h3><h4>Vi fortæller historier om plastikforurening</h4>
+        <h3>2</h3><h4>Vi fortæller historier om <br />plastikforurening</h4>
       </div>
       <div class="box">
-        <h3>3</h3><h4>Vi opsøger viden og sætter os ind i sagerne</h4>
+        <h3>3</h3><h4>Vi opsøger viden og sætter <br />os ind i sagerne</h4>
       </div>
 
       <div class="box"><h3>4</h3><h4>Vi tror på ordenlighed</h4></div>
       <div class="box">
         <div class="box">
-          <h3>5</h3><h4>Vi tror på at engagement driver forandring</h4>
+          <h3>5</h3><h4>Vi tror på at engagement <br />driver forandring</h4>
         </div>
       </div>
       <div class="but">
@@ -42,8 +42,8 @@ import Title from "../globalcomponents/Title.astro";
           display: flex;
           align-items: baseline; /* This will vertically center the items in the container */
           gap: 1rem;
-          max-width: 550px;
-          padding-bottom: rem;
+          max-width: 600px;
+          padding-bottom: 2rem;
         }
         .number {
           color: var(--color-complimentary-pine-green-dark, #142c2b);
@@ -53,10 +53,15 @@ import Title from "../globalcomponents/Title.astro";
           font-weight: 500;
           line-height: normal;
         }
-        .h3 {
+
+        .principlist {
+          display: flex;
+          justify-content: center;
+        }
+        h3 {
           color: var(--color-complimentary-pine-green-dark, #142c2b);
           font-family: "Rubik";
-          font-size: 48px;
+          font-size: clamp(24px, 5vw, 32px);
           font-style: normal;
           font-weight: 500;
           line-height: normal;
@@ -65,19 +70,16 @@ import Title from "../globalcomponents/Title.astro";
         .no-style {
           display: inline-block;
           text-decoration: none;
-          margin: 20px 0;
+          /* margin: 20px 0; */
         }
         span {
           color: var(--highlight-color);
         }
         .but {
-          /* width: 100vw; */
           display: flex;
-          justify-content: left;
-
           margin: 0 auto;
           font-family: Arial, sans-serif;
-          padding: var(--text-padding-vertical, 32px);
+          padding-bottom: 24rem;
         }
 
         p {
@@ -98,6 +100,11 @@ import Title from "../globalcomponents/Title.astro";
           gap: var(--article-gap);
         }
 
+        h4 {
+          /* font-size: 16x; */
+          font-weight: 500;
+          font-size: clamp(16px, 5vw, 24px);
+        }
         .background {
           max-width: 1650px;
           margin: auto;
@@ -107,6 +114,7 @@ import Title from "../globalcomponents/Title.astro";
           background-repeat: no-repeat;
         }
         h1 {
+          padding-top: 16rem;
           color: var(--header-color);
           font-size: clamp(
             var(--font-size-header-small),
@@ -130,13 +138,20 @@ import Title from "../globalcomponents/Title.astro";
           }
           .no-style {
             margin: 0;
-            padding-left: 10%;
           }
           .headersection {
             padding: 2rem;
           }
           h1 {
             line-height: 100%;
+            padding-top: 2rem;
+          }
+          h4 {
+            font-size: 16px;
+          }
+
+          .but {
+            padding-bottom: 2rem;
           }
         }
       </style>

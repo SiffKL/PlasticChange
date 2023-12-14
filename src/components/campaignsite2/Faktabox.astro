@@ -4,16 +4,22 @@
     <div class="grid-item">
       <div class="card">
         <h2>Vidste du at?</h2>
-        <p>Kemikalier fra plastik kan overføres til dyrenes væv, og når vi konsumerer fisk, der har indtaget plastik, kan disse skadelige kemikalier også ende i vores system, hvilket udgør en sundhedsrisiko.</p>
+        <p>
+          Kemikalier fra plastik kan overføres til dyrenes væv, og når vi
+          konsumerer fisk, der har indtaget plastik, kan disse skadelige
+          kemikalier også ende i vores system, hvilket udgør en sundhedsrisiko.
+        </p>
       </div>
     </div>
     <div class="grid-item">
       <div class="card">
-        <h2>Konsekvenser af Plastik- forurening i havet</h2>
+        <h2>Konsekvenser af Plastikforurening i havet</h2>
         <ul>
           <li>Mindst 2249 marine arter har haft kontakt med plastik.</li>
           <li>50 % af pukkelhvaler bærer ar fra fiskenet eller reb.</li>
-          <li>Op til 135.000 sæler og bardehvaler vikles ind i affald årligt</li>
+          <li>
+            Op til 135.000 sæler og bardehvaler vikles ind i affald årligt
+          </li>
           <li>1 ud af 3 skadede eller døde fugle er viklet ind i plastik.</li>
         </ul>
       </div>
@@ -21,92 +27,88 @@
   </div>
 </section>
 
-
 <style>
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  height: 997px;
-  margin: auto;
-  position: relative;
-}
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 997px;
+    margin: auto;
+    position: relative;
+  }
 
-.penguinimage {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-image: url("src/asset/svgimages/pingvin-kao-illustration-ai.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  max-width: 699px;
-  width: 90%;
-  height: 905px;
-  z-index: -1;
-}
-
-.grid-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding: 200px 5%;
-  margin: 0 auto; /* Centering the grid-section */
-  width: 100%; /* Use full available width */
-  max-width: 1440px; /* Maximum width limit */
-  height: auto; /* Adjust height dynamically */
-  background-color: rgba(211, 226, 226, 0.5);
-}
-
-.grid-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 100%;
-  padding: 0 10px;
-  box-sizing: border-box;
-}
-
-.card {
-  width: 100%;
-  padding: 20px;
-  text-align: left;
-}
-
-h2 {
-  color: var(--color-complimentary-pine-green-dark, #142c2b);
-  margin-bottom: 10px;
-}
-
-p, ul {
-  color: var(--color-complimentary-pine-green-medium, #2a5f5e);
-  font-family: Rubik;
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-li{
-  padding-top: 20px;
-}
-
-@media (max-width: 768px) {
-
+  .penguinimage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("src/asset/svgimages/pingvin-kao-illustration-ai.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 699px;
+    width: 90%;
+    height: 905px;
+    z-index: -1;
+  }
 
   .grid-section {
-    padding: 50px 3%; /* Reduced padding for smaller screens */
-    grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 200px 5%;
+    margin: 0 auto; /* Centering the grid-section */
+    width: 100%; /* Use full available width */
+    max-width: 1440px; /* Maximum width limit */
+    height: auto; /* Adjust height dynamically */
+    background-color: rgba(211, 226, 226, 0.5);
+  }
+
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 
   .card {
-    padding: 15px; /* Reduced padding inside the card */
+    width: 100%;
+    padding: 20px;
+    text-align: left;
   }
 
-}
+  h2 {
+    color: var(--color-complimentary-pine-green-dark, #142c2b);
+    margin-bottom: 10px;
+  }
+
+  p,
+  ul {
+    color: var(--color-complimentary-pine-green-medium, #2a5f5e);
+    font-family: Rubik;
+    font-size: 20px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    padding-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .grid-section {
+      padding: 50px 3%; /* Reduced padding for smaller screens */
+      grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
+    }
+
+    .card {
+      padding: 15px; /* Reduced padding inside the card */
+    }
+  }
 </style>
