@@ -80,5 +80,5 @@ p {
   font-size: clamp(16px, 1.5vw, 20px);
   font-weight: 500;
   line-height: 1.5;
-  max-width: 60ch;
+  max-width: 55ch;
 }
