@@ -29,12 +29,12 @@ svg {
   max-width: 100%;
 }
 
-input,
+/* input,
 button,
 textarea,
 select {
   font: inherit;
-}
+} */
 
 ul:where([role="list"]),
 ol:where([role="list"]) {
