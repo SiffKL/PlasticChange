@@ -17,9 +17,9 @@ const { manchet, bigred, text } = Astro.props;
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: var(--article-padding-vertical) var(--article-padding-horizontal);
-    max-width: var(--max-width-article); /* Using the variable for max-width */
+    max-width: 800px;
     gap: var(--article-gap);
   }
 
@@ -43,9 +43,9 @@ const { manchet, bigred, text } = Astro.props;
 
   @media (max-width: 1000px) {
     article {
-      gap: var(--container-padding-between-elements:);
-      padding-top: var( --container-padding-top-bottom:);
-      padding-bottom:  var( --container-padding-top-bottom:);
+      gap: var(--container-padding-between-elements: );
+      padding-top: var(--container-padding-top-bottom: );
+      padding-bottom: var(--container-padding-top-bottom: );
       padding-left: var(--container-padding-left-right);
       padding-right: var(--container-padding-left-right);
     }

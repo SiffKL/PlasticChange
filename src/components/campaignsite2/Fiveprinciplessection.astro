@@ -1,59 +1,119 @@
 ---
 import OnePrinc from "../globalcomponents/OnePrinc.astro";
+import Sbuttons from "../globalcomponents/Sbuttons.astro";
 ---
-<section>
+
+<section class="background">
+  <section class="headersection">
+    <h1>Som plastic changer <br />har vi <span>5 principper</span></h1>
+    <p class="pwidth">
+      Alle, der er med til at sætte fokus på plastik dagsordenen er i princippet
+      en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring
+      i retningen mod ansvarlig brug af plastik.
+    </p>
+  </section>
   <div class="content">
-<OnePrinc
-  number="1"
-  title="Vi er ikke imod plastik"
-  text="Plastik gavner os, når det bruges korrekt. Vi støtter ansvarlig plastikbrug ved at reducere forbruget, især af engangsplastik, og fremme produktionen af høj kvalitet plastik, der kan genbruges. Plastic Changer ønsker ikke at afskaffe plastik, men at ændre adfærd, så det bliver en fordel frem for en byrde for verdenen."
-/>
-<OnePrinc
-  number="2"
-  title="Vi fortæller historier om plastikforurening"
-  text="Problemerne i verdenshavene skyldes ikke kun lokal forurening, men primært plastikproduktion og -behandling på land. Løsningerne bør fokusere på landbaserede tiltag. Selvom havrensning er synlig og motiverende, er nøglen til at løse problemet at reducere plastikudledningen."
-/>
+    <OnePrinc
+      number="1"
+      title="Vi er ikke imod plastik"
+      text="Plastik gavner os, når det bruges korrekt. Vi støtter ansvarlig plastikbrug ved at reducere forbruget, især af engangsplastik, og fremme produktionen af høj kvalitet plastik, der kan genbruges. Plastic Changer ønsker ikke at afskaffe plastik, men at ændre adfærd, så det bliver en fordel frem for en byrde for verdenen."
+    />
+    <OnePrinc
+      number="2"
+      title="Vi fortæller historier om plastikforurening"
+      text="Problemerne i verdenshavene skyldes ikke kun lokal forurening, men primært plastikproduktion og -behandling på land. Løsningerne bør fokusere på landbaserede tiltag. Selvom havrensning er synlig og motiverende, er nøglen til at løse problemet at reducere plastikudledningen."
+    />
 
-<OnePrinc
-  number="3"
-  title="Vi opsøger viden og sætter os ind i sagerne"
-  text="Vi opsøger og deler viden, men vi kan ikke vide det hele og nogle gange skal et givent emne undersøges nærmere før vi kan udtale os mere sikkert om det. Det der kan virke som en smart løsning er det måske ikke, når man tager helheden i betragtning."
-/>
+    <OnePrinc
+      number="3"
+      title="Vi opsøger viden og sætter os ind i sagerne"
+      text="Vi opsøger og deler viden, men vi kan ikke vide det hele og nogle gange skal et givent emne undersøges nærmere før vi kan udtale os mere sikkert om det. Det der kan virke som en smart løsning er det måske ikke, når man tager helheden i betragtning."
+    />
 
-<OnePrinc
-  number="4"
-  title="Vi tror på ordenlighed"
-  text="Vi tror på at samtale og samarbejde er vejen frem, og peger ikke fingre af andre, men opfordrer til ordentlig opførsel."
-/>
+    <OnePrinc
+      number="4"
+      title="Vi tror på ordenlighed"
+      text="Vi tror på at samtale og samarbejde er vejen frem, og peger ikke fingre af andre, men opfordrer til ordentlig opførsel."
+    />
 
-<OnePrinc
-  number="5"
-  title="Vi tror på at engagement driver forandring"
-  text="Vi har lyst til at gøre en forskel, og tror på at vores handlinger og ord er med til at skabe en positiv forandring, der kan inspirere andre. Mange gange er det de små ting, som kan gøre den store forskel - selv en lille indsats kan være med til at skabe store resultater."
-/>
-</div>
+    <OnePrinc
+      number="5"
+      title="Vi tror på at engagement driver forandring"
+      text="Vi har lyst til at gøre en forskel, og tror på at vores handlinger og ord er med til at skabe en positiv forandring, der kan inspirere andre. Mange gange er det de små ting, som kan gøre den store forskel - selv en lille indsats kan være med til at skabe store resultater."
+    />
+    <div class="but">
+      <a class="no-style" href="/defemprincipper">
+        <Sbuttons title="Læs mere om principperne" , size="large" /></a
+      >
+    </div>
+  </div>
 </section>
 
 <style>
-section {
-  max-width: 1650px; /* Maximum width of the section */
-  margin: auto; /* Center the section */
-  background-image: url("src/asset/svgimages/FiveprincipBG.svg");
-  background-size: cover; /* Cover the entire section */
-  background-position: bottom; /* Center the image in the section */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-}
-
-.content {
-  padding-bottom: 600px; /* Adding padding to the bottom */
-}
-
-@media screen and (max-width: 768px) {
-  .content {
-    padding-bottom: 300px; /* Adjust padding for smaller screens */
+  .background {
+    max-width: 1650px; /* Maximum width of the section */
+    margin: auto; /* Center the section */
+    background-image: url("src/asset/svgimages/FiveprincipBG.svg");
+    background-size: cover; /* Cover the entire section */
+    background-position: bottom; /* Center the image in the section */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding-top: var(--section-padding-vertical, --size-80);
   }
-}
 
+  .headersection {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: var(--article-padding-vertical) var(--article-padding-horizontal);
+    gap: var(--article-gap);
+  }
+  h1 {
+    color: var(--header-color);
+    font-size: clamp(
+      var(--font-size-header-small),
+      5vw,
+      var(--font-size-header-large)
+    );
+    line-height: var(--line-height-header);
+  }
+
+  span {
+    color: var(--highlight-color);
+  }
+
+  p {
+    color: var(--paragraph-color);
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .pwidth {
+    max-width: 550px;
+  }
+  .but {
+    display: flex;
+    justify-content: left;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding: var(--text-padding-vertical, 32px);
+  }
+  .content {
+    padding-bottom: 600px; /* Adding padding to the bottom */
+  }
+
+  @media screen and (max-width: 768px) {
+    .content {
+      padding-bottom: 300px;
+    }
+    .no-style {
+      margin: 0;
+      padding-left: 10%;
+    }
+    .headersection {
+      max-width: 120%;
+      padding: 2rem;
+    }
+    h1 {
+      line-height: 100%;
+    }
+  }
 </style>
-
-

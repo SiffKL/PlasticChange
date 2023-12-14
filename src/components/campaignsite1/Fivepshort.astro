@@ -4,63 +4,142 @@ import OnePrinc from "../globalcomponents/OnePrinc.astro";
 import Title from "../globalcomponents/Title.astro";
 ---
 
-<section>
-  <Title
-    manchet="Som plastic changer har vi"
-    bigred="5 principper"
-    text="Alle, der er med til at sætte fokus på plastik dagsordenen er i princippet en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring i retningen mod ansvarlig brug af plastik."
-  />
+<section class="background">
+  <section class="headersection">
+    <h1>Som plastic changer <br />har vi <span>5 principper</span></h1>
+    <p>
+      Alle, der er med til at sætte fokus på plastik dagsordenen er i princippet
+      en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring
+      i retningen mod ansvarlig brug af plastik.
+    </p>
+  </section>
   <section>
     <div class="content">
-      <OnePrinc number="1" title="Vi er ikke imod plastik" />
-      <OnePrinc
-        number="2"
-        title="Vi fortæller historier om plastikforurening"
-      />
+      <div class="box">
+        <h3>1</h3><h4>Vi er ikke imod plastik</h4>
+      </div>
+      <div class="box">
+        <h3>2</h3><h4>Vi fortæller historier om plastikforurening</h4>
+      </div>
+      <div class="box">
+        <h3>3</h3><h4>Vi opsøger viden og sætter os ind i sagerne</h4>
+      </div>
 
-      <OnePrinc
-        number="3"
-        title="Vi opsøger viden og sætter os ind i sagerne"
-      />
+      <div class="box"><h3>4</h3><h4>Vi tror på ordenlighed</h4></div>
+      <div class="box">
+        <div class="box">
+          <h3>5</h3><h4>Vi tror på at engagement driver forandring</h4>
+        </div>
+      </div>
+      <div class="but">
+        <a class="no-style" href="/defemprincipper">
+          <Sbuttons title="Læs mere om principperne" , size="large" /></a
+        >
+      </div>
 
-      <OnePrinc number="4" title="Vi tror på ordenlighed" />
+      <style>
+        .box {
+          display: flex;
+          align-items: baseline; /* This will vertically center the items in the container */
+          gap: 1rem;
+          max-width: 550px;
+          padding-bottom: rem;
+        }
+        .number {
+          color: var(--color-complimentary-pine-green-dark, #142c2b);
+          font-family: "Rubik";
+          font-size: clamp(50px, 5vw, 80px); /* Scales between 50px and 80px */
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+        .h3 {
+          color: var(--color-complimentary-pine-green-dark, #142c2b);
+          font-family: "Rubik";
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
 
-      <OnePrinc number="5" title="Vi tror på at engagement driver forandring" />
-      <a class="no-style" href="/defemprincipper">
-        <Sbuttons title="Læs mere om principperne" , size="large" />
-      </a>
+        .no-style {
+          display: inline-block;
+          text-decoration: none;
+          margin: 20px 0;
+        }
+        span {
+          color: var(--highlight-color);
+        }
+        .but {
+          /* width: 100vw; */
+          display: flex;
+          justify-content: left;
+
+          margin: 0 auto;
+          font-family: Arial, sans-serif;
+          padding: var(--text-padding-vertical, 32px);
+        }
+
+        p {
+          color: var(--paragraph-color);
+          font-weight: 500;
+          max-width: 550px;
+          font-size: 16px;
+        }
+
+        .headersection {
+          display: flex;
+          flex-direction: column;
+          max-width: 100%;
+
+          padding: var(--article-padding-vertical)
+            var(--article-padding-horizontal);
+
+          gap: var(--article-gap);
+        }
+
+        .background {
+          max-width: 1650px;
+          margin: auto;
+          background-image: url("src/asset/svgimages/FiveprincipBG.svg");
+          background-size: cover;
+          background-position: bottom;
+          background-repeat: no-repeat;
+        }
+        h1 {
+          color: var(--header-color);
+          font-size: clamp(
+            var(--font-size-header-small),
+            5vw,
+            var(--font-size-header-large)
+          );
+          line-height: var(--line-height-header);
+        }
+        .content {
+          padding-bottom: 600px;
+
+          max-width: 600px; /* Adjust width as needed */
+          margin: 0 auto;
+
+          padding: var(--text-padding-vertical, 32px);
+        }
+
+        @media screen and (max-width: 768px) {
+          .content {
+            padding-bottom: 300px;
+          }
+          .no-style {
+            margin: 0;
+            padding-left: 10%;
+          }
+          .headersection {
+            padding: 2rem;
+          }
+          h1 {
+            line-height: 100%;
+          }
+        }
+      </style>
     </div>
   </section>
-
-  <style>
-.no-style {
-  display: inline-block; /* Make the <a> tag only as wide as its content */
-  text-decoration: none;
-  margin: 20px 0; /* Adjust margin as needed */
-  padding-left: 35%;
-}
-
-    section {
-      max-width: 1650px; /* Maximum width of the section */
-      margin: auto; /* Center the section */
-      background-image: url("src/asset/svgimages/FiveprincipBG.svg");
-      background-size: cover; /* Cover the entire section */
-      background-position: bottom; /* Center the image in the section */
-      background-repeat: no-repeat; /* Prevent the image from repeating */
-    }
-
-    .content {
-      padding-bottom: 600px; /* Adding padding to the bottom */
-    }
-
-    @media screen and (max-width: 768px) {
-      .content {
-        padding-bottom: 300px; /* Adjust padding for smaller screens */
-      }
-      .no-style {
-        margin: 0;
-  padding-left: 10%;
-}
-    }
-  </style>
 </section>

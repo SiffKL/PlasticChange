@@ -16,40 +16,40 @@ const { number, title, text } = Astro.props;
   .container {
     max-width: 600px; /* Adjust width as needed */
     margin: 0 auto;
-    font-family: Arial, sans-serif;
-    padding: var(--spacing-text-padding-vertical, 32px)
-      var(--spacing-text-padding-horizontal, 48px);
+
+    padding: var(--text-padding-vertical, 32px);
   }
 
   .headersplit {
     display: flex;
-    align-items: center; /* This will vertically center the items in the container */
+    align-items: last baseline; /* This will vertically center the items in the container */
     gap: 1rem;
+    max-width: 550px;
   }
 
   .number {
     color: var(--color-complimentary-pine-green-dark, #142c2b);
-    font-family: Rubik;
+    font-family: "Rubik";
     font-size: clamp(50px, 5vw, 80px); /* Scales between 50px and 80px */
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: normal;
   }
   .heading {
     color: var(--color-complimentary-pine-green-dark, #142c2b);
-    font-family: Rubik;
-    font-size: clamp(20px, 4vw, 36px); /* Scales between 20px and 36px */
+    font-family: "Rubik";
+    font-size: clamp(16px, 4vw, 32px); /* Scales between 20px and 36px */
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: normal;
   }
   .content {
     color: var(--color-complimentary-pine-green-medium, #2a5f5e);
-    /* Paragraph20Medium */
-    font-family: Rubik;
+
+    font-family: "Rubik";
     font-size: clamp(16px, 3vw, 20px); /* Scales between 16px and 24px */
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 150%; /* 30px */
   }
 </style>
