@@ -50,9 +50,8 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
       ><Sbuttons title="Mere om genbrug" size="large" /></a
     >
   </div>
-</section>
 
-<!-- <center>
+  <!-- <center>
   <article>
     <div class="title">
       <h3 class="header1">Genbrug</h3>
@@ -63,178 +62,173 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
   </article>
 </center> -->
 
-<style>
-  .container {
-    max-width: 100%;
+  <style>
+    .container {
+      max-width: 100%;
 
-    width: 80%;
-    margin: 0 auto;
-    /* text-align: center; */
-    background-image: url("src/asset/svgimages/GenbrugIkon.svg");
-    /* height: 100vh; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 22.375rem;
-    height: 22.313rem;
-    /* background-size: cover;
+      width: 80%;
+      margin: 0 auto;
+      /* text-align: center; */
+      background-image: url("src/asset/svgimages/GenbrugIkon.svg");
+      /* height: 100vh; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 22.375rem;
+      height: 22.313rem;
+      /* background-size: cover;
     background-repeat: no-repeat; */
-  }
+    }
 
-  title {
-    display: flex;
-    align-items: center;
+    title {
+      display: flex;
+      align-items: center;
 
-    /* padding: var(--spacing-text-padding-vertical, 2rem)
+      /* padding: var(--spacing-text-padding-vertical, 2rem)
       var(--spacing-text-padding-horizontal, 30rem); */
-  }
+    }
 
-  .header1 {
-    font-family: Poppins;
-    font-size: 5rem;
-    font-weight: 700;
-    line-height: 5rem; /* 100% */
-    color: var(--text-header-highlight-color, #e72458);
-
-    /* margin-top: 18rem; */
-  }
-
-  .versus {
-    color: var(--text-paragraph-graphitedark, #1c1e23);
-    font-family: Poppins;
-    font-size: 2.5rem;
-    font-weight: 300;
-    margin: 0 1rem;
-  }
-
-  .header2 {
-    color: var(--text-header-1-color-pine-green-dark, #142c2b);
-    text-align: right;
-    font-family: Poppins;
-    font-size: clamp(5rem, 3vw, 48px);
-
-    font-weight: 700;
-    padding-left: 10rem;
-  }
-
-  .container2 {
-    max-width: 100%;
-    margin: 0, auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .recycling,
-  .upcycling {
-    display: inline-block;
-    padding: var(--spacing-section-padding-vertical, 2rem)
-      var(--spacing-section-padding-horzontal, 8rem);
-  }
-
-  h2 {
-    font-family: Poppins;
-
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--text-paragraph-color-pinegreen-dark, #142c2b);
-  }
-
-  p {
-    color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
-    font-family: Rubik;
-    font-size: min(max(1.25rem, 16px), 18px);
-    font-weight: 400;
-    line-height: 150.5%; /* 1.88125rem */
-  }
-
-  h3 {
-    color: var(--text-paragraph-graphitedark, #1c1e23);
-    font-family: "Poppins";
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 2rem;
-  }
-
-  .p-section {
-    color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
-    font-family: "Rubik";
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
-    align-self: stretch;
-    margin-bottom: 3rem;
-  }
-  .stotsection {
-    display: flex;
-    height: 30.25rem;
-    padding: var(--spacing-section-padding-vertical, 5rem)
-      var(--spacing-section-padding-horzontal, 8rem);
-    justify-content: center;
-    align-items: center;
-  }
-  .container3 {
-    width: 46.375rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-text-gap-vertical, 2rem)
-      var(--spacing-text-padding-horizontal, 3rem);
-    align-self: stretch;
-  }
-
-  .no-style {
-    list-style: none;
-    text-decoration: none;
-    text-decoration-line: none;
-  }
-
-  @media only screen and (max-width: 800px) {
     .header1 {
-      font-size: 2.5rem;
-      line-height: 2.5rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      font-family: Poppins;
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 5rem; /* 100% */
+      color: var(--text-header-highlight-color, #e72458);
+
+      /* margin-top: 18rem; */
     }
 
     .versus {
-      font-size: 1.5rem;
+      color: var(--text-paragraph-graphitedark, #1c1e23);
+      font-family: Poppins;
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin: 0 1rem;
     }
 
     .header2 {
-      font-size: 2.5rem;
-      padding-left: 1rem;
+      color: var(--text-header-1-color-pine-green-dark, #142c2b);
+      text-align: right;
+      font-family: Poppins;
+      font-size: clamp(5rem, 3vw, 48px);
+
+      font-weight: 700;
+      padding-left: 10rem;
     }
 
     .container2 {
-      flex-direction: column;
-      padding: var(--spacing-section-padding-horzontal, 2rem);
+      max-width: 100%;
+      margin: 0, auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
     }
-
     .recycling,
     .upcycling {
-      padding: 1rem;
+      display: inline-block;
+      padding: var(--spacing-section-padding-vertical, 2rem)
+        var(--spacing-section-padding-horzontal, 8rem);
     }
 
     h2 {
-      font-size: 2rem;
+      font-family: Poppins;
+
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--text-paragraph-color-pinegreen-dark, #142c2b);
     }
 
     p {
-      font-size: 1rem;
+      color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
+      font-family: Rubik;
+      font-size: min(max(1.25rem, 16px), 18px);
+      font-weight: 400;
+      line-height: 150.5%; /* 1.88125rem */
     }
 
+    h3 {
+      color: var(--text-paragraph-graphitedark, #1c1e23);
+      font-family: "Poppins";
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 2rem;
+    }
+
+    .p-section {
+      color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
+      font-family: "Rubik";
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      align-self: stretch;
+      margin-bottom: 3rem;
+    }
     .stotsection {
-      padding: 2rem;
+      display: flex;
+      height: 30.25rem;
+      padding: var(--spacing-section-padding-vertical, 5rem)
+        var(--spacing-section-padding-horzontal, 8rem);
+      justify-content: center;
+      align-items: center;
+    }
+    .container3 {
+      width: 46.375rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--spacing-text-gap-vertical, 2rem)
+        var(--spacing-text-padding-horizontal, 3rem);
+      align-self: stretch;
     }
 
-    .container3 {
-      width: auto;
-      padding: 1rem;
+    @media only screen and (max-width: 800px) {
+      .header1 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .versus {
+        font-size: 1.5rem;
+      }
+
+      .header2 {
+        font-size: 2.5rem;
+        padding-left: 1rem;
+      }
+
+      .container2 {
+        flex-direction: column;
+        padding: var(--spacing-section-padding-horzontal, 2rem);
+      }
+
+      .recycling,
+      .upcycling {
+        padding: 1rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .stotsection {
+        padding: 2rem;
+      }
+
+      .container3 {
+        width: auto;
+        padding: 1rem;
+      }
     }
-  }
-</style>
+  </style>
+</section>
