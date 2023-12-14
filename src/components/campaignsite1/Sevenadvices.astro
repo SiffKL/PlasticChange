@@ -9,83 +9,74 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
       />
       <span class="pink">7 gode råd</span>
     </h2>
-    <h3></h3>
   </div>
 
   <section class="sevenadvices">
-    <!-- <Oneadvice
-      image="src/asset/icons/GoderaadMilk.svg"
-      title="Din mælk"
-      description="Køb din mælk uden skruelåg"
-    /> -->
     <div class="lottie">
-      <dotlottie-player
-        src="https://lottie.host/369caee3-f4b1-4330-b003-b92688d42a6d/XMFDuREjeM.json"
-        background="transparent"
-        speed="1"
-        style="width: 150px; height: 151px;"
-        loop
-        autoplay></dotlottie-player>
+      <div class="size">
+        <dotlottie-player
+          src="https://lottie.host/369caee3-f4b1-4330-b003-b92688d42a6d/XMFDuREjeM.json"
+          background="transparent"
+          speed="1"
+          style="width: 150px; height: 151px;"
+          loop
+          autoplay></dotlottie-player>
+      </div>
       <Oneadvice title="Din mælk" description="Køb din mælk uden skruelåg" />
     </div>
 
-    <div class="lottie">
-      <dotlottie-player
-        src="https://lottie.host/abf77aba-2e43-4b1c-9ba7-44dd7bcb0127/QxA32NZAAV.json"
-        background="transparent"
-        speed="1"
-        style="width: 150px; height: 152px;"
-        loop
-        autoplay></dotlottie-player>
-      <Oneadvice
-        title="Din vandflaske"
-        description="Brug drikkedunk og undgå købevand"
-      />
-    </div>
-    <!-- <Oneadvice
-      image="src/asset/icons/bottle.svg"
-      title="Din vandflaske"
-      description="Brug drikkedunk og undgå købevand"
-    /> -->
     <Oneadvice
       image="src/asset/icons/GoderaadTshirt.svg"
       title="Din tøjvask"
       description="Fyld maskinen, så du slidder mindre på tøjet"
     />
 
+    <Oneadvice
+      image="src/asset/icons/toiletpapir.svg"
+      title="Dit toiletbesøg"
+      description="Kun tre ting i toilettet - tis, lort og papir"
+    />
     <div class="lottie">
-      <dotlottie-player
-        src="https://lottie.host/33b7cd0c-9b0a-4401-8be2-38e0a1ace64a/7Zb5tPYAuC.json"
-        background="transparent"
-        speed="1"
-        style="width: 150px; height: 158px;"
-        loop
-        autoplay></dotlottie-player>
+      <div class="size">
+        <dotlottie-player
+          src="https://lottie.host/33b7cd0c-9b0a-4401-8be2-38e0a1ace64a/7Zb5tPYAuC.json"
+          background="transparent"
+          speed="1"
+          style="width: 150px; height: 158px;"
+          loop
+          autoplay></dotlottie-player>
+      </div>
       <Oneadvice
         title="Din fest"
         description="Drop engangsservice, balloner og sugerør"
       />
     </div>
-    <!-- <Oneadvice
-      image="src/asset/icons/balloon.svg"
-      title="Din fest"
-      description="Drop engangsservice, balloner og sugerør"
-    /> -->
+
+    <div class="lottie">
+      <div class="size">
+        <dotlottie-player
+          src="https://lottie.host/abf77aba-2e43-4b1c-9ba7-44dd7bcb0127/QxA32NZAAV.json"
+          background="transparent"
+          speed="1"
+          style="width: 150px; height: 152px;"
+          loop
+          autoplay></dotlottie-player>
+      </div>
+      <Oneadvice
+        title="Din vandflaske"
+        description="Brug drikkedunk og undgå købevand"
+      />
+    </div>
     <Oneadvice
-      image="src/asset/icons/toiletpapir.svg"
-      title="Dit toiletbesøg"
-      description="Kun tre ting i toilettet - tis, lort og papir"
+      image="src/asset/icons/kostmetik.svg"
+      title="Dine plejeprodukter"
+      description="Køb i store beholdere frem for mange små"
     />
     <Oneadvice
       image="src/asset/icons/bag.svg"
       title="Dit indkøb"
       description="Tag mulepose med og \
     sig nej tak til plastikposer"
-    />
-    <Oneadvice
-      image="src/asset/icons/kostmetik.svg"
-      title="Dine plejeprodukter"
-      description="Køb i store beholdere frem for mange små"
     />
   </section>
 </section>
@@ -103,40 +94,35 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
 <style>
   .lottie {
     display: flex;
+    width: 500px;
   }
   .sectionadvice {
     display: flex;
     flex-direction: column;
-    /* height: max-content; */
     padding: var(--spacing-section-padding-vertical, 5rem)
       var(--spacing-section-padding-horzontal, 8rem);
     justify-content: center;
-    align-items: center;
     align-content: center;
     gap: var(--spacing-section-element-gap, 5rem) -15.5rem;
-    /* flex-wrap: wrap; */
   }
 
   .sevenadvices {
     display: flex;
     max-width: 69.9375rem;
     padding: var(--size-80, 5rem) 0.125rem;
-    /* align-items: center;
-    align-content: center; */
-    gap: var(--spacing-section-element-gap, 5rem) 11.3125rem;
-    /* flex-shrink: 0; */
+    gap: var(--spacing-section-element-gap, 5rem);
     flex-wrap: wrap;
   }
-
+  img {
+    width: 150px;
+  }
   h2 {
     color: var(--text-paragraph-graphitedark, #1c1e23);
-    /* Header2-Light */
     font-family: Poppins;
-    font-size: 3.875rem;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    /* width: 67.625rem; */
     flex-shrink: 0;
     margin-bottom: 0;
   }
@@ -149,22 +135,14 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
     font-weight: 900;
     color: var(--color-primary-cerise-red-normal, #e72458);
   }
-
-  /* h3 {
-    color: var(--text-header-highlight-color, #e72458);
-    margin: 0;
-    /* Header2 */
-  /* font-family: Poppins;
-    font-size: 3.875rem;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-  } */
+  .test {
+    width: 150px;
+  }
 
   @media (max-width: 900px) {
     h2 {
       font-size: 2rem;
-      line-height: 150.5%; /* 2.06938rem */
+      line-height: 150.5%;
       padding: var(--spacing-section-padding-horzontal, 2rem);
     }
   }

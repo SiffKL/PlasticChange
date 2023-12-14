@@ -1,5 +1,3 @@
-
-
 *,
 *::before,
 *::after {
@@ -14,9 +12,6 @@ html {
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
   block-size: 100%;
-  /* color: var(--gray-7); */
-  /* font-family: var(--font-sans); */
-  /* line-height: var(--font-lineheight-3); */
 }
 
 body {
@@ -31,12 +26,12 @@ svg {
   max-width: 100%;
 }
 
-input,
+/* input,
 button,
 textarea,
 select {
   font: inherit;
-}
+} */
 
 ul:where([role="list"]),
 ol:where([role="list"]) {
@@ -44,15 +39,15 @@ ol:where([role="list"]) {
   padding: 0;
 }
 
-li{
-  color: var(--color-complimentary-pine-green-medium, #2A5F5E);
+li {
+  color: var(--color-complimentary-pine-green-medium, #2a5f5e);
 
-/* Paragraph20Normal */
-font-family: Rubik;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 150.5%; /* 30.1px */
+  /* Paragraph20Normal */
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.5%; /* 30.1px */
 }
 h1,
 h2,
@@ -62,14 +57,14 @@ h6 {
   font-family: "Poppins";
 }
 
-h2{
+h2 {
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 
-h4{
+h3 {
   font-family: Poppins;
   font-size: 32px;
   font-style: normal;
@@ -80,4 +75,5 @@ h4{
 p {
   font-family: "Rubik", sans-serif;
   max-width: 65ch;
+  font-size: 20px;
 }
