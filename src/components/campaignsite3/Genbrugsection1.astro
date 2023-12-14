@@ -2,13 +2,21 @@
 import Title from "../globalcomponents/Title.astro";
 ---
 
-<div class="maxwidth">
+<!-- <div class="maxwidth">
   <Title
     manchet="Hvorfor er genbrug"
     bigred="løsningen"
     text="Fremtiden kalder på mere genbrug, hvis vi skal løse plastikkrisen. Forstå hvorfor, at omfattende genbrugssystemer er en af de mest effektive løsninger til at løse plastikkrisen"
   />
-</div>
+</div> -->
+<section class="headersection">
+  <h1>Hvorfor er genbrug<br /><span> løsningen?</span></h1>
+  <p>
+    Fremtiden kalder på mere genbrug, hvis vi skal løse plastikkrisen. Forstå
+    hvorfor, at omfattende genbrugssystemer er en af de mest effektive løsninger
+    til at løse plastikkrisen.
+  </p>
+</section>
 <article>
   <div class="video-container">
     <iframe
@@ -22,15 +30,41 @@ import Title from "../globalcomponents/Title.astro";
 <style>
   .maxwidth {
     max-width: 1650px;
-    margin-left: 0; /* Aligns the content to the left */
+    margin-left: 0;
     padding: var(--spacing-text-padding-vertical, 2rem);
   }
 
+  .headersection {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding-left: var(--article-padding-horizontal);
+    padding-right: var(--article-padding-horizontal);
+    padding-top: 10rem;
+    gap: var(--article-gap);
+  }
+  h1 {
+    color: var(--header-color);
+    font-size: clamp(
+      var(--font-size-header-small),
+      5vw,
+      var(--font-size-header-large)
+    );
+    line-height: var(--line-height-header);
+  }
+  span {
+    color: var(--highlight-color);
+  }
+
+  p {
+    color: var(--paragraph-color);
+    font-weight: 500;
+    font-size: 16px;
+  }
   article {
     max-width: 1650px;
     margin: auto; /* Centers the content */
-    padding: var(--spacing-text-padding-vertical, 2rem)
-      var(--spacing-section-padding-horzontal, 8rem);
+    padding: var(--spacing-section-padding-horzontal, 8rem);
     display: flex;
     flex-direction: column;
     align-items: center; /* Aligns children elements to the center */
@@ -60,9 +94,15 @@ import Title from "../globalcomponents/Title.astro";
 
     .video-container {
       height: 250px;
-      padding-top: 0; /* Remove padding-top to use fixed height */
+      padding-top: 0;
+    }
+    .headersection {
+      max-width: 120%;
+      padding: 2rem;
+      padding-top: 7rem;
+    }
+    h1 {
+      line-height: 100%;
     }
   }
-
-  /* Rest of your styles */
 </style>

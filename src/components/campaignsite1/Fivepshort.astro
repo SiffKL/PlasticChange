@@ -12,6 +12,9 @@ import Title from "../globalcomponents/Title.astro";
       en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring
       i retningen mod ansvarlig brug af plastik.
     </p>
+    <a id="displaynone" class="no-style" href="/defemprincipper">
+      <Sbuttons title="Læs mere om principperne" , size="large" /></a
+    >
   </section>
   <section class="principlist">
     <div class="content">
@@ -76,10 +79,7 @@ import Title from "../globalcomponents/Title.astro";
           color: var(--highlight-color);
         }
         .but {
-          display: flex;
-          margin: 0 auto;
-          font-family: Arial, sans-serif;
-          padding-bottom: 24rem;
+          display: none;
         }
 
         p {
@@ -93,10 +93,8 @@ import Title from "../globalcomponents/Title.astro";
           display: flex;
           flex-direction: column;
           max-width: 100%;
-
           padding: var(--article-padding-vertical)
             var(--article-padding-horizontal);
-
           gap: var(--article-gap);
         }
 
@@ -108,7 +106,7 @@ import Title from "../globalcomponents/Title.astro";
         .background {
           max-width: 1650px;
           margin: auto;
-          background-image: url("src/asset/svgimages/FiveprincipBG.svg");
+          background-image: url("src/asset/svgimages/WavesPage1.svg");
           background-size: cover;
           background-position: bottom;
           background-repeat: no-repeat;
@@ -125,11 +123,10 @@ import Title from "../globalcomponents/Title.astro";
         }
         .content {
           padding-bottom: 600px;
-
-          max-width: 600px; /* Adjust width as needed */
+          max-width: 600px;
           margin: 0 auto;
-
           padding: var(--text-padding-vertical, 32px);
+          padding-bottom: 24rem;
         }
 
         @media screen and (max-width: 768px) {
@@ -149,9 +146,14 @@ import Title from "../globalcomponents/Title.astro";
           h4 {
             font-size: 16px;
           }
-
+          #displaynone {
+            display: none;
+          }
           .but {
             padding-bottom: 2rem;
+            display: flex;
+            margin: 0 auto;
+            font-family: "Rubik", sans-serif;
           }
         }
       </style>
