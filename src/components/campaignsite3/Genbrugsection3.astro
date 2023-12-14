@@ -9,7 +9,7 @@
       <span class="highlight">engangsemballage</span>
     </h1>
   </div>
-  <div class="item">
+  <div class="item1">
     <p>
       Genbrug er med andre ord et middel til at reducere vores forbrug og affald
       og derfor er det smart.
@@ -28,6 +28,7 @@
       enorme affaldsbjerge og er et ubæredygtigt træk på jordens begrænsede
       ressourcer.
     </p>
+    <br />
     <p>
       Desuden bidrager den enorme plastikproduktion til de klimaforandringer som
       vi også ser grundet de øgede CO2-udledninger.
@@ -53,6 +54,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  p {
+    font-family: Rubik;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150.5%;
   }
 
   h1 {
@@ -97,6 +106,13 @@
     text-align: left;
   }
 
+  .item1 {
+    /* border: 1px solid #ddd; */
+    padding: 20px;
+    text-align: left;
+    margin-top: 5%;
+  }
+
   .img {
     max-width: 31.25rem;
     min-width: 17.875rem;
@@ -105,7 +121,7 @@
     margin: 0 auto;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 960px) {
     .container {
       display: grid;
       grid-template-columns: 1fr;
@@ -123,6 +139,10 @@
     }
     .highlight {
       font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 1rem;
     }
   }
 </style>

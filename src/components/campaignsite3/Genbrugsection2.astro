@@ -1,5 +1,6 @@
 ---
 ---
+
 <article>
   <div class="background-svg"></div>
   <div class="content">
@@ -17,81 +18,78 @@
 </article>
 
 <style>
+  article {
+    position: relative; /* Keeps positioning context */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    /*  width: 80%; Percentage-based width for responsiveness */
+    max-width: 1439px; /* Maximum width */
+    height: auto; /* Auto height for responsiveness */
+    margin: auto; /* Centers the article horizontally */
+    overflow: hidden; /* Ensures nothing goes outside the article */
+    /* background-color: #d3e2e2; */
+  }
 
+  /* Style for the background 
+  .background-svg {
+    position: absolute;
+    bottom: 0; /* Position at the bottom instead of top 
+    left: 0;
+    width: 100%;
+    height: 100%; /* Adjust height as needed 
+    background-image: url("src/asset/svgimages/GenbrugSectionBackground.svg");
+    background-size: cover;
+    background-position: bottom; /* Align the background image to the bottom 
+  }
+*/
+  /* Style for the content */
+  .content {
+    position: relative;
+    z-index: 1; /* Ensures the content is above the background */
+    padding: var(--spacing-text-padding-vertical, 5rem)
+      var(--spacing-text-padding-horizontal, 3rem);
 
+    /* padding: var(--spacing-text-padding-vertical, 32px)
+      var(--spacing-text-padding-horizontal, 48px); */
+    width: 100%; /* Full width of the article */
+    max-width: 828px; /* Maximum width */
+    margin: auto;
+    /* padding-bottom: 200px; */
+  }
 
-article {
-  position: relative; /* Keeps positioning context */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 80%; /* Percentage-based width for responsiveness */
-  max-width: 1439px; /* Maximum width */
-  height: auto; /* Auto height for responsiveness */
-  margin: auto; /* Centers the article horizontally */
-  overflow: hidden; /* Ensures nothing goes outside the article */
-  background-color: #d3e2e2;
-}
+  /* Style for the pink text */
+  .pink {
+    color: var(--text-header-highlight-color, #e72458);
+    /* Header4 */
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 
-/* Style for the background */
-.background-svg {
-  position: absolute;
-  bottom: 0; /* Position at the bottom instead of top */
-  left: 0;
-  width: 100%;
-  height: 100%; /* Adjust height as needed */
-  background-image: url("src/asset/svgimages/GenbrugSectionBackground.svg");
-  background-size: cover;
-  background-position: bottom; /* Align the background image to the bottom */
-}
+  h4 {
+    margin-bottom: 20px; /* Adjust this value as needed for spacing */
+  }
 
-/* Style for the content */
-.content {
-  position: relative;
-  z-index: 1; /* Ensures the content is above the background */
-  padding: var(--spacing-text-padding-vertical, 32px) var(--spacing-text-padding-horizontal, 48px);
-  width: 100%; /* Full width of the article */
-  max-width: 828px; /* Maximum width */
-  margin: auto;
-  padding-bottom: 300px;
-}
+  p {
+    color: var(--color-complimentary-pine-green-medium, #2a5f5e);
+    /* Paragraph20Normal */
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150.5%;
+  }
 
-/* Style for the pink text */
-.pink {
-  color: var(--text-header-highlight-color, #e72458);
-  /* Header4 */
-  font-family: Poppins;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
+  /* Media Queries for smaller screens */
 
-h4 {
-  margin-bottom: 20px; /* Adjust this value as needed for spacing */
-}
-
-p{
-  color: var(--color-complimentary-pine-green-medium, #2A5F5E);
-/* Paragraph20Normal */
-font-family: Rubik;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 150.5%;
-}
-
-/* Media Queries for smaller screens */
-
-
-@media (max-width: 480px) {
-
-}
-.background-svg {
-
-  height: 50%;
-}
+  @media (max-width: 600px) {
+  }
+  /* .background-svg {
+    height: 50%;
+  } */
 </style>
-

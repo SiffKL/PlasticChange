@@ -8,10 +8,27 @@ import Calltoactionsection2 from "../components/globalcomponents/Calltoactionsec
 
 <BaseLayout>
   <Genbrugsection1 />
-  <Genbrugsection2 />
+  <div class="background">
+    <Genbrugsection2 />
+  </div>
   <Genbrugsection3 />
   <Calltoactionsection2
     head="Du kan beskytte naturen, dyrelivet og vores børn mod plastik"
     text="Kun med din støtte kan vi kæmpe for, at politikere og virksomheder tager ansvar for at standse overproduktion og forurening fra plastik nu og at vi kan uddanne fremtidens forbrugere."
   />
 </BaseLayout>
+
+<style>
+  .background {
+    background-color: #d3e2e2;
+    background-image: url("src/asset/svgimages/GenbrugSectionBackground.svg");
+  }
+
+  @media (max-width: 600px) {
+  }
+  .background {
+    height: 660px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+</style>

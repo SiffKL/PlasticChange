@@ -20,52 +20,49 @@ import Title from "../globalcomponents/Title.astro";
 </article>
 
 <style>
-.maxwidth {
-  max-width: 1650px;
-  margin-left: 0; /* Aligns the content to the left */
-  padding: var(--spacing-text-padding-vertical, 2rem)
-           
-}
+  .maxwidth {
+    max-width: 1650px;
+    margin-left: 0; /* Aligns the content to the left */
+    padding: var(--spacing-text-padding-vertical, 2rem);
+  }
 
-
-article {
-  max-width: 1650px;
-  margin: auto; /* Centers the content */
-  padding: var(--spacing-text-padding-vertical, 2rem)
-           var(--spacing-section-padding-horzontal, 8rem);
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Aligns children elements to the center */
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-top: 50%; /* Maintain aspect ratio for larger screens */
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Media query for mobile screens */
-@media screen and (max-width: 768px) {
   article {
-    max-width: 100%; /* Adjust max-width for smaller screens */
-    padding: var(--container-padding-top-bottom, 32px)
-             var(--container-padding-left-right, 64px);
+    max-width: 1650px;
+    margin: auto; /* Centers the content */
+    padding: var(--spacing-text-padding-vertical, 2rem)
+      var(--spacing-section-padding-horzontal, 8rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligns children elements to the center */
   }
 
   .video-container {
-    height: 600px;
-    padding-top: 0; /* Remove padding-top to use fixed height */
+    position: relative;
+    width: 100%;
+    padding-top: 50%; /* Maintain aspect ratio for larger screens */
   }
-}
 
-/* Rest of your styles */
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
+  /* Media query for mobile screens */
+  @media screen and (max-width: 768px) {
+    article {
+      max-width: 100%; /* Adjust max-width for smaller screens */
+      padding: var(--container-padding-top-bottom, 32px)
+        var(--container-padding-left-right, 64px);
+    }
+
+    .video-container {
+      height: 250px;
+      padding-top: 0; /* Remove padding-top to use fixed height */
+    }
+  }
+
+  /* Rest of your styles */
 </style>
