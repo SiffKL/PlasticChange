@@ -16,24 +16,26 @@
         <a class="basiclink" href="/hvorforgenbrug">Hvorfor Genbrug?</a>
       </li>
       <li>
-        <a class="pinklink" href="/forms"
-          >Bliv en Plastic Changer</a
-        >
+        <a class="pinklink" href="/forms">Bliv en Plastic Changer</a>
       </li>
     </ul>
-    <!-- <img class="" src="src/asset/"/> -->
   </div>
 </section>
 
 <style>
   .nav {
-    margin: 0rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
     display: flex;
     padding: var(--nav-padding-vertical, 0rem)
       var(--nav-padding-horizontal, 3.5rem);
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
+    z-index: 1000; /* Set a high z-index value */
   }
 
   a {
@@ -96,36 +98,39 @@
   .burger-menu {
     display: none;
     cursor: pointer;
-    font-size: 3.5rem;
-    margin-left: 10px;
+    font-size: 2.60444rem;
+    color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
   }
 
   .close-icon {
     display: none;
     cursor: pointer;
-    font-size: 3rem;
-    margin-left: 10px;
+    font-size: 2.60444rem;
     /* transition: height 300ms linear; */
+    color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
   }
 
   @media (max-width: 1200px) {
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2.60444rem;
+      width: 100%;
+      margin: 0;
+      padding: var(--nav-padding-vertical, 0rem)
+        var(--nav-padding-horizontal, 3.5rem);
+      display: flex;
+      justify-content: space-between;
+      background: var(--Color-Secondary-white-blush, rgba(255, 255, 255, 0.6));
+      z-index: 1000; /* Set a high z-index value */
+    }
     .burger-menu {
       display: block;
-      /* order: 3;  */
     }
 
     .close-icon {
       display: none;
-      /* order: 3;  */
-    }
-
-    .nav {
-      margin: 0rem;
-      display: flex;
-      padding: var(--nav-padding-vertical, 0rem)
-        var(--nav-padding-horizontal, 3.5rem);
-      justify-content: space-between;
-      align-items: center;
     }
 
     .nav img {
@@ -141,9 +146,8 @@
       position: absolute;
       right: 0;
       background: var(--color-complimentary-pine-green-light, #90b7b6);
-      top: -300px; /* Set an initial off-screen position */
       z-index: 1000; /* Set a high z-index value */
-      transition: transform 1s;
+      /* transition: transform 1s; */
     }
   }
 
@@ -154,7 +158,8 @@
 
   .nav.open ul {
     display: flex;
-    top: 5%;
+    top: 100%;
+    padding: 3rem;
   }
 
   .nav.open .burger-menu {
