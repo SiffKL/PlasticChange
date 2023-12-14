@@ -1,5 +1,3 @@
-
-
 *,
 *::before,
 *::after {
@@ -44,15 +42,15 @@ ol:where([role="list"]) {
   padding: 0;
 }
 
-li{
-  color: var(--color-complimentary-pine-green-medium, #2A5F5E);
+li {
+  color: var(--color-complimentary-pine-green-medium, #2a5f5e);
 
-/* Paragraph20Normal */
-font-family: Rubik;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 150.5%; /* 30.1px */
+  /* Paragraph20Normal */
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.5%; /* 30.1px */
 }
 h1,
 h2,
@@ -62,14 +60,14 @@ h6 {
   font-family: "Poppins";
 }
 
-h2{
+h2 {
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 
-h4{
+h4 {
   font-family: Poppins;
   font-size: 32px;
   font-style: normal;
@@ -79,5 +77,8 @@ h4{
 
 p {
   font-family: "Rubik", sans-serif;
-  max-width: 65ch;
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 60ch;
 }

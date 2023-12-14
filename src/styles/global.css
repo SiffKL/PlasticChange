@@ -1,7 +1,6 @@
 /* ----------- PRIMITIVE ---------- */
 
 :root {
- 
   /* colors */
   --color-pink: #ff1054;
   --color-complimentary-pine-green-dark: #142c2b;
@@ -15,7 +14,7 @@
   --color-primary-cerise-red-medium: #952738;
   --color-primary-cerise-red-normal: #e72458;
   --color-secondary-graphite-dark: #1c1e23;
-  --color-secondary-graphite-ligth: #cacdd5;
+  --color-secondary-graphite-light: #cacdd5; /* Corrected the typo 'ligth' to 'light' */
   --color-secondary-graphite-medium: #70727d;
   --color-secondary-graphite-normal: #a3a6b4;
   --color-secondary-white: #ffffff;
@@ -42,6 +41,9 @@
   --size-128: 8rem;
   --size-350: 21.875rem;
   --size-430: 26.875rem;
+
+  /* for all sections max-width */
+  --max-width-article: 90rem;
 }
 
 /* ----------- SEMANTISKE ---------- */
@@ -52,16 +54,17 @@
   --logo-color: var(--color-pink);
   --button-primary-default-background-color: #ffffff;
   --button-secondary-default-background-color: var(
-    --colors-secondary-graphite-lighter
-  );
+    --color-secondary-graphite-light
+  ); /* Corrected variable name */
 
   /* Text color */
   --button-primary-default-text-color: var(--color-primary-cerise-red-normal);
   --button-primary-hover-text-color: #ffffff;
-
   --button-secondary-hover-text-color: #ffffff;
   --newsletter-title-color: var(--color-complimentary-pine-green-dark);
-  --text-header1-color-pine-green-dark: var(--header-color-pine-green-dark);
+  --text-header1-color-pine-green-dark: var(
+    --color-complimentary-pine-green-dark
+  ); /* Corrected variable name */
   --text-header-highlight-color: var(--color-primary-cerise-red-normal);
   --text-paragraph-color-pine-green-light: var(
     --color-complimentary-pine-green-light
@@ -76,7 +79,7 @@
     --color-complimentary-pine-green-dark
   );
   --text-paragraph-graphitedark: var(--color-secondary-graphite-dark);
-  --text-paragraph-graphitelight: var(--color-secondary-graphite-ligth);
+  --text-paragraph-graphitelight: var(--color-secondary-graphite-light);
   --text-paragraph-graphitemedium: var(--color-secondary-graphite-medium);
 
   /* link */
@@ -90,7 +93,7 @@
   /* -------------- WEB SPACING ------------*/
 
   /* Button */
-  --button-padding-horizontal: var(--size-16);
+  --button-padding-horizontal: var(--size-32);
   --button-padding-vertical: var(--size-16);
 
   /* Newsletter */
@@ -98,28 +101,41 @@
   --newsletter-title-size: var(--size-40);
   --newsletter-gab-vertival: var(--size-12);
 
+  /* Title with red */
+  --article-padding-vertical: var(--size-80);
+  --article-padding-horizontal: var(--size-128);
+  --article-gap: var(--size-32);
+  --header-color: var(--text-header1-color-pine-green-dark);
+  --highlight-color: var(--text-header-highlight-color);
+  --paragraph-color: var(--text-paragraph-color-pine-green-medium);
+
   /* Nav */
   --nav-padding-vertical: 0rem;
   --nav-padding-horizontal: var(--size-56);
   --spacing-nav-padding-horizontal: var(--size-56);
-  /* --nav-gap: var(--size-430); */
 
   /* Footer */
   --footer-padding-vertical: var(--size-24);
-  --footer-padding-horizontal: var(--section-padding-horzontal);
+  --footer-padding-horizontal: var(
+    --size-128
+  ); /* Changed to a defined variable */
 
   /* Form */
   --form-elements-horizontal-gab: var(--size-24);
 
-  /* Tekst */
+  /* Text */
   --text-gap-vertical: var(--size-32);
   --text-padding-vertical: var(--size-32);
   --text-padding-horizontal: var(--size-48);
+  --font-size-header-small: var(--size-40);
+  --font-size-header-large: var(--size-80);
+  --line-height-header: var(--size-80);
+  --line-height-header-mobile: var(--size-40);
 
   /* Section */
   --section-element-gap: var(--size-80);
   --section-padding-vertical: var(--size-80);
-  --section-padding-horzontal: var(--size-128);
+  --section-padding-horizontal: var(--size-128);
   --section-onecollum-padding-horizontal: var(--size-350);
 }
 
@@ -127,8 +143,8 @@
 
 :root {
   /* numbers */
-  --container-padding-between-elements: 1.5rem;
-  --container-padding-top-bottom: 2rem;
-  --container-padding-left-right: 4rem;
-  --text-padding-between-elements: 0.75rem;
+  --container-padding-between-elements: var(--size-24);
+  --container-padding-top-bottom: var(--size-32);
+  --container-padding-left-right: var(--size-64);
+  --text-padding-between-elements: var(--size-12);
 }

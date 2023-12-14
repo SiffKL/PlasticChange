@@ -1,231 +1,66 @@
 ---
 import Sbuttons from "../globalcomponents/Sbuttons.astro";
 import OnePrinc from "../globalcomponents/OnePrinc.astro";
+import Title from "../globalcomponents/Title.astro";
 ---
 
-<section class="homepagesection2">
-  <secion class="headersection">
-    <h2>Som Plastic Changer har vi</h2>
-    <h1>5 principper</h1>
-    <p class="intro">
-      Alle, der er med til at sætte fokus på plastik dagsordenen er i princippet
-      en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring
-      i retningen mod ansvarlig brug af plastik.
-    </p>
-    <a class="no-style" href="/defemprincipper">
-      <Sbuttons title="Læs mere om principperne" , size="large" />
-    </a>
-  </secion>
-  <section class="centercontent">
-    <div class="fiveprincipshort">
-      <div>
-        <p class="punkt">1</p>
-        <p>Vi er ikke imod plastik</p>
-      </div>
-      <div>
-        <p class="punkt">2</p>
-        <p>Vi fortæller historier om plastikforurening</p>
-      </div>
-      <div>
-        <p class="punkt">3</p>
-        <p>Vi opsøger viden og sætter os ind i sagerne</p>
-      </div>
-      <div>
-        <p class="punkt">4</p>
-        <p>Vi tror på ordenlighed</p>
-      </div>
-      <div>
-        <p class="punkt">5</p>
-        <p>Vi tror på at engegement driver forandring</p>
-      </div>
-      <!-- <OnePrinc number="1" title="Vi er ikke imod plastik" />
+<section>
+  <Title
+    manchet="Som plastic changer har vi"
+    bigred="5 principper"
+    text="Alle, der er med til at sætte fokus på plastik dagsordenen er i princippet en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring i retningen mod ansvarlig brug af plastik."
+  />
+  <section>
+    <div class="content">
+      <OnePrinc number="1" title="Vi er ikke imod plastik" />
       <OnePrinc
         number="2"
         title="Vi fortæller historier om plastikforurening"
       />
+
       <OnePrinc
         number="3"
         title="Vi opsøger viden og sætter os ind i sagerne"
       />
+
       <OnePrinc number="4" title="Vi tror på ordenlighed" />
 
       <OnePrinc number="5" title="Vi tror på at engagement driver forandring" />
-    </div> -->
+      <a class="no-style" href="/defemprincipper">
+        <Sbuttons title="Læs mere om principperne" , size="large" />
+      </a>
     </div>
   </section>
+
+  <style>
+.no-style {
+  display: inline-block; /* Make the <a> tag only as wide as its content */
+  text-decoration: none;
+  margin: 20px 0; /* Adjust margin as needed */
+  padding-left: 35%;
+}
+
+    section {
+      max-width: 1650px; /* Maximum width of the section */
+      margin: auto; /* Center the section */
+      background-image: url("src/asset/svgimages/FiveprincipBG.svg");
+      background-size: cover; /* Cover the entire section */
+      background-position: bottom; /* Center the image in the section */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+    }
+
+    .content {
+      padding-bottom: 600px; /* Adding padding to the bottom */
+    }
+
+    @media screen and (max-width: 768px) {
+      .content {
+        padding-bottom: 300px; /* Adjust padding for smaller screens */
+      }
+      .no-style {
+        margin: 0;
+  padding-left: 10%;
+}
+    }
+  </style>
 </section>
-
-<style>
-  .homepagesection2 {
-    background-image: url("src/asset/svgimages/WavesPage1.svg");
-    background-size: cover;
-
-    background-repeat: no-repeat;
-    display: flex;
-    width: 100vw;
-    height: 85rem;
-    padding: var(--spacing-text-padding-vertical, 2rem)
-      var(--spacing-text-padding-horizontal, 3rem);
-    align-items: center;
-    align-content: center;
-    gap: var(--spacing-text-gap-vertical, 2rem) -8.5625rem;
-    flex-wrap: wrap;
-  }
-  .headersection {
-    display: flex;
-    width: 50rem;
-    height: fit-content;
-    padding: var(--spacing-text-padding-vertical, 2rem)
-      var(--spacing-text-padding-horizontal, 3rem);
-    align-items: center;
-    align-content: center;
-    gap: var(--spacing-text-gap-vertical, 2rem);
-    flex-wrap: wrap;
-  }
-
-  .fiveprincipshort {
-    /* display: flex; */
-    /* width: fit-content; */
-    height: fit-content;
-    padding: var(--spacing-text-padding-vertical, 2rem)
-      var(--spacing-text-padding-horizontal, 3rem);
-    flex-direction: column;
-    align-items: flex-start;
-    /* gap: var(--spacing-section-element-gap, 5rem); */
-    /* flex-shrink: 0; */
-  }
-
-  .intro {
-    width: 30rem;
-    color: var(--color-complimentary-pine-green-dark, #142c2b);
-    font-family: Rubik;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150.5%; /* 1.505rem */
-  }
-  div {
-    display: flex;
-    width: 30.375rem;
-    height: 4.9375rem;
-    align-items: last baseline;
-    gap: 1.5625rem;
-    flex-shrink: 0;
-  }
-  p {
-    width: auto;
-    align-items: flex-start;
-    gap: 1.5625rem;
-    /* flex-shrink: 0; */
-  }
-
-  h2 {
-    line-height: 9rem;
-  }
-  h1 {
-    color: var(--text-header-highlight-color, #e72458);
-    /* Header1 */
-    font-family: Poppins;
-    font-size: 5rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 5rem;
-    margin: 0;
-  }
-  p {
-    color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
-    /* Header4-Bold */
-    font-family: Poppins;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150%; /* 3rem */
-  }
-
-  h2 {
-    color: var(--text-paragraph-graphitedark, #1c1e23);
-    font-family: Poppins;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 2rem;
-    margin: 0;
-  }
-  .centercontent {
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .punkt {
-    color: var(--text-paragraph-color-pinegreen-dark, #142c2b);
-    text-align: center;
-    font-family: Poppins;
-    font-size: 3.875rem;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-  }
-
-  .no-style {
-    list-style: none;
-    text-decoration: none;
-    text-decoration-line: none;
-  }
-  @media only screen and (max-width: 900px) {
-    .homepagesection2 {
-      background-image: url("src/asset/svgimages/WavesPage1.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      padding: 2rem;
-      gap: 2rem;
-      height: 1400px;
-    }
-    .headersection {
-      width: 100%;
-      /* text-align: center; */
-      padding: 2rem 1rem;
-    }
-
-    .fiveprincipshort {
-      width: 100%;
-      padding: 1rem;
-    }
-
-    .intro,
-    p {
-      width: auto;
-      /color: #142c2b;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    h1 {
-      color: #e72458;
-      font-size: 3rem;
-      line-height: 1.2;
-    }
-    h2 {
-      color: #1c1e23;
-      font-size: 2rem;
-      line-height: 1.2;
-    }
-    .centercontent {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .punkt {
-      font-size: 2.5rem;
-    }
-
-    div {
-      width: 100%;
-      height: auto;
-      align-items: baseline;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  }
-</style>
