@@ -156,97 +156,115 @@ import Title from "../globalcomponents/Title.astro";
             font-family: "Rubik", sans-serif;
           }
         }
+
+        /* ----------- animista from here ------------ */
+
+        .slide-right {
+          -webkit-animation: slide-right 1.2s
+            cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+          animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s
+            both;
+          overflow: hidden;
+        }
+
+        /* animation slide-right ----------------------*/
+        @-webkit-keyframes slide-right {
+          0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+          }
+          100% {
+            -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+          }
+        }
+        @keyframes slide-right {
+          0% {
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+          }
+          100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+          }
+        }
       </style>
-    </div>
+      <!-- </div>
   </section>
 </section>
 
-<style>
+<styl>
   .no-style {
-    display: inline-block; /* Make the <a> tag only as wide as its content */
+    display: inline-block; 
     text-decoration: none;
-    margin: 20px 0; /* Adjust margin as needed */
+    margin: 20px 0; 
     padding-left: 35%;
   }
 
   section {
-    max-width: 1650px; /* Maximum width of the section */
-    margin: auto; /* Center the section */
+    max-width: 1650px; 
+    margin: auto; 
     background-image: url("src/asset/svgimages/FiveprincipBG.svg");
-    background-size: cover; /* Cover the entire section */
-    background-position: bottom; /* Center the image in the section */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover; 
+    background-position: bottom; 
+    background-repeat: no-repeat; 
   }
 
   .content {
-    padding-bottom: 600px; /* Adding padding to the bottom */
+    padding-bottom: 600px; 
   }
 
   @media screen and (max-width: 768px) {
     .content {
-      padding-bottom: 300px; /* Adjust padding for smaller screens */
+      padding-bottom: 300px; 
     }
     .no-style {
       margin: 0;
       padding-left: 10%;
     }
-  }
+  } -->
 
-  /* ----------- animista from here ------------ */
+      <script>
+        import { gsap } from "gsap";
 
-  .slide-right {
-    -webkit-animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-      0.4s both;
-    animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
-    overflow: hidden;
-  }
+        import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-  /* animation slide-right ----------------------*/
-  @-webkit-keyframes slide-right {
-    0% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(-100px);
-      transform: translateX(-100px);
-    }
-  }
-  @keyframes slide-right {
-    0% {
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-  }
-</style>
-<script>
-  import { gsap } from "gsap";
+        gsap.registerPlugin(ScrollTrigger);
 
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
+        // gsap.to(".gsaptest", {
+        //   color: "#76EE00",
+        //   duration: 6,
+        //   scrollTrigger: "h1",
+        // });
 
-  gsap.registerPlugin(ScrollTrigger);
+        // gsap.from(".content .container", {
+        //   xPercent: -100,
+        //   opacity: 0,
+        //   stagger: 0.5,
+        //   duration: 1,
+        //   scrollTrigger: {
+        //     trigger: ".content",
+        //     start: "start center",
+        //     toggleClass: "slide-right",
+        //     markers: true,
+        //     once: true,
+        //   },
+        // });
 
-  // gsap.to(".gsaptest", {
-  //   color: "#76EE00",
-  //   duration: 6,
-  //   scrollTrigger: "h1",
-  // });
-
-  gsap.from(".content .container", {
-    xPercent: -100,
-    opacity: 0,
-    stagger: 0.5,
-    duration: 1,
-    scrollTrigger: {
-      trigger: ".content",
-      start: "start center",
-      // toggleClass: "slide-right",
-      markers: true,
-      once: true,
-    },
-  });
-</script>
+        gsap.from(".content .box", {
+          xPercent: -100,
+          opacity: 0,
+          stagger: 0.5,
+          duration: 1,
+          scrollTrigger: {
+            trigger: ".content",
+            start: "start center",
+            // toggleClass: "slide-right",
+            markers: true,
+            once: true,
+          },
+        });
+      </script>
+    </div>
+  </section>
+</section>
