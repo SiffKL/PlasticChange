@@ -52,3 +52,8 @@ p {
   line-height: 1.5;
   max-width: 55ch;
 }
+
+::selection {
+  background-color: var(--color-primary-cerise-red-normal, #e72458);
+  color: #fff !important;
+}
