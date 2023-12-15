@@ -25,17 +25,20 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
       <Oneadvice title="Din mælk" description="Køb din mælk uden skruelåg" />
     </div>
 
-    <Oneadvice
-      image="../../asset/icons/GoderaadTshirt.svg"
-      title="Din tøjvask"
-      description="Fyld maskinen, så du slidder mindre på tøjet"
-    />
-
-    <Oneadvice
-      image="../../asset/icons/toiletpapir.svg"
-      title="Dit toiletbesøg"
-      description="Kun tre ting i toilettet - tis, lort og papir"
-    />
+    <div class="container-7">
+      <div class="img1"></div>
+      <Oneadvice
+        title="Din tøjvask"
+        description="Fyld maskinen, så du slidder mindre på tøjet"
+      />
+    </div>
+    <div class="container-7">
+      <div class="img2"></div>
+      <Oneadvice
+        title="Dit toiletbesøg"
+        description="Kun tre ting i toilettet - tis, lort og papir"
+      />
+    </div>
     <div class="lottie">
       <div class="size">
         <dotlottie-player
@@ -67,30 +70,23 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
         description="Brug drikkedunk og undgå købevand"
       />
     </div>
-    <Oneadvice
-      image="../../asset/icons/kostmetik.svg"
-      title="Dine plejeprodukter"
-      description="Køb i store beholdere frem for mange små"
-    />
-    <Oneadvice
-      image="../../asset/icons/bag.svg"
-      title="Dit indkøb"
-      description="Tag mulepose med og \
+    <div class="container-7">
+      <div class="img3"></div>
+      <Oneadvice
+        title="Dine plejeprodukter"
+        description="Køb i store beholdere frem for mange små"
+      />
+    </div>
+    <div class="container-7">
+      <div class="img4"></div>
+      <Oneadvice
+        title="Dit indkøb"
+        description="Tag mulepose med og \
     sig nej tak til plastikposer"
-    />
+      />
+    </div>
   </section>
 </section>
-
-<script
-  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-  type="module"></script>
-<script
-  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-  type="module"></script>
-<script
-  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-  type="module"></script>
-
 <style>
   .lottie {
     display: flex;
@@ -99,8 +95,7 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
   .sectionadvice {
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-section-padding-vertical, 5rem)
-      var(--spacing-section-padding-horzontal, 8rem);
+    padding: var(--spacing-section-padding-horzontal, 8rem);
     justify-content: center;
     align-content: center;
     gap: var(--spacing-section-element-gap, 5rem) -15.5rem;
@@ -137,6 +132,46 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
   }
   .test {
     width: 150px;
+  }
+
+  .img1 {
+    background-image: url("../../asset/icons/GoderaadTshirt.svg");
+    background-size: contain; /* eller background-size: contain; afhængigt af dine krav */
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+  }
+
+  .img2 {
+    background-image: url("../../asset/icons/toiletpapir.svg");
+    background-size: contain; /* eller background-size: contain; afhængigt af dine krav */
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+  }
+
+  .img3 {
+    background-image: url("../../asset/icons/kostmetik.svg");
+    background-size: contain; /* eller background-size: contain; afhængigt af dine krav */
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+  }
+
+  .img4 {
+    background-image: url("../../asset/icons/bag.svg");
+    background-size: contain; /* eller background-size: contain; afhængigt af dine krav */
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+  }
+
+  .container-7 {
+    /* display: flex; */
+    max-width: 69.9375rem;
+    /* padding: var(--size-80, 5rem) 0.125rem; */
+    /* gap: var(--spacing-section-element-gap, 2rem); */
+    /* flex-wrap: wrap; */
   }
 
   @media (max-width: 900px) {
@@ -185,3 +220,12 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
     }
   }
 </style>
+<script
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>
+<script
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>
+<script
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>
