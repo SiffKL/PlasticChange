@@ -8,13 +8,48 @@ import Faktabox from "../components/campaignsite2/Faktabox.astro";
 ---
 
 <BaseLayout>
-  <!-- <Title
-    manchet="Som plastic changer har vi"
-    bigred="5 principper"
-    text="Alle, der er med til at sætte fokus på plastik dagsordenen er i princippet en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring i retningen mod ansvarlig brug af plastik."
-  /> -->
+  <div class="ani-container slide-right">
+    <Title
+      manchet="Som plastic changer har vi"
+      bigred="5 principper"
+      text="Alle, der er med til at sætte fokus på plastik dagsordenen er i princippet en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring i retningen mod ansvarlig brug af plastik."
+    />
+  </div>
   <Fiveprinciplessection />
   <Newsletterform />
   <Faktabox />
   <VersusSection />
 </BaseLayout>
+
+<style>
+  /* ----------- animista from here ------------ */
+
+  .slide-right {
+    -webkit-animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      0.4s both;
+    animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+    overflow: hidden;
+  }
+
+  /* animation slide-right ----------------------*/
+  @-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100px);
+      transform: translateX(-100px);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+</style>

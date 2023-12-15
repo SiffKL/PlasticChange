@@ -11,7 +11,7 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
     </div>
   </div>
   <article class="container2">
-    <div class="recycling">
+    <div class="recycling slide-top">
       <div class="description">
         <h2>Genanvendelse</h2>
         <p>
@@ -24,7 +24,7 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
       </div>
     </div>
 
-    <div class="upcycling">
+    <div class="upcycling slide-top">
       <div class="description">
         <h2>Genbrug</h2>
         <p>
@@ -200,6 +200,38 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
     .container3 {
       width: auto;
       padding: 1rem;
+    }
+  }
+
+  /* ------ animista from here ------------ */
+  .slide-top {
+    -webkit-animation: slide-top 2.2s ease-in-out both;
+    animation: slide-top 2.2s ease-in-out both;
+  }
+
+  /**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+    100% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
     }
   }
 </style>

@@ -3,6 +3,10 @@ import OnePrinc from "../globalcomponents/OnePrinc.astro";
 import Sbuttons from "../globalcomponents/Sbuttons.astro";
 ---
 
+
+<section>
+  <div class="content slide-top">
+
 <section class="background">
   <section class="headersection">
     <h1>Som plastic changer <br />har vi <span>5 principper</span></h1>
@@ -41,6 +45,7 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
       title="Vi tror på at engagement driver forandring"
       text="Vi har lyst til at gøre en forskel, og tror på at vores handlinger og ord er med til at skabe en positiv forandring, der kan inspirere andre. Mange gange er det de små ting, som kan gøre den store forskel - selv en lille indsats kan være med til at skabe store resultater."
     />
+
     <div class="but">
       <a class="no-style" href="/defemprincipper">
         <Sbuttons title="Læs mere om principperne" , size="large" /></a
@@ -50,6 +55,8 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
 </section>
 
 <style>
+
+  section {
   .background {
     max-width: 1650px; /* Maximum width of the section */
     margin: auto; /* Center the section */
@@ -57,6 +64,49 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
     background-size: cover; /* Cover the entire section */
     background-position: bottom; /* Center the image in the section */
     background-repeat: no-repeat; /* Prevent the image from repeating */
+
+  }
+
+  .content {
+    padding-bottom: 600px; /* Adding padding to the bottom */
+  }
+
+  @media screen and (max-width: 768px) {
+    .content {
+      padding-bottom: 300px; /* Adjust padding for smaller screens */
+    }
+  }
+
+  /* ------ animista from here ------------ */
+  .slide-top {
+    -webkit-animation: slide-top 2.2s ease-in-out both;
+    animation: slide-top 2.2s ease-in-out both;
+  }
+
+  /**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+    100% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+
     padding-top: var(--section-padding-vertical, --size-80);
   }
 

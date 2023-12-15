@@ -1,5 +1,5 @@
 <section class="container">
-  <div class="penguinimage"></div>
+  <div class="penguinimage pulsate-fwd"></div>
   <div class="grid-section">
     <div class="grid-item">
       <div class="card, Vidstedu">
@@ -28,9 +28,7 @@
 </section>
 
 <style>
-  .Vidstedu {
-    max-width: 450px;
-  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -40,6 +38,124 @@
     margin: auto;
     position: relative;
   }
+
+  .penguinimage {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    background-image: url("src/asset/svgimages/pingvin-kao-illustration-ai.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 699px;
+    width: 90%;
+    height: 905px;
+    z-index: -1;
+  }
+
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 200px 5%;
+    margin: 0 auto; /* Centering the grid-section */
+    width: 100%; /* Use full available width */
+    max-width: 1440px; /* Maximum width limit */
+    height: auto; /* Adjust height dynamically */
+    background-color: rgba(211, 226, 226, 0.5);
+  }
+
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .card {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+  }
+
+  h2 {
+    color: var(--color-complimentary-pine-green-dark, #142c2b);
+    margin-bottom: 10px;
+  }
+
+  p,
+  ul {
+    color: var(--color-complimentary-pine-green-medium, #2a5f5e);
+    font-family: Rubik;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    padding-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .grid-section {
+      padding: 50px 3%; /* Reduced padding for smaller screens */
+      grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
+    }
+
+    .card {
+      padding: 15px; /* Reduced padding inside the card */
+    }
+
+    .penguinimage {
+      top: -25%;
+    }
+  }
+
+  /* -------- animista from here ---------- */
+
+  .pulsate-fwd {
+    -webkit-animation: pulsate-fwd 1.5s ease-in-out infinite both;
+    animation: pulsate-fwd 1.5s ease-in-out infinite both;
+  }
+
+  /**
+ * ----------------------------------------
+ * animation pulsate-fwd
+ * ----------------------------------------
+ */
+  @-webkit-keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.04);
+      transform: scale(1.04);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.04);
+      transform: scale(1.04);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+=======
 
   .penguinimage {
     position: absolute;

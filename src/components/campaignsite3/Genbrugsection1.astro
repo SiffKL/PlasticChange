@@ -2,6 +2,9 @@
 import Title from "../globalcomponents/Title.astro";
 ---
 
+
+<div class="maxwidth slide-right">
+
 <!-- <div class="maxwidth">
   <Title
     manchet="Hvorfor er genbrug"
@@ -103,6 +106,38 @@ import Title from "../globalcomponents/Title.astro";
     }
     h1 {
       line-height: 100%;
+    }
+  }
+
+
+  /* ----------- animista from here ------------ */
+
+  .slide-right {
+    -webkit-animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      0.4s both;
+    animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+    overflow: hidden;
+  }
+
+  /* animation slide-right ----------------------*/
+  @-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100px);
+      transform: translateX(-100px);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
     }
   }
 </style>

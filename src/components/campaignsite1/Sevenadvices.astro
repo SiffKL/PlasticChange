@@ -4,7 +4,7 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
 
 <section class="sectionadvice">
   <div>
-    <h2>
+    <h2 class="slide-top">
       Tænk plastspild ind <br /> i <span class="bold">din hverdag</span> med de <br
       />
       <span class="pink">7 gode råd</span>
@@ -150,6 +150,38 @@ import Oneadvice from "../campaignsite1/Oneadvice.astro";
     }
     dotlottie-player {
       width: 50px;
+    }
+  }
+
+  /* ------ animista from here ------------ */
+  .slide-top {
+    -webkit-animation: slide-top 1.2s ease-in-out both;
+    animation: slide-top 1.2s ease-in-out both;
+  }
+
+  /**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+    100% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
     }
   }
 </style>
