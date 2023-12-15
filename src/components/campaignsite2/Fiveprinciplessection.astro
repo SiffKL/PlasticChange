@@ -4,17 +4,19 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
 ---
 
 <section>
-  <div class="content slide-top">
+  <div class="content-5">
     <section class="background">
       <section class="headersection">
-        <h1>Som plastic changer <br />har vi <span>5 principper</span></h1>
-        <p class="pwidth">
+        <h1 class="slide-right">
+          Som plastic changer <br />har vi <span>5 principper</span>
+        </h1>
+        <p class="pwidth slide-right">
           Alle, der er med til at sætte fokus på plastik dagsordenen er i
           princippet en Plastic Changer. Vi drives af ønsket om at skabe en
           positiv forandring i retningen mod ansvarlig brug af plastik.
         </p>
       </section>
-      <div class="content">
+      <div class="content-5p">
         <OnePrinc
           number="1"
           title="Vi er ikke imod plastik"
@@ -51,124 +53,193 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
         </div>
       </div>
     </section>
+  </div>
+</section>
+<style>
+  .background {
+    max-width: 1650px; /* Maximum width of the section */
+    margin: auto; /* Center the section */
+    background-image: url("../../asset/svgimages/FiveprincipBG.svg");
+    background-size: cover; /* Cover the entire section */
+    background-position: bottom; /* Center the image in the section */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+  }
 
-    <style>
-      .background {
-        max-width: 1650px; /* Maximum width of the section */
-        margin: auto; /* Center the section */
-        background-image: url("../../asset/svgimages/FiveprincipBG.svg");
-        background-size: cover; /* Cover the entire section */
-        background-position: bottom; /* Center the image in the section */
-        background-repeat: no-repeat; /* Prevent the image from repeating */
-      }
+  .content {
+    padding-bottom: 600px; /* Adding padding to the bottom */
+  }
 
-      .content {
-        padding-bottom: 600px; /* Adding padding to the bottom */
-      }
+  @media screen and (max-width: 768px) {
+    .content {
+      padding-bottom: 300px; /* Adjust padding for smaller screens */
+    }
+  }
 
-      @media screen and (max-width: 768px) {
-        .content {
-          padding-bottom: 300px; /* Adjust padding for smaller screens */
-        }
-      }
+  /* ------ animista from here ------------ */
+  .slide-top {
+    -webkit-animation: slide-top 2.2s ease-in-out both;
+    animation: slide-top 2.2s ease-in-out both;
+  }
 
-      /* ------ animista from here ------------ */
-      .slide-top {
-        -webkit-animation: slide-top 2.2s ease-in-out both;
-        animation: slide-top 2.2s ease-in-out both;
-      }
-
-      /**
+  /**
  * ----------------------------------------
  * animation slide-top
  * ----------------------------------------
  */
-      @-webkit-keyframes slide-top {
-        0% {
-          -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-        }
-        100% {
-          -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-        }
-      }
-      @keyframes slide-top {
-        0% {
-          -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-        }
-        100% {
-          -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+    100% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
 
-          padding-top: var(--section-padding-vertical, --size-80);
-        }
-      }
+      padding-top: var(--section-padding-vertical, --size-80);
+    }
+  }
 
-      .headersection {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-        padding: var(--article-padding-vertical)
-          var(--article-padding-horizontal);
-        gap: var(--article-gap);
-      }
-      h1 {
-        color: var(--header-color);
-        font-size: clamp(
-          var(--font-size-header-small),
-          5vw,
-          var(--font-size-header-large)
-        );
-        line-height: var(--line-height-header);
-      }
-      .but {
-        max-width: 600px;
-      }
-      span {
-        color: var(--highlight-color);
-      }
+  .headersection {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: var(--article-padding-vertical) var(--article-padding-horizontal);
+    gap: var(--article-gap);
+  }
+  h1 {
+    color: var(--header-color);
+    font-size: clamp(
+      var(--font-size-header-small),
+      5vw,
+      var(--font-size-header-large)
+    );
+    line-height: var(--line-height-header);
+  }
+  .but {
+    max-width: 600px;
+  }
+  span {
+    color: var(--highlight-color);
+  }
 
-      p {
-        color: var(--paragraph-color);
-        font-weight: 500;
-        font-size: 16px;
-      }
-      .pwidth {
-        max-width: 550px;
-      }
-      .but {
-        display: flex;
-        justify-content: left;
-        margin: 0 auto;
-        font-family: Arial, sans-serif;
-        padding: var(--text-padding-vertical, 32px);
-      }
-      .content {
-        padding-bottom: 500px; /* Adding padding to the bottom */
-      }
+  p {
+    color: var(--paragraph-color);
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .pwidth {
+    max-width: 550px;
+  }
+  .but {
+    display: flex;
+    justify-content: left;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding: var(--text-padding-vertical, 32px);
+  }
+  .content {
+    padding-bottom: 500px; /* Adding padding to the bottom */
+  }
 
-      @media screen and (max-width: 768px) {
-        .content {
-          padding-bottom: 300px;
-        }
+  @media screen and (max-width: 768px) {
+    .content {
+      padding-bottom: 300px;
+    }
 
-        .but {
-          padding-bottom: 8rem;
-        }
-        .no-style {
-          margin: 0;
-          padding-left: 10%;
-        }
-        .headersection {
-          max-width: 120%;
-          padding: 2rem;
-        }
-        h1 {
-          line-height: 100%;
-        }
-      }
-    </style>
-  </div>
-</section>
+    .but {
+      padding-bottom: 8rem;
+    }
+    .no-style {
+      margin: 0;
+      padding-left: 10%;
+    }
+    .headersection {
+      max-width: 120%;
+      padding: 2rem;
+    }
+    h1 {
+      line-height: 100%;
+    }
+  }
+
+  .slide-right {
+    -webkit-animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      0.4s both;
+    animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+    overflow: hidden;
+  }
+
+  /* animation slide-right ----------------------*/
+  @-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100px);
+      transform: translateX(-100px);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // gsap.to(".gsaptest", {
+  //   color: "#76EE00",
+  //   duration: 6,
+  //   scrollTrigger: "h1",
+  // });
+
+  // gsap.from(".content .container", {
+  //   xPercent: -100,
+  //   opacity: 0,
+  //   stagger: 0.5,
+  //   duration: 1,
+  //   scrollTrigger: {
+  //     trigger: ".content",
+  //     start: "start center",
+  //     toggleClass: "slide-right",
+  //     markers: true,
+  //     once: true,
+  //   },
+  // });
+
+  gsap.from(".content-5p .container-onep", {
+    yPercent: -100,
+    opacity: 0,
+    stagger: 0.5,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".content-5p",
+      start: "6% center",
+      // toggleClass: "slide-top",
+      markers: true,
+      once: true,
+    },
+  });
+</script>
