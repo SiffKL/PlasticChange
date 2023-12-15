@@ -11,7 +11,7 @@ import Title from "../globalcomponents/Title.astro";
     text="Alle, der er med til at sætte fokus på plastik dagsordenen er i princippet en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring i retningen mod ansvarlig brug af plastik."
   />
   <section>
-    <div class="content slide-right">
+    <div class="content">
       <OnePrinc number="1" title="Vi er ikke imod plastik" />
       <OnePrinc
         number="2"
@@ -108,11 +108,17 @@ import Title from "../globalcomponents/Title.astro";
   //   scrollTrigger: "h1",
   // });
 
-  gsap.to(".content", {
+  gsap.from(".content .container", {
+    xPercent: -100,
+    opacity: 0,
+    stagger: 0.5,
+    duration: 1,
     scrollTrigger: {
       trigger: ".content",
-      start: "center center",
-      toggleClass: ".slide-left",
+      start: "start center",
+      // toggleClass: "slide-right",
+      markers: true,
+      once: true,
     },
   });
 </script>

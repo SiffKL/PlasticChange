@@ -7,7 +7,7 @@ const { number, title, text } = Astro.props;
     <span class="number">{number}</span>
     <h1 class="heading">{title}</h1>
   </div>
-  <p class="content">
+  <p class="content-text">
     {text}
   </p>
 </div>
@@ -43,7 +43,7 @@ const { number, title, text } = Astro.props;
     font-weight: 700;
     line-height: normal;
   }
-  .content {
+  .content-text {
     color: var(--color-complimentary-pine-green-medium, #2a5f5e);
     /* Paragraph20Medium */
     font-family: Rubik;
