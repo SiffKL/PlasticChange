@@ -4,31 +4,159 @@ import OnePrinc from "../globalcomponents/OnePrinc.astro";
 import Title from "../globalcomponents/Title.astro";
 ---
 
-<section>
-  <Title
-    manchet="Som plastic changer har vi"
-    bigred="5 principper"
-    text="Alle, der er med til at sætte fokus på plastik dagsordenen er i princippet en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring i retningen mod ansvarlig brug af plastik."
-  />
-  <section>
+<section class="background">
+  <section class="headersection">
+    <h1>Som plastic changer <br />har vi <span>5 principper</span></h1>
+    <p>
+      Alle, der er med til at sætte fokus på plastik dagsordenen er i princippet
+      en Plastic Changer. Vi drives af ønsket om at skabe en positiv forandring
+      i retningen mod ansvarlig brug af plastik.
+    </p>
+    <a id="displaynone" class="no-style" href="/defemprincipper">
+      <Sbuttons title="Læs mere om principperne" , size="large" /></a
+    >
+  </section>
+  <section class="principlist">
     <div class="content">
-      <OnePrinc number="1" title="Vi er ikke imod plastik" />
-      <OnePrinc
-        number="2"
-        title="Vi fortæller historier om plastikforurening"
-      />
+      <div class="box">
+        <h3>1</h3><h4>Vi er ikke imod plastik</h4>
+      </div>
+      <div class="box">
+        <h3>2</h3><h4>Vi fortæller historier om <br />plastikforurening</h4>
+      </div>
+      <div class="box">
+        <h3>3</h3><h4>Vi opsøger viden og sætter <br />os ind i sagerne</h4>
+      </div>
 
-      <OnePrinc
-        number="3"
-        title="Vi opsøger viden og sætter os ind i sagerne"
-      />
+      <div class="box"><h3>4</h3><h4>Vi tror på ordenlighed</h4></div>
+      <div class="box">
+        <div class="box">
+          <h3>5</h3><h4>Vi tror på at engagement <br />driver forandring</h4>
+        </div>
+      </div>
+      <div class="but">
+        <a class="no-style" href="/defemprincipper">
+          <Sbuttons title="Læs mere om principperne" , size="large" /></a
+        >
+      </div>
 
-      <OnePrinc number="4" title="Vi tror på ordenlighed" />
+      <style>
+        .box {
+          display: flex;
+          align-items: baseline; /* This will vertically center the items in the container */
+          gap: 1rem;
+          max-width: 600px;
+          padding-bottom: 2rem;
+        }
+        .number {
+          color: var(--color-complimentary-pine-green-dark, #142c2b);
+          font-family: "Rubik";
+          font-size: clamp(50px, 5vw, 80px); /* Scales between 50px and 80px */
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
 
-      <OnePrinc number="5" title="Vi tror på at engagement driver forandring" />
-      <a class="no-style" href="/defemprincipper">
-        <Sbuttons title="Læs mere om principperne" , size="large" />
-      </a>
+        .principlist {
+          display: flex;
+          justify-content: center;
+        }
+        h3 {
+          color: var(--color-complimentary-pine-green-dark, #142c2b);
+          font-family: "Rubik";
+          font-size: clamp(24px, 5vw, 32px);
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+
+        .no-style {
+          display: inline-block;
+          text-decoration: none;
+          /* margin: 20px 0; */
+        }
+        span {
+          color: var(--highlight-color);
+        }
+        .but {
+          display: none;
+        }
+
+        p {
+          color: var(--paragraph-color);
+          font-weight: 500;
+          max-width: 550px;
+          font-size: 16px;
+        }
+
+        .headersection {
+          display: flex;
+          flex-direction: column;
+          max-width: 100%;
+          padding: var(--article-padding-vertical)
+            var(--article-padding-horizontal);
+          gap: var(--article-gap);
+        }
+
+        h4 {
+          /* font-size: 16x; */
+          font-weight: 500;
+          font-size: clamp(16px, 5vw, 24px);
+        }
+        .background {
+          max-width: 1650px;
+          margin: auto;
+          background-image: url("src/asset/svgimages/WavesPage1.svg");
+          background-size: cover;
+          background-position: bottom;
+          background-repeat: no-repeat;
+        }
+        h1 {
+          padding-top: 16rem;
+          color: var(--header-color);
+          font-size: clamp(
+            var(--font-size-header-small),
+            5vw,
+            var(--font-size-header-large)
+          );
+          line-height: var(--line-height-header);
+        }
+        .content {
+          padding-bottom: 600px;
+          max-width: 600px;
+          margin: 0 auto;
+          padding: var(--text-padding-vertical, 32px);
+          padding-bottom: 24rem;
+        }
+
+        @media screen and (max-width: 768px) {
+          .content {
+            padding-bottom: 300px;
+          }
+          .no-style {
+            margin: 0;
+          }
+          .headersection {
+            padding: 2rem;
+          }
+          h1 {
+            line-height: 100%;
+            padding-top: 2rem;
+          }
+          h4 {
+            font-size: 16px;
+          }
+          #displaynone {
+            display: none;
+          }
+          .but {
+            padding-bottom: 2rem;
+            display: flex;
+            margin: 0 auto;
+            font-family: "Rubik", sans-serif;
+          }
+        }
+      </style>
     </div>
   </section>
 </section>

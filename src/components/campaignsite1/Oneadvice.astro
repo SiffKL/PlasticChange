@@ -26,6 +26,12 @@ const { image, title, description } = Astro.props;
         font-size: 1.5rem;
         font-weight: 600;
       }
+
+      @media (max-width: 900px) {
+        img {
+          width: 100px;
+        }
+      }
     </style>
   </div>
 </section>

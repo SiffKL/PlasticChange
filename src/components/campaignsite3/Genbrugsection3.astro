@@ -14,7 +14,7 @@ import Calltoactionsection2 from "../globalcomponents/Calltoactionsection2.astro
     <p>
       Genbrug er med andre ord et middel til at reducere vores forbrug og affald
       og derfor er det smart.
-    </p>
+    </p><br />
     <p>
       Derfor bør prioriteringen af affaldshierarkiet gentænkes, således at vi
       bevæger os væk fra deponi og affaldsforbrænding, som stadig er den
@@ -59,11 +59,12 @@ import Calltoactionsection2 from "../globalcomponents/Calltoactionsection2.astro
   }
 
   p {
-    font-family: Rubik;
+    font-family: "Rubik";
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
     line-height: 150.5%;
+    color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
   }
 
   h1 {
@@ -96,24 +97,22 @@ import Calltoactionsection2 from "../globalcomponents/Calltoactionsection2.astro
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-gap: 20px;
-      padding: 20px; */
-    padding: var(--spacing-section-padding-vertical, 5rem)
-      var(--spacing-section-padding-horzontal, 8rem);
+    padding: var(--section-padding-vertical, 5rem)
+      var(--section-padding-horzontal, 8rem);
     grid-gap: var(--spacing-section-element-gap, 5rem);
   }
 
   .item {
-    /* border: 1px solid #ddd; */
     padding: 20px;
     text-align: left;
+    max-width: 500px;
   }
 
   .item1 {
-    /* border: 1px solid #ddd; */
     padding: 20px;
     text-align: left;
     margin-top: 5%;
+    max-width: 500px;
   }
 
   .img {
@@ -128,8 +127,8 @@ import Calltoactionsection2 from "../globalcomponents/Calltoactionsection2.astro
     .container {
       display: grid;
       grid-template-columns: 1fr;
-      padding: var(--container-padding-top-bottom, 2rem)
-        var(--container-padding-left-right, 4rem);
+
+      padding: 1rem;
       grid-gap: 0rem;
     }
 

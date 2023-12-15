@@ -5,8 +5,8 @@
   <div class="background-svg"></div>
   <div class="content">
     <h4>
-      Genbrug handler om at vi skal <br />
-      <span class="pink">blive bedre og smartere</span> til at bruge jordens ressourcer
+      Genbrug handler om at vi skal blive
+      <span class="pink">bedre og smartere</span> til at bruge jordens ressourcer
     </h4>
     <p>
       Dels fordi vi kun har en begrænset mængde af dem. Dels fordi det reducerer
@@ -33,38 +33,21 @@
     /* background-color: #d3e2e2; */
   }
 
-  /* Style for the background 
-  .background-svg {
-    position: absolute;
-    bottom: 0; /* Position at the bottom instead of top 
-    left: 0;
-    width: 100%;
-    height: 100%; /* Adjust height as needed 
-    background-image: url("src/asset/svgimages/GenbrugSectionBackground.svg");
-    background-size: cover;
-    background-position: bottom; /* Align the background image to the bottom 
-  }
-*/
-  /* Style for the content */
   .content {
     position: relative;
-    z-index: 1; /* Ensures the content is above the background */
+    z-index: 1;
     padding: var(--spacing-text-padding-vertical, 5rem)
       var(--spacing-text-padding-horizontal, 3rem);
-
-    /* padding: var(--spacing-text-padding-vertical, 32px)
-      var(--spacing-text-padding-horizontal, 48px); */
-    width: 100%; /* Full width of the article */
-    max-width: 828px; /* Maximum width */
+    width: 100%;
+    max-width: 828px;
     margin: auto;
-    /* padding-bottom: 200px; */
   }
 
   /* Style for the pink text */
   .pink {
     color: var(--text-header-highlight-color, #e72458);
     /* Header4 */
-    font-family: Poppins;
+    font-family: "Poppins";
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -72,24 +55,48 @@
   }
 
   h4 {
+    font-size: 32px;
     margin-bottom: 20px; /* Adjust this value as needed for spacing */
+    width: 600px;
   }
 
   p {
     color: var(--color-complimentary-pine-green-medium, #2a5f5e);
-    /* Paragraph20Normal */
-    font-family: Rubik;
+    font-family: "Rubik";
     font-size: 20px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 150.5%;
+  }
+  .background {
+    background-color: #d3e2e2;
+    background-image: url("src/asset/svgimages/GenbrugSectionBackground.svg");
   }
 
   /* Media Queries for smaller screens */
 
   @media (max-width: 600px) {
+    h4,
+    .pink {
+      width: auto;
+      font-size: 24px;
+    }
+    .content {
+      padding: 1rem;
+    }
+    h4,
+    p {
+      padding: 20px;
+    }
+    h4 {
+      padding-top: 3rem;
+    }
+    p {
+      padding-bottom: 4rem;
+      font: 16px;
+    }
+    .background {
+      height: 750px;
+      background-position: bottom;
+      background-repeat: no-repeat;
+    }
   }
-  /* .background-svg {
-    height: 50%;
-  } */
 </style>
