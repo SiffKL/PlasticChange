@@ -3,7 +3,7 @@
 
 <section>
   <div class="nav">
-    <a href="/"><img src="../../../src/asset/icons/logo.svg" alt="" /></a>
+    <a href="/"><div class="img"></div></a>
 
     <div class="burger-menu">☰</div>
     <div class="close-icon">✕</div>
@@ -95,6 +95,14 @@
     margin: 0;
     padding: 0;
   }
+
+  .img {
+    background-image: url("../../../src/asset/icons/logo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 5.1875rem;
+    width: 15.5rem;
+  }
   .burger-menu {
     display: none;
     cursor: pointer;
@@ -125,6 +133,7 @@
       background: var(--Color-Secondary-white-blush, rgba(255, 255, 255, 0.6));
       z-index: 1000; /* Set a high z-index value */
     }
+
     .burger-menu {
       display: block;
     }
@@ -133,7 +142,7 @@
       display: none;
     }
 
-    .nav img {
+    .nav .img {
       width: 8.93525rem;
       height: 2.60444rem;
       /* order: 1;  */
