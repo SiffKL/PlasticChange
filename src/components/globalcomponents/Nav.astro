@@ -8,7 +8,7 @@
     <div class="burger-menu">☰</div>
     <div class="close-icon">✕</div>
 
-    <ul class="tracking-in-expand-fwd-top">
+    <ul>
       <li>
         <a class="basiclink" href="/defemprincipper">De 5 Principper</a>
       </li>
@@ -128,7 +128,7 @@
 
     .burger-menu {
       display: block;
-      transition: opacity 0.3s ease;
+      /* transition: opacity 0.3s ease; */
     }
 
     .close-icon {
@@ -200,6 +200,13 @@
       cubic-bezier(0.215, 0.61, 0.355, 1) both;
   }
 
+  .tracking-in-expand-fwd-bottom {
+    -webkit-animation: tracking-in-expand-fwd-bottom 0.8s
+      cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    animation: tracking-in-expand-fwd-bottom 0.8s
+      cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  }
+
   /**
  * ----------------------------------------
  * animation tracking-in-expand-fwd-top
@@ -237,6 +244,44 @@
       opacity: 1;
     }
   }
+
+  /**
+ * ----------------------------------------
+ * animation tracking-in-expand-fwd-bottom
+ * ----------------------------------------
+ */
+  @-webkit-keyframes tracking-in-expand-fwd-bottom {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px) translateY(500px);
+      transform: translateZ(-700px) translateY(500px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand-fwd-bottom {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px) translateY(500px);
+      transform: translateZ(-700px) translateY(500px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
 </style>
 
 <script>
@@ -248,10 +293,19 @@
 
     burgerMenu.addEventListener("click", function () {
       nav.classList.toggle("open");
+      // Add or remove the animation class when the menu is opened or closed
+      if (nav.classList.contains("open")) {
+        nav.classList.add("tracking-in-expand-fwd-top");
+      } else {
+        nav.classList.add("tracking-in-expand-fwd-bottom");
+      }
     });
 
     closeIcon.addEventListener("click", function () {
       nav.classList.remove("open");
+      // Remove the animation class when the menu is closed
+      nav.classList.remove("tracking-in-expand-fwd-top");
+      nav.classList.remove("tracking-in-expand-fwd-bottom");
     });
   });
 </script>
