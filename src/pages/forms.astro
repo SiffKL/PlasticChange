@@ -1,22 +1,21 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Form1 from "../components/Forms/Form1.astro"
-import Form2 from "../components/Forms/Form2.astro"
-import Form3 from "../components/Forms/Form3.astro"
+import Form1 from "../components/Forms/Form1.astro";
+import Form2 from "../components/Forms/Form2.astro";
+import Form3 from "../components/Forms/Form3.astro";
 import Paybutton from "../components/globalcomponents/Paybutton.astro";
 import Form4 from "../components/Forms/Form4.astro";
 import Form5 from "../components/Forms/Form5.astro";
 ---
+
 <BaseLayout>
   <section class="grid">
     <div class="backgroundimg"></div>
-      <Form1 />
-      <Form2 />
-      <Form3 />
-      <Form4 />
-      <Form5 />
-
-      
+    <Form1 />
+    <Form2 />
+    <Form3 />
+    <Form4 />
+    <Form5 />
   </section>
 </BaseLayout>
 
@@ -31,7 +30,7 @@ import Form5 from "../components/Forms/Form5.astro";
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url("src/asset/svgimages/HeroBackground.svg");
+    background-image: url("../../asset/svgimages/HeroBackground.svg");
     background-size: cover; /* eller background-size: contain; afhængigt af dine krav */
     background-repeat: no-repeat;
   }
