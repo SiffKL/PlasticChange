@@ -65,12 +65,12 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
     background-repeat: no-repeat; /* Prevent the image from repeating */
   }
 
-  .content {
-    padding-bottom: 600px; /* Adding padding to the bottom */
+  .content-5p {
+    padding-bottom: 60%; /* Adding padding to the bottom */
   }
 
   @media screen and (max-width: 768px) {
-    .content {
+    .content-5p {
       padding-bottom: 300px; /* Adjust padding for smaller screens */
     }
   }
@@ -88,22 +88,22 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
  */
   @-webkit-keyframes slide-top {
     0% {
-      -webkit-transform: translateY(0%);
-      transform: translateY(0%);
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
     }
     100% {
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
+      -webkit-transform: translateY(-100vw);
+      transform: translateY(-100vw);
     }
   }
   @keyframes slide-top {
     0% {
-      -webkit-transform: translateY(100%);
+      -webkit-transform: translateY(100vw);
       transform: translateY(100%);
     }
     100% {
-      -webkit-transform: translateY(0%);
-      transform: translateY(0%);
+      -webkit-transform: translateY(0vw);
+      transform: translateY(0vw);
 
       padding-top: var(--section-padding-vertical, --size-80);
     }
