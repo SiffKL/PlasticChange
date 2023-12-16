@@ -58,7 +58,6 @@
     padding: 200px 5%;
     margin: 0 auto; /* Centering the grid-section */
     width: 100%; /* Use full available width */
-    max-width: 1440px; /* Maximum width limit */
     height: auto; /* Adjust height dynamically */
     background-color: rgba(211, 226, 226, 0.5);
   }
@@ -107,12 +106,13 @@
       grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
     }
 
-    .card {
+    .card,
+    .Vidstedu {
       padding: 15px; /* Reduced padding inside the card */
     }
 
     .penguinimage {
-      top: -25%;
+      top: -18%;
     }
   }
 
@@ -154,80 +154,6 @@
     100% {
       -webkit-transform: scale(1);
       transform: scale(1);
-    }
-  }
-  .penguinimage {
-    position: absolute;
-    top: 0;
-    /* left: 50%; */
-    transform: translateX(-50%);
-    background-image: url("../../asset/svgimages/pingvin-kao-illustration-ai.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    max-width: 699px;
-    width: 90%;
-    height: 905px;
-    z-index: -1;
-  }
-
-  .grid-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 200px 5%;
-    margin: 0 auto; /* Centering the grid-section */
-    width: 100%; /* Use full available width */
-    max-width: 1440px; /* Maximum width limit */
-    height: auto; /* Adjust height dynamically */
-    background-color: rgba(211, 226, 226, 0.5);
-    align-items: flex-start;
-  }
-
-  .grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-
-  .card {
-    width: 100%;
-    text-align: left;
-  }
-
-  h2 {
-    color: var(--color-complimentary-pine-green-dark, #142c2b);
-    margin-bottom: 10px;
-  }
-
-  p,
-  ul {
-    color: var(--color-complimentary-pine-green-medium, #2a5f5e);
-    font-family: Rubik;
-    font-size: 20px;
-  }
-
-  ul {
-    padding-left: 20px;
-  }
-
-  li {
-    padding-top: 20px;
-  }
-
-  @media (max-width: 768px) {
-    .grid-section {
-      padding: 50px 3%; /* Reduced padding for smaller screens */
-      grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
-    }
-
-    .card,
-    .Vidstedu {
-      padding: 15px; /* Reduced padding inside the card */
     }
   }
 </style>
