@@ -16,7 +16,7 @@ import Oneadvice2 from "../campaignsite1/Oneadvice2.astro";
         src="https://lottie.host/369caee3-f4b1-4330-b003-b92688d42a6d/XMFDuREjeM.json"
         background="transparent"
         speed="1"
-        style="width: 150px; height: 151px;"
+        style="width: 120px; height: 151px;"
         loop
         autoplay></dotlottie-player>
       <Oneadvice2 title="Din mælk" description="Køb din mælk uden skruelåg" />
@@ -121,6 +121,7 @@ import Oneadvice2 from "../campaignsite1/Oneadvice2.astro";
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: var(--spacing-section-element-gap, 80px);
   }
 
   .card {
@@ -165,9 +166,7 @@ import Oneadvice2 from "../campaignsite1/Oneadvice2.astro";
 
   /* Responsive adjustments as needed */
   @media (max-width: 600px) {
-    .card {
-      flex-direction: column;
-    }
+
 
     .card img {
       width: 100%;
