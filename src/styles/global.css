@@ -59,8 +59,8 @@
 
   /* Text color */
   --button-primary-default-text-color: var(--color-primary-cerise-red-normal);
-  --button-primary-hover-text-color: #ffffff;
-  --button-secondary-hover-text-color: #ffffff;
+  --button-primary-hover-text-color: var(--color-secondary-white);
+  --button-secondary-hover-text-color: var(--color-secondary-white);
   --newsletter-title-color: var(--color-complimentary-pine-green-dark);
   --text-header1-color-pine-green-dark: var(
     --color-complimentary-pine-green-dark
