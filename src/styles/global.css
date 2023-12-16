@@ -149,3 +149,195 @@
   --container-padding-left-right: var(--size-64);
   --text-padding-between-elements: var(--size-12);
 }
+
+
+:root {
+  /* Mode 1 */
+  /* colors */
+  --color-pink: #ff1054;
+  --color-complimentary-pine-green-dark: #142c2b;
+  --color-complimentary-pine-green-light: #90b7b6;
+  --color-complimentary-pine-green-lightest: #d3e2e2;
+  --color-complimentary-pine-green-medium: #2a5f5e;
+  --color-complimentary-pine-green-normal: #007c79;
+  --color-primary-cerise-red-darm: #49131c;
+  --color-primary-cerise-red-light: #f38898;
+  --color-primary-cerise-red-lightest: #fbd9de;
+  --color-primary-cerise-red-medium: #952738;
+  --color-primary-cerise-red-normal: #e72458;
+  --color-secondary-graphite-dark: #1c1e23;
+  --color-secondary-graphite-ligth: #cacdd5;
+  --color-secondary-graphite-medium: #70727d;
+  --color-secondary-graphite-normal: #a3a6b4;
+  --color-secondary-white: #ffffff;
+  --color-secondary-white-blush: #ffffff99;
+  /* numbers */
+  --350: 0rem;
+  --size-0: 0rem;
+  --size-4: 0.25rem;
+  --size-8: 0.5rem;
+  --size-12: 0.75rem;
+  --size-16: 1rem;
+  --size-24: 1.5rem;
+  --size-32: 2rem;
+  --size-40: 2.5rem;
+  --size-48: 3rem;
+  --size-56: 3.5rem;
+  --size-64: 4rem;
+  --size-72: 4.5rem;
+  --size-80: 5rem;
+  --size-88: 5.5rem;
+  --size-96: 6rem;
+  --size-104: 6.5rem;
+  --size-112: 7rem;
+  --size-120: 7.5rem;
+  --size-128: 8rem;
+  --size-350: 21.875rem;
+}
+:root {
+  /* imported from figma, needs sorting */
+  /* NEW VERSION 16 dec */
+  --logo-color: var(--color-pink);
+  --primary-dark-green: var(--color-complimentary-pine-green-normal);
+  --burgermeny-active-text-color: var(--color-primary-cerise-red-normal);
+  --burgermeny-background-color: var(--color-complimentary-pine-green-light);
+  --burgermeny-cross-color: var(--color-complimentary-pine-green-dark);
+  --burgermeny-text-color: var(--color-complimentary-pine-green-dark);
+  --forms-input-active-border-color: var(--color-complimentary-pine-green-normal);
+  --forms-input-default-background-color: var(--color-secondary-white);
+  --forms-input-default-border-color: var(--color-secondary-graphite-medium);
+  --forms-input-default-text-color: var(--color-secondary-graphite-medium);
+  --forms-input-error-border-color: var(--color-primary-cerise-red-normal);
+  --forms-input-error-text-color: var(--color-primary-cerise-red-normal);
+  --forms-payment-active-active-text-color: var(--color-secondary-graphite-dark);
+  --forms-payment-active-background-color: var(--color-secondary-white);
+  --forms-payment-active-border-color: var(--color-complimentary-pine-green-normal);
+  --forms-payment-active-checkmark-color: var(--color-complimentary-pine-green-normal);
+  --forms-payment-active-icon-color: var(--color-complimentary-pine-green-normal);
+  --forms-payment-default-background-color: var(--color-secondary-white);
+  --forms-payment-default-border-color: var(--color-secondary-graphite-normal);
+  --forms-payment-default-icon-color: var(--color-secondary-graphite-medium);
+  --forms-payment-default-text-color: var(--color-secondary-graphite-dark);
+  --forms-progressbar-active-color: var(--color-secondary-graphite-dark);
+  --forms-progressbar-active-line-color: var(--color-complimentary-pine-green-normal);
+  --forms-progressbar-line-color: var(--color-secondary-graphite-medium);
+  --forms-progressbar-nonactive-color: var(--color-secondary-graphite-medium);
+  --nav-active-link-color: var(--color-primary-cerise-red-normal);
+  --nav-background-color: #ffffff;
+  --nav-link-color: var(--color-secondary-graphite-dark);
+  --button-tertiary-default-border-color: var(--color-secondary-graphite-ligth);
+  --button-tertiary-default-background-color: var(--color-secondary-white);
+  --button-tertiary-default-text-color: var(--color-secondary-graphite-dark);
+  --button-tertiary-hover-background-color: var(--color-complimentary-pine-green-normal);
+  --button-tertiary-hover-text-color: var(--color-secondary-white);
+  --button-primary-default-background-color: var(--color-primary-cerise-red-normal);
+  --button-primary-default-text-color: var(--color-secondary-white);
+  --button-primary-hover-background-color: var(--color-complimentary-pine-green-normal);
+  --button-primary-hover-text-color: var(--color-secondary-white);
+  --button-secondary-default-background-color: var(--color-secondary-white);
+  --button-secondary-default-border-color: var(--color-primary-cerise-red-normal);
+  --button-secondary-default-text-color: var(--color-primary-cerise-red-normal);
+  --button-secondary-hover-background-color: var(--color-secondary-white);
+  --button-secondary-hover-border-color: var(--color-complimentary-pine-green-medium);
+  --button-secondary-hover-text-color: var(--color-complimentary-pine-green-medium);
+  --text-color-header1-color-pine-green-dark: var(--color-secondary-graphite-dark);
+  --text-color-footer-icon-default-color: var(--color-secondary-graphite-normal);
+  --text-color-footer-icon-hover-color: var(--color-primary-cerise-red-normal);
+  --text-color-header-highlight-color: var(--color-primary-cerise-red-normal);
+  --text-color-header-principples-color: var(--color-complimentary-pine-green-dark);
+  --text-color-header1-plastic-changer: var(--color-complimentary-pine-green-medium);
+  --text-color-paragraph-color-pine-green-light: var(--color-complimentary-pine-green-light);
+  --text-color-paragraph-color-pine-green-medium: var(--color-complimentary-pine-green-medium);
+  --text-color-paragraph-color-pine-green-normal: var(--color-complimentary-pine-green-normal);
+  --text-color-paragraph-color-pinegreen-dark: var(--color-complimentary-pine-green-dark);
+  --text-color-paragraph-graphitedark: var(--color-secondary-graphite-dark);
+  --text-color-paragraph-graphitelight: var(--color-secondary-graphite-ligth);
+  --text-color-paragraph-graphitemedium: var(--color-secondary-graphite-medium);
+  /* numbers */
+  --forms-border: 0.03125rem;
+  --forms-active-border: 0.1875rem;
+  --forms-border-radius: 0.25rem;
+  --forms-progressbar-line-stroke: 0.0625rem;
+  --button-padding-vertical: var(--size-16);
+  --button-padding-horizontal: var(--size-32);
+  --spacing-nav-padding-vertical: var(--size-0);
+  --spacing-newsletter-gab-vertival: var(--size-12);
+  --spacing-footer-padding-vertical: var(--size-24);
+  --spacing-form-elements-horizontal-gab: var(--size-24);
+  --spacing-text-gap-vertical: var(--size-32);
+  --spacing-text-padding-vertical: var(--size-32);
+  --spacing-forms-padding-horizontal: 2.75rem;
+  --spacing-text-padding-horizontal: var(--size-48);
+  --spacing-navn-padding-horizontal: var(--size-56);
+  --spacing-section-element-gap: var(--size-80);
+  --spacing-section-padding-vertical: var(--size-80);
+  --spacing-footer-padding-horizontal: var(--spacing-section-padding-horzontal);
+  --spacing-section-padding-horzontal: var(--size-128);
+  --spacing-section-onecollum-padding-horizontal: var(--size-350);
+  --spacing-forms-textunder-padding-button: var(--size-8);
+  --spacing-forms-elements-gap: var(--size-16);
+  --spacing-forms-container-gap: var(--size-24);
+  --spacing-forms-container--padding-vertical: var(--size-32);
+  --spacing-forms-container-padding-horizontal: var(--size-40);
+  --spacing-forms-form-pay-padding-top: var(--size-56);
+}
+:root {
+  /* Mode 1 */
+  /* numbers */
+  --padding-forms-horizontal: var(--size-16);
+  --container-padding-between-elements: 1.5rem;
+  --container-padding-top-bottom: 2rem;
+  --container-padding-left-right: 4rem;
+  --text-padding-between-elements: 0.75rem;
+}
+
+
+
+  /* PAYBUTTON */
+:root {
+  /* Color Variables */
+  --payment-button-border-color: var(--color-complimentary-pine-green-light);
+  --payment-button-text-color: var(--color-secondary-graphite-dark); /* Replace with actual color */
+  --checkmark-border-color: var( --color-secondary-graphite-normal);
+  --hover-background-color: var(--color-complimentary-pine-green-lightest);
+  --active-checkmark-border-color: green;
+  --active-checkmark-background-color: green;
+  --active-checkmark-color: var(--color-secondary-white);
+
+  /* Size Variables */
+  --button-gap: var(--size-12);
+  --payment-button-width: 335px;   /* Input to figma */
+  --payment-button-padding: 12px 10px;
+  --payment-button-border-radius: 1px;
+  --checkmark-size: var(--size-24);
+  --checkmark-border-width: 1px; /* Replace with actual width if different */
+  --button-text-margin-right: var(--size-8);
+  --image-placeholder-width: var(--size-120);
+  --image-placeholder-height: var(--size-40);
+  --font-size: 16px;
+}
+
+
+
+/* Pbutton */
+:root {
+  /* Color Variables */
+  --button-bg-color: var(--color-primary-cerise-red-normal);
+  --button-text-color: var(--button-secondary-hover-text-color, --color-secondary-white);
+  --button-hover-bg-color: var(--color-complimentary-pine-green-normal);
+  --button-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  /* Size and Spacing Variables */
+  --button-min-width: 14.688rem;
+  --button-large-font-size: 2rem;
+  --button-forms-font-size: 1rem;
+  --button-forms-max-width: 14.68rem;
+  --button-padding-vertical: var(--size-16);
+  --button-padding-horizontal: var(--size-32);
+  --button-forms-padding-vertical: 1rem;
+  --button-forms-padding-horizontal: 2rem;
+
+  /* Font and Text Variables */
+  --button-font-family: "Rubik";
+  --button-font-weight: 700;
+}

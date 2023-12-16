@@ -25,6 +25,7 @@
 </section>
 
 <style>
+
   section {
     display: flex;
     flex-direction: column;
@@ -36,19 +37,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px; /* Adds spacing between buttons */
+    gap: var(--button-gap);
   }
 
   .payment-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 335px;
-    padding: 12px 10px;
-    border: 1px solid #90b7b6;
-    border-radius: 1px;
+    width: var(--payment-button-width);
+    padding: var(--payment-button-padding);
+    border: 2px solid var(--payment-button-border-color);
+    border-radius: var(--payment-button-border-radius);
     background: transparent;
-    color: #000;
+    color: var(--payment-button-text-color);
   }
 
   .checkmark,
@@ -56,32 +57,33 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Rubik;
-    font-size: 16px;
+    font-family: "Rubik";
+    font-size: var(--font-size);
     line-height: 150%;
-    margin-right: 8px;
+    margin-right: var(--button-text-margin-right);
   }
 
   .checkmark {
-    width: 24px;
-    height: 24px;
+    width: var(--checkmark-size);
+    height: var(--checkmark-size);
     border-radius: 50%;
-    border: 2px solid #000;
+    border: var(--Forms-progressbar-line-stroke, var(--checkmark-border-width))
+      solid var(--checkmark-border-color);
   }
 
   .button-text {
     flex-grow: 1;
     text-align: center;
     font-weight: 500;
-    color: #000;
+    color: var(--payment-button-text-color);
   }
 
   .image-placeholder {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 120px;
-    height: 40px;
+    width: var(--image-placeholder-width);
+    height: var(--image-placeholder-height);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,13 +91,42 @@
 
   .payment-button:hover,
   .payment-button:focus {
-    background-color: rgba(20, 44, 43, 0.1);
+    background-color: var(--hover-background-color);
   }
 
   .payment-button:focus .checkmark,
   .payment-button:active .checkmark {
-    border-color: green;
-    background-color: green;
-    color: white;
+    border-color: var(--active-checkmark-border-color);
+    background-color: var(--active-checkmark-background-color);
+    color: var(--active-checkmark-color);
   }
+
+
+  /* PAYBUTTON */
+  :root {
+  /* Color Variables */
+  --payment-button-border-color: var(--color-complimentary-pine-green-light);
+  --payment-button-text-color: var(--color-secondary-graphite-dark); /* Replace with actual color */
+  --checkmark-border-color: var( --color-secondary-graphite-normal);
+  --hover-background-color: var(--color-complimentary-pine-green-lightest);
+  --active-checkmark-border-color: green;
+  --active-checkmark-background-color: green;
+  --active-checkmark-color: var(--color-secondary-white);
+
+  /* Size Variables */
+  --button-gap: var(--size-12);
+  --payment-button-width: 335px;   /* Input to figma */
+  --payment-button-padding: 12px 10px;
+  --payment-button-border-radius: 1px;
+  --checkmark-size: var(--size-24);
+  --checkmark-border-width: 1px; /* Replace with actual width if different */
+  --button-text-margin-right: var(--size-8);
+  --image-placeholder-width: var(--size-120);
+  --image-placeholder-height: var(--size-40);
+  --font-size: 16px;
+}
+
+
+
+
 </style>
