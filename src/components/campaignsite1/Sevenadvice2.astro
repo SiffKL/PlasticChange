@@ -29,52 +29,55 @@ import Oneadvice2 from "../campaignsite1/Oneadvice2.astro";
       />
     </div>
     <div class="card">
-        <dotlottie-player
-          src="https://lottie.host/33b7cd0c-9b0a-4401-8be2-38e0a1ace64a/7Zb5tPYAuC.json"
-          background="transparent"
-          speed="1"
-          style="width: 150px; height: 158px;"
-          loop
-          autoplay></dotlottie-player>
-        <Oneadvice2 title="Din fest" description="Drop engangsservice, balloner og sugerør" />
-      </div>
+      <dotlottie-player
+        src="https://lottie.host/33b7cd0c-9b0a-4401-8be2-38e0a1ace64a/7Zb5tPYAuC.json"
+        background="transparent"
+        speed="1"
+        style="width: 150px; height: 158px;"
+        loop
+        autoplay></dotlottie-player>
+      <Oneadvice2
+        title="Din fest"
+        description="Drop engangsservice, balloner og sugerør"
+      />
+    </div>
 
     <div class="card">
-        <div class="card-image" id="img2"></div>
-        <Oneadvice2
-          title="Dit toiletbesøg"
-          description="Kun tre ting i toilettet - tis, lort og papir"
-        />
-      </div>
+      <div class="card-image" id="img2"></div>
+      <Oneadvice2
+        title="Dit toiletbesøg"
+        description="Kun tre ting i toilettet - tis, lort og papir"
+      />
+    </div>
 
-      
+    <div class="card">
+      <dotlottie-player
+        src="https://lottie.host/abf77aba-2e43-4b1c-9ba7-44dd7bcb0127/QxA32NZAAV.json"
+        background="transparent"
+        speed="1"
+        style="width: 135px; height: 152px;"
+        loop
+        autoplay></dotlottie-player>
+      <Oneadvice2
+        title="Din vandflaske"
+        description="Brug drikkedunk og undgå købevand"
+      />
+    </div>
 
-
-      <div class="card">
-        <dotlottie-player
-          src="https://lottie.host/abf77aba-2e43-4b1c-9ba7-44dd7bcb0127/QxA32NZAAV.json"
-          background="transparent"
-          speed="1"
-          style="width: 135px; height: 152px;"
-          loop
-          autoplay></dotlottie-player>
-        <Oneadvice2 title="Din vandflaske" description="Brug drikkedunk og undgå købevand" />
-      </div>
-
-      <div class="card">
-        <div class="card-image" id="img3"></div>
-        <Oneadvice2
-          title="Dine plejeprodukter"
-          description="Køb i store beholdere frem for mange små"
-        />
-      </div>
-      <div class="card">
-        <div class="card-image" id="img4"></div>
-        <Oneadvice2
-          title="Dit indkøb"
-          description="Tag mulepose med og sig nej tak til plastikposer"
-        />
-      </div>
+    <div class="card">
+      <div class="card-image" id="img3"></div>
+      <Oneadvice2
+        title="Dine plejeprodukter"
+        description="Køb i store beholdere frem for mange små"
+      />
+    </div>
+    <div class="card">
+      <div class="card-image" id="img4"></div>
+      <Oneadvice2
+        title="Dit indkøb"
+        description="Tag mulepose med og sig nej tak til plastikposer"
+      />
+    </div>
     <!-- Repeat the above div block for each of the 7 cards, changing the image source and text as needed -->
     <!-- ... -->
   </div>
@@ -84,7 +87,7 @@ import Oneadvice2 from "../campaignsite1/Oneadvice2.astro";
   h2 {
     color: var(--text-paragraph-graphitedark, #1c1e23);
     font-family: Poppins;
-  font-size: clamp(22px, 5vw, 62px);
+    font-size: clamp(22px, 5vw, 62px);
     font-weight: 400;
     margin-bottom: 0;
   }
@@ -102,7 +105,6 @@ import Oneadvice2 from "../campaignsite1/Oneadvice2.astro";
     justify-content: flex-start; /* Aligns content to the left */
     text-align: left;
     padding: var(--spacing-section-element-gap, 80px);
-;
   }
 
   /* Additional CSS remains unchanged */
@@ -122,6 +124,7 @@ import Oneadvice2 from "../campaignsite1/Oneadvice2.astro";
     flex-wrap: wrap;
     justify-content: space-around;
     gap: var(--spacing-section-element-gap, 80px);
+    padding-bottom: var(--section-padding-bottom, --size-128);
   }
 
   .card {
@@ -166,57 +169,51 @@ import Oneadvice2 from "../campaignsite1/Oneadvice2.astro";
 
   /* Responsive adjustments as needed */
   @media (max-width: 600px) {
-
-
     .card img {
       width: 100%;
       margin-bottom: 10px;
     }
   }
 
-/* ------ animista from here ------------ */
-.slide-top {
-  -webkit-animation: slide-top 1.2s ease-in-out both;
-  animation: slide-top 1.2s ease-in-out both;
-}
+  /* ------ animista from here ------------ */
+  .slide-top {
+    -webkit-animation: slide-top 1.2s ease-in-out both;
+    animation: slide-top 1.2s ease-in-out both;
+  }
 
-/**
+  /**
 * ----------------------------------------
 * animation slide-top
 * ----------------------------------------
 */
-@-webkit-keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+    100% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
   }
-  100% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
   }
-}
-@keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-  }
-}
-
-
 </style>
 
-
-</style>
 <script
-src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-type="module"></script>
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>
 <script
-src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-type="module"></script>
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>
 <script
-src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-type="module"></script>
+  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+  type="module"></script>

@@ -137,6 +137,7 @@
   --section-padding-vertical: var(--size-80);
   --section-padding-horizontal: var(--size-128);
   --section-onecollum-padding-horizontal: var(--size-350);
+  --section-padding-bottom: var(--size-128);
 }
 
 /* ---------- MOBILE SPACING ----------- */
