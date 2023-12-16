@@ -3,13 +3,6 @@ import Title from "../globalcomponents/Title.astro";
 ---
 
 <div class="maxwidth slide-right">
-  <!-- <div class="maxwidth">
-  <Title
-    manchet="Hvorfor er genbrug"
-    bigred="løsningen"
-    text="Fremtiden kalder på mere genbrug, hvis vi skal løse plastikkrisen. Forstå hvorfor, at omfattende genbrugssystemer er en af de mest effektive løsninger til at løse plastikkrisen"
-  />
-</div> -->
   <section class="headersection">
     <h1>Hvorfor er genbrug<br /><span> løsningen?</span></h1>
     <p>
@@ -30,10 +23,10 @@ import Title from "../globalcomponents/Title.astro";
 
   <style>
     .maxwidth {
-      max-width: 1650px;
+      max-width: 1800px;
 
       margin: 0 auto;
-      padding: var(--spacing-text-padding-vertical, 2rem);
+      padding: var(--spacing-text-padding-vertical);
     }
 
     .headersection {
@@ -65,8 +58,8 @@ import Title from "../globalcomponents/Title.astro";
     }
     article {
       max-width: 1650px;
-      margin: auto; /* Centers the content */
-      padding: var(--spacing-section-padding-horzontal, 8rem);
+      margin: auto; 
+      padding: var(--spacing-section-padding-horzontal);
       display: flex;
       flex-direction: column;
       align-items: center; /* Aligns children elements to the center */
@@ -89,7 +82,7 @@ import Title from "../globalcomponents/Title.astro";
     /* Media query for mobile screens */
     @media screen and (max-width: 768px) {
       article {
-        max-width: 100%; /* Adjust max-width for smaller screens */
+        max-width: 100%; 
         padding: 0;
       }
 

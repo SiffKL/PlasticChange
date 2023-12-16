@@ -37,8 +37,8 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
   .desk {
     display: flex;
     max-width: 1440px;
-    padding: var(--spacing-section-padding-vertical, 80px)
-      var(--spacing-section-padding-horzontal, 128px);
+    padding: var(--spacing-section-padding-vertical)
+      var(--spacing-section-padding-horzontal);
     justify-content: center;
     align-items: center;
     margin: 0 auto; /* Added to ensure centering */
@@ -56,7 +56,7 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
     max-width: 742px;
     text-align: left;
     color: var(--pine-green-dark);
-    gap: var(--spacing-text-gap-vertical, 2rem);
+    gap: var(--spacing-text-gap-vertical);
   }
 
   .mobile-news {
@@ -98,7 +98,6 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
     }
 
     .mobile-news img {
-      /* max-height: 19.4375rem; */
       max-width: 16.125rem;
     }
   }

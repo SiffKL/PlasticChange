@@ -9,24 +9,16 @@
 </article>
 
 <style>
-  :root {
-    --spacing-vertical: 32px;
-    --spacing-horizontal: 128px;
-    --text-gap-vertical: 32px;
-    --header-color: #000;
-    --highlight-color: #e72458;
-    --paragraph-color: #2a5f5e;
-  }
 
   article {
     max-width: 100%; /* Adjust width as needed */
     margin: 0px auto;
-    padding: var(--spacing-text-padding-vertical, 6rem)
-      var(--spacing-section-padding-horzontal, 14rem);
+    padding: var(--spacing-text-padding-vertical)
+      var(--spacing-section-padding-horzontal);
   }
 
   .header-text {
-    color: var(--header-color);
+    color: var(--text-color-Header1-color-PineGreenDark);
     font-family: "Poppins", sans-serif;
     margin: 0;
   }
@@ -49,11 +41,11 @@
   }
 
   .pink {
-    color: var(--highlight-color);
+    color: var(--text-color-header-highlight-color);
   }
 
   .main-text {
-    color: var(--paragraph-color);
+    color: var(--text-color-header-principples-color);
     font-family: "Rubik", sans-serif;
     font-size: min(
       max(1.5vw, 16px),
