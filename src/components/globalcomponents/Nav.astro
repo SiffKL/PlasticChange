@@ -3,12 +3,12 @@
 
 <section>
   <div class="nav">
-    <a href="/" title="Link til forside"><div class="img"></div></a>
+    <a href="/" title="Link til forside"><div class="img-icon"></div></a>
 
     <div class="burger-menu">☰</div>
     <div class="close-icon">✕</div>
 
-    <ul>
+    <ul class="slide-in-top">
       <li>
         <a class="basiclink" href="/defemprincipper">De 5 Principper</a>
       </li>
@@ -96,7 +96,7 @@
     padding: 0;
   }
 
-  .img {
+  .img-icon {
     background-image: url("../../../src/asset/icons/logo.svg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -142,7 +142,7 @@
       display: none;
     }
 
-    .nav .img {
+    .nav .img-icon {
       width: 8.93525rem;
       height: 2.60444rem;
       /* order: 1;  */
@@ -179,6 +179,43 @@
     display: block;
     /* transition: height 300ms linear; */
   }
+
+  /* --------- Animista from here ------------ */
+
+  .slide-in-top {
+    -webkit-animation: slide-in-top 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+    animation: slide-in-top 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+  }
+
+  /**
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+  @-webkit-keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+      transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 </style>
 
 <script>
@@ -190,10 +227,12 @@
 
     burgerMenu.addEventListener("click", function () {
       nav.classList.toggle("open");
+      menuList.classList.toggle("slide-in-top");
     });
 
     closeIcon.addEventListener("click", function () {
       nav.classList.remove("open");
+      menuList.classList.remove("slide-in-top");
     });
   });
 </script>
