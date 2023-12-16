@@ -2,142 +2,141 @@
 import Title from "../globalcomponents/Title.astro";
 ---
 
-
 <div class="maxwidth slide-right">
-
-<!-- <div class="maxwidth">
+  <!-- <div class="maxwidth">
   <Title
     manchet="Hvorfor er genbrug"
     bigred="løsningen"
     text="Fremtiden kalder på mere genbrug, hvis vi skal løse plastikkrisen. Forstå hvorfor, at omfattende genbrugssystemer er en af de mest effektive løsninger til at løse plastikkrisen"
   />
 </div> -->
-<section class="headersection">
-  <h1>Hvorfor er genbrug<br /><span> løsningen?</span></h1>
-  <p>
-    Fremtiden kalder på mere genbrug, hvis vi skal løse plastikkrisen. Forstå
-    hvorfor, at omfattende genbrugssystemer er en af de mest effektive løsninger
-    til at løse plastikkrisen.
-  </p>
-</section>
-<article>
-  <div class="video-container">
-    <iframe
-      src="https://www.youtube.com/embed/7eivTQkBYvo?si=4X2BvPIswXobDr97"
-      title="YouTube video player"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
-  </div>
-</article>
+  <section class="headersection">
+    <h1>Hvorfor er genbrug<br /><span> løsningen?</span></h1>
+    <p>
+      Fremtiden kalder på mere genbrug, hvis vi skal løse plastikkrisen. Forstå
+      hvorfor, at omfattende genbrugssystemer er en af de mest effektive
+      løsninger til at løse plastikkrisen.
+    </p>
+  </section>
+  <article>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/7eivTQkBYvo?si=4X2BvPIswXobDr97"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </article>
 
-<style>
-  .maxwidth {
-    max-width: 1650px;
-    margin-left: 0;
-    padding: var(--spacing-text-padding-vertical, 2rem);
-  }
+  <style>
+    .maxwidth {
+      max-width: 1650px;
+      /* margin-left: 0; */
+      margin: 0 auto;
+      padding: var(--spacing-text-padding-vertical, 2rem);
+    }
 
-  .headersection {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    padding-left: var(--article-padding-horizontal);
-    padding-right: var(--article-padding-horizontal);
-    padding-top: 10rem;
-    gap: var(--article-gap);
-  }
-  h1 {
-    color: var(--header-color);
-    font-size: clamp(
-      var(--font-size-header-small),
-      5vw,
-      var(--font-size-header-large)
-    );
-    line-height: var(--line-height-header);
-  }
-  span {
-    color: var(--highlight-color);
-  }
+    .headersection {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      padding-left: var(--article-padding-horizontal);
+      padding-right: var(--article-padding-horizontal);
+      padding-top: 10rem;
+      gap: var(--article-gap);
+    }
+    h1 {
+      color: var(--header-color);
+      font-size: clamp(
+        var(--font-size-header-small),
+        5vw,
+        var(--font-size-header-large)
+      );
+      line-height: var(--line-height-header);
+    }
+    span {
+      color: var(--highlight-color);
+    }
 
-  p {
-    color: var(--paragraph-color);
-    font-weight: 500;
-    font-size: 16px;
-  }
-  article {
-    max-width: 1650px;
-    margin: auto; /* Centers the content */
-    padding: var(--spacing-section-padding-horzontal, 8rem);
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Aligns children elements to the center */
-  }
-
-  .video-container {
-    position: relative;
-    width: 100%;
-    padding-top: 50%; /* Maintain aspect ratio for larger screens */
-  }
-
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Media query for mobile screens */
-  @media screen and (max-width: 768px) {
+    p {
+      color: var(--paragraph-color);
+      font-weight: 500;
+      font-size: 16px;
+    }
     article {
-      max-width: 100%; /* Adjust max-width for smaller screens */
-      padding: var(--container-padding-top-bottom, 32px)
-        var(--container-padding-left-right, 64px);
+      max-width: 1650px;
+      margin: auto; /* Centers the content */
+      padding: var(--spacing-section-padding-horzontal, 8rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Aligns children elements to the center */
     }
 
     .video-container {
-      height: 250px;
-      padding-top: 0;
+      position: relative;
+      width: 100%;
+      padding-top: 50%; /* Maintain aspect ratio for larger screens */
     }
-    .headersection {
-      max-width: 120%;
-      padding: 2rem;
-      padding-top: 7rem;
-    }
-    h1 {
-      line-height: 100%;
-    }
-  }
 
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-  /* ----------- animista from here ------------ */
+    /* Media query for mobile screens */
+    @media screen and (max-width: 768px) {
+      article {
+        max-width: 100%; /* Adjust max-width for smaller screens */
+        padding: var(--container-padding-top-bottom, 32px)
+          var(--container-padding-left-right, 64px);
+      }
 
-  .slide-right {
-    -webkit-animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-      0.4s both;
-    animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
-    overflow: hidden;
-  }
+      .video-container {
+        height: 250px;
+        padding-top: 0;
+      }
+      .headersection {
+        max-width: 120%;
+        padding: 2rem;
+        padding-top: 7rem;
+      }
+      h1 {
+        line-height: 100%;
+      }
+    }
 
-  /* animation slide-right ----------------------*/
-  @-webkit-keyframes slide-right {
-    0% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
+    /* ----------- animista from here ------------ */
+
+    .slide-right {
+      -webkit-animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        0.4s both;
+      animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+      overflow: hidden;
     }
-    100% {
-      -webkit-transform: translateX(-100px);
-      transform: translateX(-100px);
+
+    /* animation slide-right ----------------------*/
+    @-webkit-keyframes slide-right {
+      0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+      100% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+      }
     }
-  }
-  @keyframes slide-right {
-    0% {
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
+    @keyframes slide-right {
+      0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+      }
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
     }
-    100% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-  }
-</style>
+  </style>
+</div>
