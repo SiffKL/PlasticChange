@@ -18,21 +18,16 @@ const { title, description } = Astro.props;
   .card-text h3 {
     color: var(--text-color-paragraph-color-pinegreen-Dark, #142C2B);
 /* Header4 */
-font-family: Poppins;
-font-size: 32px;
-font-style: normal;
+font-size: clamp(20px, 2.5vw, 32px);
 font-weight: 700;
-line-height: normal;
   }
 
   .card-text p {
     color: var(--text-color-paragraph-color-PineGreenMedium, #2A5F5E);
 
 /* Paragraph20Medium */
-font-family: Rubik;
-font-size: 20px;
+font-size: clamp(16px, 2vw, 20px);
 font-style: normal;
 font-weight: 500;
-line-height: 150%; /* 30px */
   }
 </style>
