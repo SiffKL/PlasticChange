@@ -104,7 +104,8 @@ import Oneadvice2 from "../campaignsite1/Oneadvice2.astro";
     display: flex;
     justify-content: flex-start; /* Aligns content to the left */
     text-align: left;
-    padding: var(--spacing-section-element-gap, 80px);
+    padding: var(--spacing-section-element-gap);
+    padding-left: 0;
   }
 
   /* Additional CSS remains unchanged */
@@ -116,15 +117,15 @@ import Oneadvice2 from "../campaignsite1/Oneadvice2.astro";
   }
 
   .pink {
-    color: var(--color-primary-cerise-red-normal, #e72458);
+    color: var(--color-primary-cerise-red-normal);
   }
 
   .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: var(--spacing-section-element-gap, 80px);
-    padding-bottom: var(--section-padding-bottom, --size-128);
+    gap: var(--spacing-section-element-gap);
+    padding-bottom: var(--section-padding-bottom);
   }
 
   .card {
@@ -168,11 +169,28 @@ import Oneadvice2 from "../campaignsite1/Oneadvice2.astro";
   }
 
   /* Responsive adjustments as needed */
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     .card img {
       width: 100%;
       margin-bottom: 10px;
     }
+
+    .container{
+      padding: var(--spacing-text-padding-vertical)
+      var(--spacing-text-padding-horizontal);
+    }
+
+    .titlecontainer {
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    text-align: left;
+    padding: 0;
+  }
+
+  .card-container {
+    gap: var(--spacing-text-gap-vertical);
+  }
+
   }
 
   /* ------ animista from here ------------ */

@@ -25,21 +25,19 @@ const { head, text, list1, list2, list3 } = Astro.props;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
-    /* padding: var(--spacing-section-padding-vertical, 5rem)
-      var(--spacing-section-onecollum-padding-horizontal, 21.875rem); */
-    padding: var(--spacing-section-padding-vertical, 5rem)
-      var(--spacing-section-padding-horzontal, 8rem);
+    background: var(--color-complimentary-pine-green-lightest);
+    padding: var(--spacing-section-padding-vertical)
+      var(--spacing-section-padding-horzontal);
   }
 
   .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align text to the left */
+    align-items: flex-start; 
     gap: var(--spacing-text-gap-vertical, 1.5rem);
     width: 46.375rem;
-    margin: 0 auto; /* Center container */
-    padding: 0 1rem; /* Add padding for responsiveness */
+    margin: 0 auto; 
+    padding: 0 1rem; 
   }
 
   h3 {
@@ -48,12 +46,11 @@ const { head, text, list1, list2, list3 } = Astro.props;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding: var(--spacing-text-padding-vertical, 0.5rem, 2rem);
   }
 
   p,
   li {
-    color: var(--text-paragraph-color-pine-green-medium, #2a5f5e);
+    color: var(--text-paragraph-color-pine-green-medium);
     font-family: "Rubik";
     font-size: 16px;
     font-style: normal;
