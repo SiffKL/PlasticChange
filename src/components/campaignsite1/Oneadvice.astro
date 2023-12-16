@@ -9,29 +9,29 @@ const { image, title, description } = Astro.props;
   <div>
     <h3>{title}</h3>
     <p>{description}</p>
-    <style>
-      .oneadvice {
-        display: flex;
-        align-items: center;
-        /* justify-content: left; */
-        gap: 1.75rem;
-        width: 500px;
-      }
-
-      p {
-        font-size: 20px;
-        font-weight: 300;
-      }
-      h3 {
-        font-size: 1.5rem;
-        font-weight: 600;
-      }
-
-      @media (max-width: 900px) {
-        img {
-          width: 100px;
-        }
-      }
-    </style>
   </div>
 </section>
+<style>
+  .oneadvice {
+    display: flex;
+    align-items: center;
+    /* justify-content: left; */
+    gap: 1.75rem;
+    width: 500px;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px) {
+    img {
+      width: 100px;
+    }
+  }
+</style>

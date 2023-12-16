@@ -217,128 +217,126 @@
     <p>Konto. 84110002039618</p>
     <p>MobilePay: 304961</p>
   </div>
+</section>
 
-  <style>
+<style>
+  section {
+    display: flex;
+    height: 15.9375rem;
+    max-height: 18.75rem;
+    padding: var(--spacing-footer-padding-vertical, 1.5rem)
+      var(--spacing-footer-padding-horizontal, 8rem);
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contentcontainer1 {
+    width: 18.75rem;
+    height: 14.5625rem;
+    padding: var(--text-padding-vertical, 2rem)
+      var(--text-padding-horizontal, 3rem);
+
+    gap: var(--size-8, 0.5rem);
+  }
+  .contentcontainer2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    width: 18.75rem;
+    height: 14.5625rem;
+    padding: var(--text-padding-vertical, 2rem)
+      var(--text-padding-horizontal, 3rem);
+  }
+  .contentcontainer3 {
+    width: 18.75rem;
+    height: 14.5625rem;
+    padding: var(--text-padding-vertical, 2rem)
+      var(--text-padding-horizontal, 3rem);
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: var(--size-8, 0.5rem);
+  }
+  .contentcontainer3 p {
+    text-align: right;
+  }
+
+  p {
+    color: var(--text-paragraph-graphitemedium, #70727d);
+    font-family: "Rubik", sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+  }
+  .icons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icons2 {
+    display: none;
+  }
+  svg:hover path {
+    fill: #e72458;
+  }
+
+  .titel {
+    color: var(--text-paragraph-graphitedark, --color-secondary-graphite-dark);
+  }
+
+  .pinklink {
+    text-decoration: underline;
+    /* color: var(--text-header-highlight-color, #e72458); */
+    color: var(--link-color-default, --color-secondary-graphite-dark);
+    font-family: "Rubik";
+  }
+
+  .pinklink:hover {
+    color: var(--link-color-hover, --color-primary-cerise-red-normal);
+    text-decoration: underline;
+  }
+
+  .pinklink:active {
+    color: var(--text-header-highlight-color, #e72458);
+
+    text-decoration: underline;
+  }
+
+  .no-style {
+    list-style: none;
+    text-decoration: none;
+    text-decoration-line: none;
+  }
+
+  @media (max-width: 600px) {
     section {
       display: flex;
-      height: 15.9375rem;
-      max-height: 18.75rem;
-      padding: var(--spacing-footer-padding-vertical, 1.5rem)
-        var(--spacing-footer-padding-horizontal, 8rem);
-      justify-content: space-between;
-      align-items: center;
-    }
-    .contentcontainer1 {
-      width: 18.75rem;
-      height: 14.5625rem;
-      padding: var(--text-padding-vertical, 2rem)
-        var(--text-padding-horizontal, 3rem);
-
-      gap: var(--size-8, 0.5rem);
-    }
-    .contentcontainer2 {
-      display: flex;
+      padding: var(--container-padding-top-bottom, 2rem)
+        var(--container-padding-left-right, 4rem);
       flex-direction: column;
-      text-align: center;
-      justify-content: space-between;
-      width: 18.75rem;
-      height: 14.5625rem;
-      padding: var(--text-padding-vertical, 2rem)
-        var(--text-padding-horizontal, 3rem);
-    }
-    .contentcontainer3 {
-      width: 18.75rem;
-      height: 14.5625rem;
-      padding: var(--text-padding-vertical, 2rem)
-        var(--text-padding-horizontal, 3rem);
-      justify-content: flex-end;
       align-items: flex-start;
-      gap: var(--size-8, 0.5rem);
+      gap: var(--container-padding-between-elements, 1.5rem);
     }
-    .contentcontainer3 p {
-      text-align: right;
+    .contentcontainer1,
+    .contentcontainer2,
+    .contentcontainer3 {
+      padding: 0;
+      max-width: 16.3125rem;
     }
 
-    p {
-      color: var(--text-paragraph-graphitemedium, #70727d);
-      font-family: "Rubik", sans-serif;
-      font-weight: 100;
-      font-size: 16px;
+    .contentcontainer1,
+    .contentcontainer2,
+    .contentcontainer3 p {
+      text-align: left;
     }
+
     .icons {
-      display: flex;
-      justify-content: space-between;
+      display: none;
     }
 
     .icons2 {
-      display: none;
+      display: flex;
+      justify-content: space-around;
+      max-width: 11.38603rem;
+      gap: 1.19rem;
     }
-    svg:hover path {
-      fill: #e72458;
-    }
-
-    .titel {
-      color: var(
-        --text-paragraph-graphitedark,
-        --color-secondary-graphite-dark
-      );
-    }
-
-    .pinklink {
-      text-decoration: underline;
-      color: var(--text-header-highlight-color, #e72458);
-      font-family: "Rubik";
-    }
-
-    .pinklink:hover {
-      color: var(--text-paragraph-graphitedark, #1c1e23);
-      text-decoration: underline;
-    }
-
-    .pinklink:active {
-      color: var(--text-header-highlight-color, #e72458);
-
-      text-decoration: underline;
-    }
-
-    .no-style {
-      list-style: none;
-      text-decoration: none;
-      text-decoration-line: none;
-    }
-
-    @media (max-width: 600px) {
-      section {
-        display: flex;
-        padding: var(--container-padding-top-bottom, 2rem)
-          var(--container-padding-left-right, 4rem);
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--container-padding-between-elements, 1.5rem);
-      }
-      .contentcontainer1,
-      .contentcontainer2,
-      .contentcontainer3 {
-        padding: 0;
-        max-width: 16.3125rem;
-      }
-
-      .contentcontainer1,
-      .contentcontainer2,
-      .contentcontainer3 p {
-        text-align: left;
-      }
-
-      .icons {
-        display: none;
-      }
-
-      .icons2 {
-        display: flex;
-        justify-content: space-around;
-        max-width: 11.38603rem;
-        gap: 1.19rem;
-      }
-    }
-  </style>
-</section>
+  }
+</style>
