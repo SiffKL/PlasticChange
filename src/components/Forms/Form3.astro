@@ -14,7 +14,7 @@ import Paybutton from "../globalcomponents/Paybutton.astro";
   <ProgIndicator3 />
   <form>
     <!-- Donation Type -->
-    <div class="form-group">
+    <div class="form-group-payment">
       <Paybutton />
     </div>
     <div class="form-group">
@@ -66,24 +66,24 @@ import Paybutton from "../globalcomponents/Paybutton.astro";
     font-size: 12px;
     font-style: normal;
     font-weight: 300;
-    line-height: 40px;
   }
 
   .underknap {
     color: var(--color-complimentary-pine-green-medium, #2a5f5e);
-    /* Paragraph12Normal */
-    font-family: Rubik;
+
+    font-family: "Rubik";
     font-size: 12px;
-    font-style: normal;
+
     font-weight: 400;
     line-height: 20px; /* 166.667% */
+    margin-top: 16px;
   }
 
   .skattefradrag {
     color: var(--color-complimentary-pine-green-medium, #2a5f5e);
-    font-family: Rubik;
+    font-family: "Rubik";
     font-size: 12px;
-    font-style: normal;
+
     font-weight: 700;
     line-height: 20px;
   }
@@ -92,7 +92,7 @@ import Paybutton from "../globalcomponents/Paybutton.astro";
   p,
   form label,
   a {
-    font-family: Rubik;
+    font-family: "Rubik";
   }
 
   h1 {
@@ -129,6 +129,12 @@ import Paybutton from "../globalcomponents/Paybutton.astro";
 
   .form-group {
     display: grid;
+    margin-top: 24px;
+  }
+
+  .form-group-payment {
+    display: flex;
+    justify-content: center;
     margin-top: 24px;
   }
 

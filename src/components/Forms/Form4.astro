@@ -15,126 +15,142 @@ import ProgIndicator4 from "./Progressbar/ProgIndicator4.astro";
   <form>
     <!-- Donation Type -->
     <div class="form-group">
-      <label>Information</label>
-      <p class="inputs">Stefan Vinther Heide</p>
-      <p class="inputs">Stefan@VintherHeide.dk</p>
-      <label>CPR</label>
-      <p class="inputs">Ikke angivet</p>
-      <label>Kort information</label>
-      <p class="inputs">XXXX-XXXX-XXXX-XX87</p>
-      <label>Støtte</label>
-      <p class="inputs">Månedlig.</p>
-      <p class="inputs">250kr.</p>
-    </div>
+      <p class="Din_Bek">Din bekræftigelse</p>
+      <div class="gap">
+        <label>Information</label>
+        <p class="inputs">Stefan Vinther Heide</p>
+        <p class="inputs">Stefan@VintherHeide.dk</p>
+      </div>
+      <div class="gap">
+        <label>CPR</label>
+        <p class="inputs">Ikke angivet</p>
+      </div>
+      <div class="gap">
+        <label>Kort information</label>
+        <p class="inputs">XXXX-XXXX-XXXX-XX87</p>
+      </div>
+      <div class="gap">
+        <label>Støtte</label>
+        <p class="inputs">Månedlig.</p>
+        <p class="inputs">250kr.</p>
+      </div>
 
-    <!-- Submit -->
-    <div class="form-group">
-      <Pbuttons title="Bekræft og betal" size="forms" />
-      <p class="underknap">
-        Husk! Du kan også selv indtaste dit <span class="skattefradrag"
-          >skattefradrag</span
-        > når du intaster din selvangivelse hos skat.
-      </p>
-      <a href="#">Læs mere her</a>
+      <!-- Submit -->
+      <div class="form-group">
+        <Pbuttons title="Bekræft og betal" size="forms" />
+        <p class="underknap">
+          Husk! Du kan også selv indtaste dit <span class="skattefradrag"
+            >skattefradrag</span
+          > når du intaster din selvangivelse hos skat.
+        </p>
+        <a href="#">Læs mere her</a>
+      </div>
     </div>
   </form>
+
+  <style>
+    .Din_Bek {
+      margin-bottom: 16px;
+    }
+    .container {
+      max-width: 450px;
+      margin: 20px auto;
+      padding: 30px 44px;
+      background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
+      border-radius: 5px;
+      text-align: left;
+    }
+
+    .inputs {
+      color: var(--color-secondary-graphite-medium, #70727d);
+      /* Paragraph12Normal */
+      font-family: "Rubik";
+      font-size: 12px;
+
+      font-weight: 400;
+    }
+    .gap {
+      margin-bottom: 16px;
+    }
+
+    .underknap {
+      color: var(--color-complimentary-pine-green-medium, #2a5f5e);
+      /* Paragraph12Normal */
+      font-family: "Rubik";
+      font-size: 12px;
+
+      font-weight: 400;
+      line-height: 20px; /* 166.667% */
+      margin-top: 16px;
+    }
+
+    .skattefradrag {
+      color: var(--color-complimentary-pine-green-medium, #2a5f5e);
+      font-family: Rubik;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+    }
+
+    h1 {
+      color: #000;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    .pc-text {
+      color: var(--color-complimentary-pine-green-medium, #2a5f5e);
+      font-weight: 800;
+    }
+    .fs-text {
+      color: var(--color-complimentary-pine-green-dark, #142c2b);
+      font-weight: 800;
+    }
+
+    p {
+      color: var(--color-complimentary-pine-green-normal, #007c79);
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    form {
+      padding-top: 16px;
+      padding-left: 44px;
+      padding-right: 44px;
+      padding-bottom: 30px;
+      color: var(--color-secondary-graphite-dark, #1c1e23);
+      /* Paragraph12Bold */
+      font-family: Rubik;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-top: 24px;
+    }
+
+    .inline {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .highlighted {
+      background: #357a79;
+      color: #fff;
+    }
+  </style>
+  <script></script>
 </section>
-
-<style>
-  .container {
-    max-width: 450px;
-    margin: 20px auto;
-    padding: 30px 44px;
-    background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
-    border-radius: 5px;
-    text-align: left;
-  }
-
-  .inputs {
-    color: var(--color-secondary-graphite-medium, #70727d);
-    /* Paragraph12Normal */
-    font-family: Rubik;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-  }
-
-  .underknap {
-    color: var(--color-complimentary-pine-green-medium, #2a5f5e);
-    /* Paragraph12Normal */
-    font-family: Rubik;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 166.667% */
-  }
-
-  .skattefradrag {
-    color: var(--color-complimentary-pine-green-medium, #2a5f5e);
-    font-family: Rubik;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 20px;
-  }
-
-  h1 {
-    color: #000;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 1.3;
-  }
-
-  .pc-text {
-    color: var(--color-complimentary-pine-green-medium, #2a5f5e);
-    font-weight: 800;
-  }
-  .fs-text {
-    color: var(--color-complimentary-pine-green-dark, #142c2b);
-    font-weight: 800;
-  }
-
-  p {
-    color: var(--color-complimentary-pine-green-normal, #007c79);
-    font-size: 16px;
-    font-weight: 400;
-  }
-
-  form {
-    padding-top: 16px;
-    padding-left: 44px;
-    padding-right: 44px;
-    padding-bottom: 30px;
-    color: var(--color-secondary-graphite-dark, #1c1e23);
-    /* Paragraph12Bold */
-    font-family: Rubik;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 600;
-  }
-
-  .form-group {
-    margin-top: 24px;
-  }
-
-  .inline {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  a {
-    color: #3498db;
-    text-decoration: none;
-    font-size: 13px;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  .highlighted {
-    background: #357a79;
-    color: #fff;
-  }
-</style>
-<script></script>

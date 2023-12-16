@@ -6,32 +6,68 @@ import Form3 from "../components/Forms/Form3.astro";
 import Paybutton from "../components/globalcomponents/Paybutton.astro";
 import Form4 from "../components/Forms/Form4.astro";
 import Form5 from "../components/Forms/Form5.astro";
+import Sbuttons from "../components/globalcomponents/Sbuttons.astro";
 ---
 
 <BaseLayout>
   <section class="grid">
-    <div class="backgroundimg"></div>
+    <div class="Form_flow_intro">
+      <h1>Vores bud på "Støt nu" form-flow</h1>
+      <p>
+        Her ser vores designbud på et "støt nu" form-flow. Afprøv knapper her,
+        eller det fulde flow i vores FIgma prototype.
+      </p>
+      <p>
+        Flowet starter på Hero section, hvorfra man ved klik på "Gør en forskel"
+        tilgår flow-start ved brug af cards, altså multistep flow. På den måde
+        undgår vi pageloade og forsøger at minimere af brugerne...
+      </p>
+      <a
+        href="https://www.figma.com/proto/fDy1q7v7nbsZmIBRG7M2xV/PlasticChange?page-id=2%3A3&type=design&node-id=205-1697&viewport=380%2C428%2C0.06&t=pWH1L1jqUx0PWAyt-1&scaling=min-zoom&starting-point-node-id=205%3A1697&mode=design"
+        >Afprøv prototype her</a
+      >
+    </div>
     <Form1 />
     <Form2 />
     <Form3 />
     <Form4 />
     <Form5 />
   </section>
+  <div class="tilbage_knap">
+    <a class="no-style" href="/index">
+      <Sbuttons title="Tilbage til forsiden" size="forms" />
+    </a>
+  </div>
 </BaseLayout>
 
 <style>
   .grid {
+    padding-top: 5rem;
     display: grid;
     grid-template-columns: 6fr 8fr;
-    background: var(--color-complimentary-pine-green-lightest, #d3e2e2);
+    /* background: var(--color-complimentary-pine-green-lightest, #d3e2e2); */
   }
-  .backgroundimg {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: url("../asset/svgimages/HeroBackground.svg");
-    background-size: cover; /* eller background-size: contain; afhængigt af dine krav */
-    background-repeat: no-repeat;
+  .Form_flow_intro {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  p,
+  h1,
+  a {
+    font-family: "Rubik";
+    margin-bottom: 16px;
+  }
+  a {
+    color: var(--link-color-hover, --color-primary-cerise-red-normal);
+  }
+  .tilbage_knap {
+    max-width: max-content;
+    margin: 0 auto;
+    padding: 10rem;
   }
 </style>
