@@ -31,7 +31,7 @@ import Title from "../globalcomponents/Title.astro";
   <style>
     .maxwidth {
       max-width: 1650px;
-      /* margin-left: 0; */
+
       margin: 0 auto;
       padding: var(--spacing-text-padding-vertical, 2rem);
     }
@@ -90,8 +90,7 @@ import Title from "../globalcomponents/Title.astro";
     @media screen and (max-width: 768px) {
       article {
         max-width: 100%; /* Adjust max-width for smaller screens */
-        padding: var(--container-padding-top-bottom, 32px)
-          var(--container-padding-left-right, 64px);
+        padding: 0;
       }
 
       .video-container {
@@ -100,8 +99,10 @@ import Title from "../globalcomponents/Title.astro";
       }
       .headersection {
         max-width: 120%;
-        padding: 2rem;
+        padding-bottom: 2rem;
         padding-top: 7rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
       }
       h1 {
         line-height: 100%;
