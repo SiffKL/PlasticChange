@@ -11,7 +11,7 @@
   --color-primary-cerise-red-dark: #49131c;
   --color-primary-cerise-red-light: #f38898;
   --color-primary-cerise-red-lightest: #fbd9de;
-  --color-primary-cerise-red-medium: #952738;
+  --color-primary-cerise-red-medium: #c01b47;
   --color-primary-cerise-red-normal: #e72458;
   --color-secondary-graphite-dark: #1c1e23;
   --color-secondary-graphite-light: #cacdd5; /* Corrected the typo 'ligth' to 'light' */
@@ -150,6 +150,11 @@
   --text-padding-between-elements: var(--size-12);
 }
 
+/* _____________________________________________________________________________________________ */
+
+/* imported from figma, needs sorting */
+/* NEW VERSION 16 dec */
+
 :root {
   /* Mode 1 */
   /* colors */
@@ -162,7 +167,7 @@
   --color-primary-cerise-red-darm: #49131c;
   --color-primary-cerise-red-light: #f38898;
   --color-primary-cerise-red-lightest: #fbd9de;
-  --color-primary-cerise-red-medium: #952738;
+  --color-primary-cerise-red-medium: #c01b47;
   --color-primary-cerise-red-normal: #e72458;
   --color-secondary-graphite-dark: #1c1e23;
   --color-secondary-graphite-ligth: #cacdd5;
@@ -194,13 +199,7 @@
   --size-350: 21.875rem;
 }
 
-
-
-
-
 :root {
-  /* imported from figma, needs sorting */
-  /* NEW VERSION 16 dec */
   --logo-color: var(--color-pink);
   --primary-dark-green: var(--color-complimentary-pine-green-normal);
   --burgermeny-active-text-color: var(--color-primary-cerise-red-normal);
