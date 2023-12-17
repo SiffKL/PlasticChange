@@ -22,10 +22,7 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
       modtage en mail fra os
     </p>
     <div class="container">
-      <img
-        src="../src/asset/svgimages/hval-flaske-illustration-webp.webp"
-        alt="whale in a bottle"
-      />
+      <div class="img-hval"></div>
     </div>
     <a class="no-style space" href="/defemprincipper">
       <Sbuttons title="Tilbage" size="large" />
@@ -86,9 +83,10 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
     .mob-div {
       display: flex;
       flex-direction: column;
-      padding: var(--container-padding-top-bottom, 2rem)
-        var(--container-padding-left-right, 4rem);
+      padding: var(--container-padding-top-bottom)
+        var(--container-padding-left-right);
       gap: var(--container-padding-between-elements, 1.5rem);
+      padding-top: 4rem;
     }
 
     .container {
@@ -97,7 +95,14 @@ import Sbuttons from "../globalcomponents/Sbuttons.astro";
       align-items: center;
     }
 
-    .mobile-news img {
+    .img-hval {
+      background-image: url("../src/asset/svgimages/hval-flaske-illustration-webp.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 16.125rem;
+      height: 19.4375rem;
+    }
+    .mobile-news .img-hval {
       max-width: 16.125rem;
     }
   }
