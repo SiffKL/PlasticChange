@@ -36,7 +36,6 @@ import Calltoactionsection2 from "../globalcomponents/Calltoactionsection2.astro
     </p>
   </div>
   <div class="item">
-
     <dotlottie-player
       class="img"
       src="https://lottie.host/cdcabfe6-3891-4c89-b121-209e85df15b7/HtmXyGgIzI.json"
@@ -51,8 +50,6 @@ import Calltoactionsection2 from "../globalcomponents/Calltoactionsection2.astro
   src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
   type="module"></script>
 <style>
-
-
   p {
     font-family: "Rubik";
     font-size: 1.25rem;
@@ -92,8 +89,8 @@ import Calltoactionsection2 from "../globalcomponents/Calltoactionsection2.astro
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: var(--section-padding-vertical)
-      var(--section-padding-horzontal);
+    padding: var(--spacing-section-padding-vertical, 5rem)
+      var(--spacing-section-padding-horzontal, 8rem);
     grid-gap: var(--spacing-section-element-gap);
     max-width: 1440px;
     align-items: center;

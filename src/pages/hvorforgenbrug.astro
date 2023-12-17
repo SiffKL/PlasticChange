@@ -20,11 +20,14 @@ import Calltoactionsection2 from "../components/globalcomponents/Calltoactionsec
 
 <style>
   .background {
+    margin: 0 auto;
     background-color: #d3e2e2;
     background-image: url("../../src/asset/svgimages/GenbrugSectionBackground.svg");
     height: 750px;
     background-position: bottom;
     background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1800px;
   }
 
   /* ------ animista from here ------------ */
@@ -56,6 +59,12 @@ import Calltoactionsection2 from "../components/globalcomponents/Calltoactionsec
     100% {
       -webkit-transform: translateY(0%);
       transform: translateY(0%);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .background {
+      height: 800px;
     }
   }
 </style>
