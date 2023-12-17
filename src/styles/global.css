@@ -238,9 +238,6 @@
   );
   --forms-progressbar-line-color: var(--color-secondary-graphite-medium);
   --forms-progressbar-nonactive-color: var(--color-secondary-graphite-medium);
-  --nav-active-link-color: var(--color-primary-cerise-red-normal);
-  --nav-background-color: #ffffff;
-  --nav-link-color: var(--color-secondary-graphite-dark);
   --button-tertiary-default-border-color: var(--color-secondary-graphite-ligth);
   --button-tertiary-default-background-color: var(--color-secondary-white);
   --button-tertiary-default-text-color: var(--color-secondary-graphite-dark);
