@@ -15,13 +15,14 @@ const { title, size } = Astro.props;
     padding: var(--button-padding-vertical, 1rem)
       var(--button-padding-horizontal, 2rem);
     border-radius: 0.0625rem;
-    border: 2px solid var(--button-secondary-default-border-color, #c01b47);
-    color: var(--button-secondary-default-text-color, #c01b47);
+    border: 2px solid var(--button-secondary-default-border-color);
+    color: var(--button-secondary-default-text-color);
     min-width: 14.6875rem;
     /* box-shadow: 0px 4px 4px 0px rgba(#49131c); */
 
     font-family: "Rubik";
     font-size: 16px;
+    font-weight: 700;
     background-color: transparent;
   }
 
@@ -43,6 +44,7 @@ const { title, size } = Astro.props;
   [data-size="large"] {
     padding: var(--button-padding-vertical, 1rem)
       var(--button-padding-horizontal, 2rem);
+    font-weight: 700;
   }
 
   [data-size="forms"] {
